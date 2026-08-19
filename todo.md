@@ -36,4 +36,9 @@
 - [x] Replace the navigation logo and develop a consistent editorial typography system.
 - [x] Replace the repository source link with the `prayas.is-a.dev` portfolio CTA.
 - [x] Verify responsive navigation and typography, then publish the refinement.
+
+## GitHub Deployment Readiness
+
+- [ ] Confirm all current project files are committed and pushed to the public GitHub branch.
+- [ ] Verify the repository’s current commit is ready for external Vercel deployment.
 ***
