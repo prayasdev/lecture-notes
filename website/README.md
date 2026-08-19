@@ -1,25 +1,44 @@
-# Website
+# Website Content Integration
 
-This directory contains the content-generation and library configuration layer for the Lecture Notes web experience. The Manus static template serves the React shell from `client/`; it imports generated note data from `website/src/` so the published website can remain fully static.
+This directory connects the distributed source archive to the static React catalogue. It does not own lecture content. The authoritative files remain in `digital notes/`; this layer reads them and produces a generated library for the reader.
 
-## How the site works
+## Data flow
 
-1. Source modules remain inside `digital notes/subjects/<subject>/modules/`.
-2. `website/scripts/sync-notes.mjs` reads subject manifests and Markdown files.
-3. The script writes `website/src/library.generated.ts`, which is imported by the React reader.
-4. Module-local image paths are rewritten to GitHub raw-content URLs so the rendered site can display the source diagrams and figures.
-5. Legacy PDFs and presentations are registered in each subject `manifest.json` and open through a raw GitHub link.
+```text
+subject manifest + module Markdown + local resources
+                    ↓
+website/scripts/sync-notes.mjs
+                    ↓
+website/src/library.generated.ts
+                    ↓
+client/src/pages/Home.tsx → catalogue and Markdown reader
+```
 
-## Routine update
+| File | Responsibility | Editing rule |
+|---|---|---|
+| `scripts/sync-notes.mjs` | Scans manifests, modules, local Legacy/Practical resources, and builds raw GitHub URLs. | Edit only when archive behaviour changes. |
+| `src/library.generated.ts` | Generated subject catalogue and embedded Markdown content. | **Never edit manually.** |
+| `../client/src/pages/Home.tsx` | Catalogue navigation, collection visibility, Streamdown/KaTeX reader. | Edit only for reader or UI behaviour. |
 
-After adding or changing notes, run:
+## Synchronize content
+
+From the repository root, run:
 
 ```bash
 node website/scripts/sync-notes.mjs
+pnpm check
 ```
 
-Then commit both the source files under `digital notes/` and the regenerated `website/src/library.generated.ts`.
+The synchronizer reads every `digital notes/subjects/<slug>/manifest.json`, then resolves each declared module at `modules/<module.id>/<module.file>`. It discovers supported local resources under the subject’s Legacy and Practical directories, merges any manifest-registered metadata or external links, and writes `src/library.generated.ts`.
 
-## Publishing
+## Rendering rules
 
-The project is designed for the included static website workflow. The repository also contains all source notes and website configuration so it can be deployed on another static host if desired.
+Module-local asset links written as `](assets/<file>)` become raw GitHub URLs during synchronization. The Markdown reader supports ordinary Markdown, tables, images, `\(...\)` inline mathematics, and `\[...\]` display mathematics. The reader normalizes the latter LaTeX delimiters for KaTeX; source Markdown should keep the documented authoring syntax.
+
+The repository identity and raw-link branch are intentionally explicit at the top of `scripts/sync-notes.mjs`. If this archive is forked or its default branch changes, update `owner`, `repository`, and `branch` before syncing.
+
+## Commit boundary
+
+Every content change must include both the authored files under `digital notes/` and the regenerated `website/src/library.generated.ts`. This keeps the static site deterministic and allows any host to build or serve the same catalogue without a runtime database.
+
+See [`../README.md`](../README.md) for the project map and [`../AI_AUTHORING_README.md`](../AI_AUTHORING_README.md) for the content-generation contract.

@@ -22,4 +22,11 @@
 - [x] Add reliable inline and display LaTeX rendering without modifying source note files.
 - [x] Verify mathematical notation in the reader at desktop and mobile widths.
 - [x] Publish the rendering correction and save a stable project checkpoint.
+
+## Documentation Refresh
+
+- [x] Review every repository README and the current distributed-manifest convention.
+- [x] Write a concise architecture and AI authoring guide for new digital-note subjects.
+- [x] Align all README links, instructions, and terminology with the current implementation.
+- [x] Validate the documented paths and publish the documentation update.
 ***
