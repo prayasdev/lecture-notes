@@ -29,4 +29,11 @@
 - [x] Write a concise architecture and AI authoring guide for new digital-note subjects.
 - [x] Align all README links, instructions, and terminology with the current implementation.
 - [x] Validate the documented paths and publish the documentation update.
+
+## Typography and Navigation Refinement
+
+- [x] Audit the current type hierarchy, logo lockup, and navigation behavior.
+- [x] Replace the navigation logo and develop a consistent editorial typography system.
+- [x] Replace the repository source link with the `prayas.is-a.dev` portfolio CTA.
+- [x] Verify responsive navigation and typography, then publish the refinement.
 ***

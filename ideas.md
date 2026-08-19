@@ -115,3 +115,9 @@ Each subject owns a local `manifest.json` that is the source of truth for its ti
 ### Accepted review amendments
 
 The desktop catalogue uses a visibly distinct **collection shelf** for All, Digital, Legacy, and Practical rather than treating collections as ordinary filter chips. Subject rows remain compact archival records: metadata-forward, ruled by columns, and supported by calm register labels and collection seals. Archive imagery is retained only as a labelled plate; the search, filters, and ordered subject index remain the first-read elements.
+
+### Typography and navigation refinement
+
+The archive uses a three-part type system: **Noto Serif** for institutional display moments, **Source Serif 4** for long reading passages, and **DM Sans** for compact controls and metadata. The navigation mark is an abstract archive seed—linking scholarship, engineering, and Prayas’s garden-like portfolio identity—while the `prayas.is-a.dev` CTA is treated as a quiet maker credit rather than a generic source link.
+
+The collection taxonomy appears once as the primary **Collection Shelf** beneath the search field; contextual subject tabs remain only within individual subject records. The masthead lockup frames the archive seed in a double rule, carries a purposefully styled serif wordmark, and continues the brick-and-brass material rule into the catalogue register.

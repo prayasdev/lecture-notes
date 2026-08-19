@@ -1,5 +1,6 @@
 /**
  * Nalanda Archive design system: a catalogue-first scholarly interface powered by distributed subject manifests.
+ * Typography balances Noto Serif display, Source Serif reading, and DM Sans navigation; the header joins the archive mark to Prayas's portfolio identity.
  * The only fixed vocabulary is collection-level; subjects, categories, modules, and resources come from library.generated.ts.
  */
 import "katex/dist/katex.min.css";
@@ -68,7 +69,7 @@ const subjects = library.subjects as unknown as SubjectItem[];
 const categories = library.categories as unknown as CategoryItem[];
 const heroImage = "/manus-storage/nalanda-archive-hero_c37e3dda.png";
 const latticeImage = "/manus-storage/nalanda-brick-lattice_45f8d117.png";
-const sealImage = "/manus-storage/nalanda-archive-seal_65bf63f5.png";
+const archiveMark = "/manus-storage/prayas-archive-mark-01_d3f5e7c2.png";
 
 const collectionMeta: Record<CollectionKey, { label: string; icon: typeof BookOpenText }> = {
   all: { label: "All", icon: FolderOpen },
@@ -237,30 +238,15 @@ export default function Home() {
   return (
     <div className="nalanda-app" style={{ "--lattice": `url(${latticeImage})` } as CSSProperties}>
       <header className="archive-topbar">
-        <button type="button" className="seal-lockup" onClick={backToCatalogue} aria-label="Return to archive catalogue">
-          <img src={sealImage} alt="" />
+        <button type="button" className="archive-brand" onClick={backToCatalogue} aria-label="Return to archive catalogue">
+          <span className="archive-brand-mark"><img src={archiveMark} alt="" /></span>
           <span>
+            <small>Academic archive</small>
             <b>Lecture Notes</b>
-            <small>Nalanda archive</small>
           </span>
         </button>
-        <nav className="archive-nav" aria-label="Collection navigation">
-          {(Object.keys(collectionMeta) as CollectionKey[]).map((key) => {
-            const Icon = collectionMeta[key].icon;
-            return (
-              <button
-                key={key}
-                type="button"
-                className={collection === key && !selectedSubject ? "is-active" : ""}
-                onClick={() => { setCollection(key); backToCatalogue(); }}
-              >
-                <Icon aria-hidden="true" /> {collectionMeta[key].label}
-              </button>
-            );
-          })}
-        </nav>
-        <a className="top-repository" href={`https://github.com/${library.owner}/${library.repository}`} target="_blank" rel="noreferrer">
-          Source <ArrowUpRight aria-hidden="true" />
+        <a className="portfolio-cta" href="https://prayas.is-a.dev" target="_blank" rel="noreferrer" aria-label="Visit Prayas Das portfolio">
+          <span><small>Built by</small><b>prayas.is-a.dev</b></span><ArrowUpRight aria-hidden="true" />
         </a>
       </header>
 
