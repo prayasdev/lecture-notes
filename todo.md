@@ -46,4 +46,10 @@
 
 - [x] Copy generated branding assets into the Vercel-served public directory and replace platform-only asset references.
 - [x] Commit and push the fully self-contained Vercel-ready project state.
+
+## Vercel Deployment
+
+- [x] Verify Vercel account access and create a professionally named project from the public GitHub repository.
+- [x] Deploy the Vercel-ready configuration to an available free `vercel.app` domain.
+- [x] Validate the published Vercel site and share its public URL.
 ***
