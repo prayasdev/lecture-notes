@@ -1,0 +1,18 @@
+{
+  "id": "electrical-measurements-instrumentation",
+  "code": "EMI",
+  "title": "Electrical Measurements & Instrumentation",
+  "shortTitle": "Electrical Measurements & Instrumentation",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy past-question material for electrical measurements and instrumentation.",
+  "tags": [
+    "measurements",
+    "instrumentation",
+    "past papers"
+  ],
+  "legacyDirectories": [],
+  "legacyFiles": [
+    "legacy/PYQ/EMI PYQ.pdf"
+  ]
+}

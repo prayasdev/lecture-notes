@@ -1,0 +1,20 @@
+{
+  "id": "signals-systems",
+  "code": "S&S",
+  "title": "Signals & Systems",
+  "shortTitle": "Signals & Systems",
+  "category": "Electrical & Electronics",
+  "categoryId": "electrical-electronics",
+  "description": "Legacy notes and past-question papers for signals and systems.",
+  "tags": [
+    "signals",
+    "systems",
+    "convolution"
+  ],
+  "legacyDirectories": [
+    "legacy/Signals & Systems"
+  ],
+  "legacyFiles": [
+    "legacy/PYQ/Signal&System_PYQ.pdf"
+  ]
+}

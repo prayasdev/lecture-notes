@@ -1,0 +1,17 @@
+{
+  "id": "basic-mechanical-engineering",
+  "code": "BME",
+  "title": "Basic Mechanical Engineering",
+  "shortTitle": "Basic Mechanical Engineering",
+  "category": "Basic Engineering",
+  "categoryId": "basic-engineering",
+  "description": "Legacy notes and slide decks for introductory mechanical engineering.",
+  "tags": [
+    "thermodynamics",
+    "fluid mechanics",
+    "ic engines"
+  ],
+  "legacyDirectories": [
+    "legacy/BME"
+  ]
+}

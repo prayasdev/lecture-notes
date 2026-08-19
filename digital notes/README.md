@@ -52,14 +52,15 @@ Create `subjects/<subject-slug>/manifest.json`. Use lowercase kebab-case for the
 |---|---|
 | `id`, `code`, `title`, `category`, `description`, `modules` | Core subject and catalogue fields. |
 | `shortTitle`, `categoryId`, `tags`, `courseHours`, `accent` | Recommended metadata fields. |
-| `legacyDirectory`, `practicalDirectory` | Optional custom local-resource directories; defaults use the subject slug. |
+| `legacyDirectory`, `practicalDirectory` | Optional single local-resource directories; defaults use the subject slug. |
+| `legacyDirectories`, `legacyFiles` | Optional Legacy-only fields for several complete Legacy folders and for precise files held under a shared folder such as `legacy/PYQ/`. |
 | `legacy`, `practical` | Optional registered resources, resource overrides, or external links. |
 
 Every module object must point to `modules/<id>/<file>`. For a local figure, write `![Alt text](assets/figure-name.png)` in that module Markdown file. The synchronizer rewrites this path for the published reader.
 
 ## Optional collections
 
-Legacy discovery supports `.pdf`, `.ppt`, `.pptx`, `.doc`, `.docx`, `.xls`, `.xlsx`, and `.zip`. Practical discovery supports those files plus `.md`, `.ipynb`, `.py`, `.m`, `.c`, `.cpp`, and `.js`. `README` files are ignored as resources.
+Legacy discovery supports `.pdf`, `.ppt`, `.pptx`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.zip`, `.html`, and common image files. Use `legacyDirectories` only where every file in a listed folder belongs to the same subject; use `legacyFiles` for a subject-specific file held in a shared folder. Practical discovery supports documents plus `.md`, `.ipynb`, `.py`, `.m`, `.c`, `.cpp`, and `.js`. `README` files are ignored as resources.
 
 To register an external Practical resource, add it to the subject manifest:
 

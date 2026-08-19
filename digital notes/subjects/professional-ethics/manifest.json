@@ -1,0 +1,17 @@
+{
+  "id": "professional-ethics",
+  "code": "ETHICS",
+  "title": "Professional Ethics",
+  "shortTitle": "Professional Ethics",
+  "category": "Humanities & Management",
+  "categoryId": "humanities-management",
+  "description": "Legacy module slides, notes, and past-question papers for professional ethics.",
+  "tags": [
+    "professional ethics",
+    "ethics",
+    "past papers"
+  ],
+  "legacyDirectories": [
+    "legacy/Professional Ethics"
+  ]
+}

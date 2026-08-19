@@ -1,0 +1,20 @@
+{
+  "id": "power-system-protection",
+  "code": "PSP",
+  "title": "Power System Protection",
+  "shortTitle": "Power System Protection",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy protection notes, assignments, relay material, and past-question papers.",
+  "tags": [
+    "power system protection",
+    "relays",
+    "circuit breakers"
+  ],
+  "legacyDirectories": [
+    "legacy/PSP Ashwini Sir"
+  ],
+  "legacyFiles": [
+    "legacy/Power System Protection PYQ.pdf"
+  ]
+}

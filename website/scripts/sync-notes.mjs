@@ -17,7 +17,7 @@ const repository = 'lecture-notes';
 const branch = 'main';
 
 const extensions = {
-  legacy: new Set(['.pdf', '.ppt', '.pptx', '.doc', '.docx', '.xls', '.xlsx', '.zip']),
+  legacy: new Set(['.pdf', '.ppt', '.pptx', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.html', '.png', '.jpg', '.jpeg', '.webp']),
   practical: new Set(['.pdf', '.ppt', '.pptx', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.md', '.ipynb', '.py', '.m', '.c', '.cpp', '.js']),
 };
 
@@ -50,13 +50,27 @@ function listResources(directory, rootDirectory, allowedExtensions) {
   });
 }
 
-function mergeResources(discovered, registered, repositoryRelativeDirectory) {
+function listExplicitResources(resourcePaths, allowedExtensions) {
+  return (resourcePaths || []).flatMap((resourcePath) => {
+    const absolutePath = path.join(digitalNotesRoot, resourcePath);
+    const extension = path.extname(absolutePath).toLowerCase();
+    if (!fs.existsSync(absolutePath) || !fs.statSync(absolutePath).isFile() || !allowedExtensions.has(extension)) return [];
+    return [{
+      path: resourcePath.split(path.sep).join('/'),
+      title: titleFromFilename(path.basename(absolutePath)),
+      type: extension.slice(1).toUpperCase(),
+      source: 'local',
+    }];
+  });
+}
+
+function mergeResources(discovered, registered, rawUrlForResource) {
   const overrides = new Map((registered || []).filter((resource) => resource.path).map((resource) => [resource.path, resource]));
   const indexed = discovered.map((resource) => ({ ...resource, ...(overrides.get(resource.path) || {}) }));
   const externalOnly = (registered || []).filter((resource) => !resource.path || !indexed.some((item) => item.path === resource.path));
   return [...indexed, ...externalOnly].map((resource) => ({
     ...resource,
-    rawUrl: resource.url || rawUrl(path.join('digital notes', repositoryRelativeDirectory, resource.path || '')),
+    rawUrl: resource.url || rawUrlForResource(resource),
   }));
 }
 
@@ -84,17 +98,20 @@ const subjects = subjectDirectories.map((subjectSlug) => {
     };
   });
 
-  const legacyDirectory = manifest.legacyDirectory || `legacy/${subjectSlug}`;
+  const legacyDirectories = manifest.legacyDirectories || [manifest.legacyDirectory || `legacy/${subjectSlug}`];
   const practicalDirectory = manifest.practicalDirectory || `practical/${subjectSlug}`;
   const legacy = mergeResources(
-    listResources(path.join(digitalNotesRoot, legacyDirectory), path.join(digitalNotesRoot, legacyDirectory), extensions.legacy),
+    [
+      ...legacyDirectories.flatMap((directory) => listResources(path.join(digitalNotesRoot, directory), digitalNotesRoot, extensions.legacy)),
+      ...listExplicitResources(manifest.legacyFiles, extensions.legacy),
+    ],
     manifest.legacy,
-    legacyDirectory,
+    (resource) => rawUrl(path.join('digital notes', resource.path || '')),
   ).map((resource) => ({ ...resource, collection: 'legacy' }));
   const practical = mergeResources(
     listResources(path.join(digitalNotesRoot, practicalDirectory), path.join(digitalNotesRoot, practicalDirectory), extensions.practical),
     manifest.practical,
-    practicalDirectory,
+    (resource) => rawUrl(path.join('digital notes', practicalDirectory, resource.path || '')),
   ).map((resource) => ({ ...resource, collection: 'practical' }));
 
   return { ...manifest, modules, legacy, practical };

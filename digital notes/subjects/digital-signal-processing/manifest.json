@@ -1,0 +1,17 @@
+{
+  "id": "digital-signal-processing",
+  "code": "DSP",
+  "title": "Digital Signal Processing",
+  "shortTitle": "Digital Signal Processing",
+  "category": "Electrical & Electronics",
+  "categoryId": "electrical-electronics",
+  "description": "Legacy past-question material for digital signal processing.",
+  "tags": [
+    "digital signal processing",
+    "past papers"
+  ],
+  "legacyDirectories": [],
+  "legacyFiles": [
+    "legacy/DSP PYQ.pdf"
+  ]
+}

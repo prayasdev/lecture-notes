@@ -1,0 +1,16 @@
+{
+  "id": "electrical-machines-ii",
+  "code": "EM-II",
+  "title": "Electrical Machines II",
+  "shortTitle": "Electrical Machines II",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy scanned notes on single-phase induction machines.",
+  "tags": [
+    "electrical machines",
+    "induction motor"
+  ],
+  "legacyDirectories": [
+    "legacy/Manas Sir"
+  ]
+}

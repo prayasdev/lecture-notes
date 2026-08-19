@@ -1,0 +1,20 @@
+{
+  "id": "organisational-behaviour",
+  "code": "OB",
+  "title": "Organisational Behaviour",
+  "shortTitle": "Organisational Behaviour",
+  "category": "Humanities & Management",
+  "categoryId": "humanities-management",
+  "description": "Legacy notes, assignments, and past papers for organisational behaviour.",
+  "tags": [
+    "organisational behaviour",
+    "leadership",
+    "motivation"
+  ],
+  "legacyDirectories": [
+    "legacy/OB"
+  ],
+  "legacyFiles": [
+    "legacy/PYQ/OB_PYQ_merged.pdf"
+  ]
+}

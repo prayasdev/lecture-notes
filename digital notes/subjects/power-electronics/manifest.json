@@ -1,0 +1,17 @@
+{
+  "id": "power-electronics",
+  "code": "POW-ELEC",
+  "title": "Power Electronics",
+  "shortTitle": "Power Electronics",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy past-question material for power electronics.",
+  "tags": [
+    "power electronics",
+    "past papers"
+  ],
+  "legacyDirectories": [],
+  "legacyFiles": [
+    "legacy/PYQ/Power Electronics PYQ.pdf"
+  ]
+}

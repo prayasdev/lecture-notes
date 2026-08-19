@@ -1,0 +1,17 @@
+{
+  "id": "power-systems-ii",
+  "code": "PS-II",
+  "title": "Power Systems II",
+  "shortTitle": "Power Systems II",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy assignments and reference material on power-system fault analysis and stability.",
+  "tags": [
+    "power systems",
+    "fault analysis",
+    "stability"
+  ],
+  "legacyDirectories": [
+    "legacy/Power System"
+  ]
+}

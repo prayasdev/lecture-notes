@@ -1,0 +1,18 @@
+{
+  "id": "english-technical-communication",
+  "code": "ENG",
+  "title": "English for Technical Communication",
+  "shortTitle": "English for Technical Communication",
+  "category": "Humanities & Communication",
+  "categoryId": "humanities-communication",
+  "description": "Legacy notes and course material for English, technical communication, and professional writing.",
+  "tags": [
+    "technical communication",
+    "writing",
+    "language skills"
+  ],
+  "legacyDirectories": [
+    "legacy/ENG Saheen Mam",
+    "legacy/ENG Sankhipta Puri"
+  ]
+}

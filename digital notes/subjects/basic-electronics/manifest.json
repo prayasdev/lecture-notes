@@ -1,0 +1,17 @@
+{
+  "id": "basic-electronics",
+  "code": "BE",
+  "title": "Basic Electronics",
+  "shortTitle": "Basic Electronics",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy notes and reference material for foundational electronic devices and circuits.",
+  "tags": [
+    "electronics",
+    "fet",
+    "integrated circuits"
+  ],
+  "legacyDirectories": [
+    "legacy/BE"
+  ]
+}

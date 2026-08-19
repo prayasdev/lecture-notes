@@ -1,0 +1,17 @@
+{
+  "id": "microprocessors-microcontrollers-laboratory",
+  "code": "MPMC-LAB",
+  "title": "Microprocessors & Microcontrollers Laboratory",
+  "shortTitle": "Microprocessors & Microcontrollers Laboratory",
+  "category": "Electrical & Electronics",
+  "categoryId": "electrical-electronics",
+  "description": "Legacy laboratory records for microprocessor and microcontroller experiments.",
+  "tags": [
+    "microprocessor",
+    "microcontroller",
+    "laboratory"
+  ],
+  "legacyDirectories": [
+    "legacy/MPMC LAB"
+  ]
+}

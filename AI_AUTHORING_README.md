@@ -123,6 +123,25 @@ Only add a figure when it aids the lesson. Give each figure accurate alt text an
 }
 ```
 
+### Legacy-only manifest pattern
+
+For a subject with no Markdown modules, omit `modules`. Use `legacyDirectories` to register one or more complete folders under `digital notes/legacy/`; use `legacyFiles` only for subject-specific files held in a shared folder such as `legacy/PYQ/`.
+
+```json
+{
+  "id": "example-legacy-subject",
+  "code": "EXAMPLE",
+  "title": "Example Legacy Subject",
+  "shortTitle": "Example",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "A concise description of the available legacy collection.",
+  "tags": ["example topic"],
+  "legacyDirectories": ["legacy/Example Notes"],
+  "legacyFiles": ["legacy/PYQ/Example Subject PYQ.pdf"]
+}
+```
+
 ## Completion checklist
 
 Before finishing, verify every module file exists, every local image path resolves from its own module folder, each manifest module points to the correct file, citations match the reference list, and all content is committed with the regenerated `website/src/library.generated.ts`.

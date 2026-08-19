@@ -1,0 +1,16 @@
+{
+  "id": "power-system-laboratory",
+  "code": "PS-LAB",
+  "title": "Power System Laboratory",
+  "shortTitle": "Power System Laboratory",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy laboratory manual for power-system experiments.",
+  "tags": [
+    "power systems",
+    "laboratory"
+  ],
+  "legacyDirectories": [
+    "legacy/Ps lab"
+  ]
+}

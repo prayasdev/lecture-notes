@@ -1,0 +1,16 @@
+{
+  "id": "electrical-machines-laboratory",
+  "code": "EM-LAB",
+  "title": "Electrical Machines Laboratory",
+  "shortTitle": "Electrical Machines Laboratory",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy experiment sheets for electrical machines laboratory work.",
+  "tags": [
+    "electrical machines",
+    "laboratory"
+  ],
+  "legacyDirectories": [
+    "legacy/Machines Lab"
+  ]
+}

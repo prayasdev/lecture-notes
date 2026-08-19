@@ -8,6 +8,1297 @@ export const library = {
   "branch": "main",
   "subjects": [
     {
+      "id": "analog-digital-electronics",
+      "code": "ADE",
+      "title": "Analog & Digital Electronics",
+      "shortTitle": "Analog & Digital Electronics",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy notes and reference material for analog and digital electronic circuits.",
+      "tags": [
+        "analog electronics",
+        "digital logic",
+        "circuits"
+      ],
+      "legacyDirectories": [
+        "legacy/ADE"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/ADE/4 bit Binary_Multiplier.pdf",
+          "title": "4 Bit Binary Multiplier",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/4%20bit%20Binary_Multiplier.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/74ls155.pdf",
+          "title": "74ls155",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/74ls155.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/ADE- AEC.pdf",
+          "title": "ADE  AEC",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/ADE-%20AEC.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/Comb Circuits.pdf",
+          "title": "Comb Circuits",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/Comb%20Circuits.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/Flip Flop conversions.pdf",
+          "title": "Flip Flop Conversions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/Flip%20Flop%20conversions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/K-Map examples.pdf",
+          "title": "K Map Examples",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/K-Map%20examples.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/K-Map.pdf",
+          "title": "K Map",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/K-Map.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/QM Method.pdf",
+          "title": "QM Method",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/QM%20Method.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/Quine McCluskey Method.docx",
+          "title": "Quine McCluskey Method",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/Quine%20McCluskey%20Method.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/Seq Circuits.pdf",
+          "title": "Seq Circuits",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/Seq%20Circuits.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ADE/Verification of flip flops.docx",
+          "title": "Verification Of Flip Flops",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ADE/Verification%20of%20flip%20flops.docx",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "basic-civil-engineering",
+      "code": "BCE",
+      "title": "Basic Civil Engineering",
+      "shortTitle": "Basic Civil Engineering",
+      "category": "Basic Engineering",
+      "categoryId": "basic-engineering",
+      "description": "Legacy notes covering foundational civil engineering topics and practice material.",
+      "tags": [
+        "civil engineering",
+        "transportation",
+        "irrigation"
+      ],
+      "legacyDirectories": [
+        "legacy/BCE"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/BCE/BCE Module V/Dams.pdf",
+          "title": "Dams",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE%20Module%20V/Dams.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE Module V/border flooding.pdf",
+          "title": "Border Flooding",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE%20Module%20V/border%20flooding.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE Module V/canal.pdf",
+          "title": "Canal",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE%20Module%20V/canal.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE Module V/irrigation.pdf",
+          "title": "Irrigation",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE%20Module%20V/irrigation.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE- MOD 4 NOTES.pdf",
+          "title": "BCE  MOD 4 NOTES",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE-%20MOD%204%20NOTES.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE- MOD 5 NOTES.pdf",
+          "title": "BCE  MOD 5 NOTES",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE-%20MOD%205%20NOTES.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE- MODULE 2.pdf",
+          "title": "BCE  MODULE 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE-%20MODULE%202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE- MODULE 3 Transportation.pdf",
+          "title": "BCE  MODULE 3 Transportation",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE-%20MODULE%203%20Transportation.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE- Module IV upto End.pdf",
+          "title": "BCE  Module IV Upto End",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE-%20Module%20IV%20upto%20End.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BCE/BCE- Module-II by Mukherjee Sir.pdf",
+          "title": "BCE  Module II By Mukherjee Sir",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BCE/BCE-%20Module-II%20by%20Mukherjee%20Sir.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "basic-electrical-engineering",
+      "code": "BEE",
+      "title": "Basic Electrical Engineering",
+      "shortTitle": "Basic Electrical Engineering",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy notes, assignments, and worked material for basic electrical engineering.",
+      "tags": [
+        "circuit analysis",
+        "transformers",
+        "power systems"
+      ],
+      "legacyDirectories": [
+        "legacy/BEE"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/BEE/BEE MODULE 3 PART 1 (REVIEW OF MAGNETIC CIRCUITS).pdf",
+          "title": "BEE MODULE 3 PART 1 (REVIEW OF MAGNETIC CIRCUITS)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE%20MODULE%203%20PART%201%20(REVIEW%20OF%20MAGNETIC%20CIRCUITS).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE notes module 1.pdf",
+          "title": "BEE Notes Module 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE%20notes%20module%201.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- AC CIRCUITS MODULE 2 PART 1 (RMS AVERAGE AND SOME NUMERICALS).pdf",
+          "title": "BEE  AC CIRCUITS MODULE 2 PART 1 (RMS AVERAGE AND SOME NUMERICALS)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20AC%20CIRCUITS%20MODULE%202%20PART%201%20(RMS%20AVERAGE%20AND%20SOME%20NUMERICALS).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Assignment 1.pdf",
+          "title": "BEE  Assignment 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Assignment%201.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Bandwidth of RLC Circuit.pdf",
+          "title": "BEE  Bandwidth Of RLC Circuit",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Bandwidth%20of%20RLC%20Circuit.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Basic Terminology and Questions.pdf",
+          "title": "BEE  Basic Terminology And Questions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Basic%20Terminology%20and%20Questions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- DELTA – STAR TRANSFORMATIONS.pdf",
+          "title": "BEE  DELTA – STAR TRANSFORMATIONS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20DELTA%20%E2%80%93%20STAR%20TRANSFORMATIONS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Handwritten NODAL ANALYSIS MESH ANALYSIS.pdf",
+          "title": "BEE  Handwritten NODAL ANALYSIS MESH ANALYSIS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Handwritten%20NODAL%20ANALYSIS%20MESH%20ANALYSIS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- KCL and KVL.pdf",
+          "title": "BEE  KCL And KVL",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20KCL%20and%20KVL.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- KCL, KVL, Star delta conversion.pdf",
+          "title": "BEE  KCL, KVL, Star Delta Conversion",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20KCL%2C%20KVL%2C%20Star%20delta%20conversion.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- KIRCHOFF’S LAWS AND MESH ANALYSIS.pdf",
+          "title": "BEE  KIRCHOFF’S LAWS AND MESH ANALYSIS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20KIRCHOFF%E2%80%99S%20LAWS%20AND%20MESH%20ANALYSIS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- MODULE IV TRANSFORMERS.pdf",
+          "title": "BEE  MODULE IV TRANSFORMERS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20MODULE%20IV%20TRANSFORMERS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- MODULE V General Structure of Electrical Power Systems.pdf",
+          "title": "BEE  MODULE V General Structure Of Electrical Power Systems",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20MODULE%20V%20General%20Structure%20of%20Electrical%20Power%20Systems.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- MODULE V.pdf",
+          "title": "BEE  MODULE V",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20MODULE%20V.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Mathematical Formulae.pdf",
+          "title": "BEE  Mathematical Formulae",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Mathematical%20Formulae.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Mesh Node Analysis Question.pdf",
+          "title": "BEE  Mesh Node Analysis Question",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Mesh%20Node%20Analysis%20Question.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Nodal Analysis and Mesh Analysis.pdf",
+          "title": "BEE  Nodal Analysis And Mesh Analysis",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Nodal%20Analysis%20and%20Mesh%20Analysis.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Practice Questions for RL.pdf",
+          "title": "BEE  Practice Questions For RL",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Practice%20Questions%20for%20RL.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Preliminary Introduction.pdf",
+          "title": "BEE  Preliminary Introduction",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Preliminary%20Introduction.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Question Bulk 0.pdf",
+          "title": "BEE  Question Bulk 0",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Question%20Bulk%200.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Question Bulk 2.pdf",
+          "title": "BEE  Question Bulk 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Question%20Bulk%202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Question Bulk 3.pdf",
+          "title": "BEE  Question Bulk 3",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Question%20Bulk%203.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Question Bulk.pdf",
+          "title": "BEE  Question Bulk",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Question%20Bulk.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- RC Circuit questions.pdf",
+          "title": "BEE  RC Circuit Questions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20RC%20Circuit%20questions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- RESONANCE IN AC CIRCUITS.pdf",
+          "title": "BEE  RESONANCE IN AC CIRCUITS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20RESONANCE%20IN%20AC%20CIRCUITS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Source Transformation.pdf",
+          "title": "BEE  Source Transformation",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Source%20Transformation.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Star Delta Conversion Formula.pdf",
+          "title": "BEE  Star Delta Conversion Formula",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Star%20Delta%20Conversion%20Formula.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Superposition Question.pdf",
+          "title": "BEE  Superposition Question",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Superposition%20Question.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Thevnin, Norton, Maximum Power Transfer.pdf",
+          "title": "BEE  Thevnin, Norton, Maximum Power Transfer",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Thevnin%2C%20Norton%2C%20Maximum%20Power%20Transfer.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Transformer Diagram.pdf",
+          "title": "BEE  Transformer Diagram",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Transformer%20Diagram.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Transformer Props and Losses.pdf",
+          "title": "BEE  Transformer Props And Losses",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Transformer%20Props%20and%20Losses.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Transformer.pdf",
+          "title": "BEE  Transformer",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Transformer.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE- Waveform Table.pdf",
+          "title": "BEE  Waveform Table",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE-%20Waveform%20Table.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BEE/BEE.pdf",
+          "title": "BEE",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BEE/BEE.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "basic-electrical-engineering-laboratory",
+      "code": "BEE-LAB",
+      "title": "Basic Electrical Engineering Laboratory",
+      "shortTitle": "Basic Electrical Engineering Laboratory",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy laboratory manuals and experiment material for basic electrical engineering.",
+      "tags": [
+        "electrical laboratory",
+        "measurements",
+        "circuits"
+      ],
+      "legacyDirectories": [
+        "legacy/EE Lab"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/EE Lab/2nd SEm/Measurement of Earth Resistance .pdf",
+          "title": "Measurement Of Earth Resistance ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/Measurement%20of%20Earth%20Resistance%20.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/Measurement of hysterisis loss.pdf",
+          "title": "Measurement Of Hysterisis Loss",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/Measurement%20of%20hysterisis%20loss.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/RLC series circuit.pdf",
+          "title": "RLC Series Circuit",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/RLC%20series%20circuit.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/Testing of single phase energy meter.pdf",
+          "title": "Testing Of Single Phase Energy Meter",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/Testing%20of%20single%20phase%20energy%20meter.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/Thevenin Theorem.pdf",
+          "title": "Thevenin Theorem",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/Thevenin%20Theorem.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/field resistance and armature resistance .pdf",
+          "title": "Field Resistance And Armature Resistance ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/field%20resistance%20and%20armature%20resistance%20.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/o.c.c of a separately excited dc generator.pdf",
+          "title": "O.C.C Of A Separately Excited Dc Generator",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/o.c.c%20of%20a%20separately%20excited%20dc%20generator.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/EE Lab/2nd SEm/speed control of a dc shunt motor.pdf",
+          "title": "Speed Control Of A Dc Shunt Motor",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/EE%20Lab/2nd%20SEm/speed%20control%20of%20a%20dc%20shunt%20motor.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "basic-electronics",
+      "code": "BE",
+      "title": "Basic Electronics",
+      "shortTitle": "Basic Electronics",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy notes and reference material for foundational electronic devices and circuits.",
+      "tags": [
+        "electronics",
+        "fet",
+        "integrated circuits"
+      ],
+      "legacyDirectories": [
+        "legacy/BE"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/BE/BE- CRO and DSO.docx",
+          "title": "BE  CRO And DSO",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BE/BE-%20CRO%20and%20DSO.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BE/BE- FET parameters_MOSFET.pdf",
+          "title": "BE  FET Parameters MOSFET",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BE/BE-%20FET%20parameters_MOSFET.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BE/BE- Field effect transistor (FET).pdf",
+          "title": "BE  Field Effect Transistor (FET)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BE/BE-%20Field%20effect%20transistor%20(FET).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BE/BE- Integrated Circuits (Module 2).pdf",
+          "title": "BE  Integrated Circuits (Module 2)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BE/BE-%20Integrated%20Circuits%20(Module%202).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BE/BE_MODULE-II_updated.pdf",
+          "title": "BE MODULE II Updated",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BE/BE_MODULE-II_updated.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BE/BE_Module-3(1).pdf",
+          "title": "BE Module 3(1)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BE/BE_Module-3(1).pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "basic-mechanical-engineering",
+      "code": "BME",
+      "title": "Basic Mechanical Engineering",
+      "shortTitle": "Basic Mechanical Engineering",
+      "category": "Basic Engineering",
+      "categoryId": "basic-engineering",
+      "description": "Legacy notes and slide decks for introductory mechanical engineering.",
+      "tags": [
+        "thermodynamics",
+        "fluid mechanics",
+        "ic engines"
+      ],
+      "legacyDirectories": [
+        "legacy/BME"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/BME/BME- ABH 1 ET_Intro.pptx",
+          "title": "BME  ABH 1 ET Intro",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20ABH%201%20ET_Intro.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- ABH 2 CH 2.pptx",
+          "title": "BME  ABH 2 CH 2",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20ABH%202%20CH%202.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- CH 1_Introduction.pptx",
+          "title": "BME  CH 1 Introduction",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20CH%201_Introduction.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- CH 2_Property of gases.pptx",
+          "title": "BME  CH 2 Property Of Gases",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20CH%202_Property%20of%20gases.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- CH 3_Properties of steam.pptx",
+          "title": "BME  CH 3 Properties Of Steam",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20CH%203_Properties%20of%20steam.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- CH 6 - IC Engine.pptx",
+          "title": "BME  CH 6   IC Engine",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20CH%206%20-%20IC%20Engine.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- Engines Sima Mam.pptx",
+          "title": "BME  Engines Sima Mam",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20Engines%20Sima%20Mam.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- Fluid Mechanics.pptx",
+          "title": "BME  Fluid Mechanics",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20Fluid%20Mechanics.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- Mech Eng Study Help.pdf",
+          "title": "BME  Mech Eng Study Help",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20Mech%20Eng%20Study%20Help.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- Robotics Unit V-min (5).pdf",
+          "title": "BME  Robotics Unit V Min (5)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20Robotics%20Unit%20V-min%20(5).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- Thermodynamics Questions.pdf",
+          "title": "BME  Thermodynamics Questions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20Thermodynamics%20Questions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/BME/BME- Transmission of motion and power.pptx",
+          "title": "BME  Transmission Of Motion And Power",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/BME/BME-%20Transmission%20of%20motion%20and%20power.pptx",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "c-programming",
+      "code": "C",
+      "title": "C Programming",
+      "shortTitle": "C Programming",
+      "category": "Computer Science",
+      "categoryId": "computer-science",
+      "description": "Legacy notes and practice material for programming in C.",
+      "tags": [
+        "c programming",
+        "arrays",
+        "functions"
+      ],
+      "legacyDirectories": [
+        "legacy/C Pati Sir",
+        "legacy/C Sheela Ma'am"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/C Pati Sir/ACTUAL ARGUMENTS AND FORMAL ARGUMENTS.docx",
+          "title": "ACTUAL ARGUMENTS AND FORMAL ARGUMENTS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/ACTUAL%20ARGUMENTS%20AND%20FORMAL%20ARGUMENTS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/ARRAY USING FUNCTION-2.docx",
+          "title": "ARRAY USING FUNCTION 2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/ARRAY%20USING%20FUNCTION-2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/ARRAYS USING FUNCTIONS.docx",
+          "title": "ARRAYS USING FUNCTIONS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/ARRAYS%20USING%20FUNCTIONS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/ARRAYS-2.docx",
+          "title": "ARRAYS 2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/ARRAYS-2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/ARRAYS.docx",
+          "title": "ARRAYS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/ARRAYS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/C Functions.docx",
+          "title": "C Functions",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/C%20Functions.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS.docx",
+          "title": "CONTROL STATEMENTS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS1.docx",
+          "title": "CONTROL STATEMENTS1",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS1.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS2.docx",
+          "title": "CONTROL STATEMENTS2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS4.docx",
+          "title": "CONTROL STATEMENTS4",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS4.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS5.docx",
+          "title": "CONTROL STATEMENTS5",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS5.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS6.docx",
+          "title": "CONTROL STATEMENTS6",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS6.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/CONTROL STATEMENTS7.docx",
+          "title": "CONTROL STATEMENTS7",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/CONTROL%20STATEMENTS7.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/EXAMPLES.docx",
+          "title": "EXAMPLES",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/EXAMPLES.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/Example.docx",
+          "title": "Example",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/Example.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/FUNCTION CATAGORIES.docx",
+          "title": "FUNCTION CATAGORIES",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/FUNCTION%20CATAGORIES.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/FUNDAMENTALS OF STRINGS.docx",
+          "title": "FUNDAMENTALS OF STRINGS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/FUNDAMENTALS%20OF%20STRINGS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/JUMP STATEMENTS.docx",
+          "title": "JUMP STATEMENTS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/JUMP%20STATEMENTS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/Lab test answers.pdf",
+          "title": "Lab Test Answers",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/Lab%20test%20answers.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/OPERATORS.docx",
+          "title": "OPERATORS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/OPERATORS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/POINTERS.docx",
+          "title": "POINTERS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/POINTERS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/RECURSION.docx",
+          "title": "RECURSION",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/RECURSION.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/STRING EXAMPLES.docx",
+          "title": "STRING EXAMPLES",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/STRING%20EXAMPLES.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/STRUCTURE.docx",
+          "title": "STRUCTURE",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/STRUCTURE.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/String Function.docx",
+          "title": "String Function",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/String%20Function.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/TWO DIMENSIONAL ARRAYS-2.docx",
+          "title": "TWO DIMENSIONAL ARRAYS 2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/TWO%20DIMENSIONAL%20ARRAYS-2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/TWO DIMENSIONAL ARRAYS.docx",
+          "title": "TWO DIMENSIONAL ARRAYS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/TWO%20DIMENSIONAL%20ARRAYS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Pati Sir/pointer-2.docx",
+          "title": "Pointer 2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Pati%20Sir/pointer-2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Array and Structure.pdf",
+          "title": "C  Array And Structure",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Array%20and%20Structure.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Btree.pdf",
+          "title": "C  Btree",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Btree.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- DMA and certain imp terminologies.pdf",
+          "title": "C  DMA And Certain Imp Terminologies",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20DMA%20and%20certain%20imp%20terminologies.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Functions.pdf",
+          "title": "C  Functions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Functions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Keyboard shortcuts in Word.docx",
+          "title": "C  Keyboard Shortcuts In Word",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Keyboard%20shortcuts%20in%20Word.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Lab Imp questions.docx",
+          "title": "C  Lab Imp Questions",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Lab%20Imp%20questions.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Looping and branching.pdf",
+          "title": "C  Looping And Branching",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Looping%20and%20branching.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Loops.pdf",
+          "title": "C  Loops",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Loops.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Pointer Assignment.pdf",
+          "title": "C  Pointer Assignment",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Pointer%20Assignment.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Queue.pdf",
+          "title": "C  Queue",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Queue.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- Structures and Functions.pdf",
+          "title": "C  Structures And Functions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20Structures%20and%20Functions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C- bitwise shift in C.pdf",
+          "title": "C  Bitwise Shift In C",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-%20bitwise%20shift%20in%20C.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/C Sheela Ma'am/C-Calls.pdf",
+          "title": "C Calls",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/C%20Sheela%20Ma'am/C-Calls.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "control-systems",
+      "code": "CS",
+      "title": "Control Systems",
+      "shortTitle": "Control Systems",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy lecture notes for control-system analysis and compensator design.",
+      "tags": [
+        "control systems",
+        "bode plot",
+        "nyquist"
+      ],
+      "legacyDirectories": [
+        "legacy/CS Ashwini Sir"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/CS Ashwini Sir/1. Control System Lecture Notes - 13102025.pdf",
+          "title": "1. Control System Lecture Notes   13102025",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CS%20Ashwini%20Sir/1.%20Control%20System%20Lecture%20Notes%20-%2013102025.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/CS Ashwini Sir/2. Bode Plot & Lead Lag COmpensator - DocScanner Oct 31, 2025 12-03 PM.pdf",
+          "title": "2. Bode Plot & Lead Lag COmpensator   DocScanner Oct 31, 2025 12 03 PM",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CS%20Ashwini%20Sir/2.%20Bode%20Plot%20%26%20Lead%20Lag%20COmpensator%20-%20DocScanner%20Oct%2031%2C%202025%2012-03%20PM.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/CS Ashwini Sir/3. Last Modules - DOC-20251112-WA0001..pdf",
+          "title": "3. Last Modules   DOC 20251112 WA0001.",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CS%20Ashwini%20Sir/3.%20Last%20Modules%20-%20DOC-20251112-WA0001..pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/CS Ashwini Sir/4. Nyquist.pdf",
+          "title": "4. Nyquist",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CS%20Ashwini%20Sir/4.%20Nyquist.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "data-structures-algorithms",
+      "code": "DSA",
+      "title": "Data Structures & Algorithms",
+      "shortTitle": "Data Structures & Algorithms",
+      "category": "Computer Science",
+      "categoryId": "computer-science",
+      "description": "Legacy notes and questions covering common data structures and algorithms.",
+      "tags": [
+        "data structures",
+        "algorithms",
+        "graphs"
+      ],
+      "legacyDirectories": [
+        "legacy/DSA Lopa Mam"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/DSA Lopa Mam/CUPGS 4th Sem Internal Question Data Communication.docx",
+          "title": "CUPGS 4th Sem Internal Question Data Communication",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/CUPGS%204th%20Sem%20Internal%20Question%20Data%20Communication.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/Graphs.docx",
+          "title": "Graphs",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/Graphs.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/Hashing Sorting.docx",
+          "title": "Hashing Sorting",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/Hashing%20Sorting.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/Linked List Ops.DOCX",
+          "title": "Linked List Ops",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/Linked%20List%20Ops.DOCX",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/List.DOCX",
+          "title": "List",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/List.DOCX",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/Stack Queue.docx",
+          "title": "Stack Queue",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/Stack%20Queue.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/Traversal Question.docx",
+          "title": "Traversal Question",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/Traversal%20Question.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/DSA Lopa Mam/Trees.docx",
+          "title": "Trees",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSA%20Lopa%20Mam/Trees.docx",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "digital-signal-processing",
+      "code": "DSP",
+      "title": "Digital Signal Processing",
+      "shortTitle": "Digital Signal Processing",
+      "category": "Electrical & Electronics",
+      "categoryId": "electrical-electronics",
+      "description": "Legacy past-question material for digital signal processing.",
+      "tags": [
+        "digital signal processing",
+        "past papers"
+      ],
+      "legacyDirectories": [],
+      "legacyFiles": [
+        "legacy/DSP PYQ.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/DSP PYQ.pdf",
+          "title": "DSP PYQ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/DSP%20PYQ.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
       "id": "eeoe4001-energy-conservation-auditing",
       "code": "EEOE4001",
       "title": "Energy Conservation & Auditing",
@@ -88,7 +1379,7 @@ export const library = {
       ],
       "legacy": [
         {
-          "path": "sample-legacy-reference.pdf",
+          "path": "legacy/eeoe4001-energy-conservation-auditing/sample-legacy-reference.pdf",
           "title": "Sample Legacy Reference",
           "type": "PDF",
           "source": "local",
@@ -97,12 +1388,2190 @@ export const library = {
         }
       ],
       "practical": []
+    },
+    {
+      "id": "electrical-machines-i",
+      "code": "EM-I",
+      "title": "Electrical Machines I",
+      "shortTitle": "Electrical Machines I",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy notes and past-question material for transformers and DC machines.",
+      "tags": [
+        "electrical machines",
+        "transformers",
+        "dc machines"
+      ],
+      "legacyDirectories": [
+        "legacy/Machines JB Gupta"
+      ],
+      "legacyFiles": [
+        "legacy/PYQ/Electrical Machine Pyq.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Machines JB Gupta/1. Transformers.pdf",
+          "title": "1. Transformers",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/1.%20Transformers.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/10. Losses Testing and Maintenance of DC machines.pdf",
+          "title": "10. Losses Testing And Maintenance Of DC Machines",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/10.%20Losses%20Testing%20and%20Maintenance%20of%20DC%20machines.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/4. Construction of DC Machine.pdf",
+          "title": "4. Construction Of DC Machine",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/4.%20Construction%20of%20DC%20Machine.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/5. Armature Reaction & Commutation.pdf",
+          "title": "5. Armature Reaction & Commutation",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/5.%20Armature%20Reaction%20%26%20Commutation.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/6. Characteristics of DC Generators.pdf",
+          "title": "6. Characteristics Of DC Generators",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/6.%20Characteristics%20of%20DC%20Generators.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/7. Parallel Operation of DC Generator.pdf",
+          "title": "7. Parallel Operation Of DC Generator",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/7.%20Parallel%20Operation%20of%20DC%20Generator.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/8. Operating Characteristics and Applications of DC Motor.pdf",
+          "title": "8. Operating Characteristics And Applications Of DC Motor",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/8.%20Operating%20Characteristics%20and%20Applications%20of%20DC%20Motor.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines JB Gupta/9. Speed Control, Starting and Braking of DC Motors.pdf",
+          "title": "9. Speed Control, Starting And Braking Of DC Motors",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20JB%20Gupta/9.%20Speed%20Control%2C%20Starting%20and%20Braking%20of%20DC%20Motors.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PYQ/Electrical Machine Pyq.pdf",
+          "title": "Electrical Machine Pyq",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PYQ/Electrical%20Machine%20Pyq.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "electrical-machines-ii",
+      "code": "EM-II",
+      "title": "Electrical Machines II",
+      "shortTitle": "Electrical Machines II",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy scanned notes on single-phase induction machines.",
+      "tags": [
+        "electrical machines",
+        "induction motor"
+      ],
+      "legacyDirectories": [
+        "legacy/Manas Sir"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 093752.png",
+          "title": "Screenshot 2025 04 29 093752",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20093752.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 093949.png",
+          "title": "Screenshot 2025 04 29 093949",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20093949.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 094057.png",
+          "title": "Screenshot 2025 04 29 094057",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20094057.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 094218.png",
+          "title": "Screenshot 2025 04 29 094218",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20094218.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 095038.png",
+          "title": "Screenshot 2025 04 29 095038",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20095038.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 095209.png",
+          "title": "Screenshot 2025 04 29 095209",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20095209.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 095327.png",
+          "title": "Screenshot 2025 04 29 095327",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20095327.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 095415.png",
+          "title": "Screenshot 2025 04 29 095415",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20095415.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 095601.png",
+          "title": "Screenshot 2025 04 29 095601",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20095601.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 095704.png",
+          "title": "Screenshot 2025 04 29 095704",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20095704.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 100300.png",
+          "title": "Screenshot 2025 04 29 100300",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20100300.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 101027.png",
+          "title": "Screenshot 2025 04 29 101027",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20101027.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 101322.png",
+          "title": "Screenshot 2025 04 29 101322",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20101322.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 101504.png",
+          "title": "Screenshot 2025 04 29 101504",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20101504.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 101604.png",
+          "title": "Screenshot 2025 04 29 101604",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20101604.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102014.png",
+          "title": "Screenshot 2025 04 29 102014",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102014.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102036.png",
+          "title": "Screenshot 2025 04 29 102036",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102036.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102302.png",
+          "title": "Screenshot 2025 04 29 102302",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102302.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102434.png",
+          "title": "Screenshot 2025 04 29 102434",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102434.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102500.png",
+          "title": "Screenshot 2025 04 29 102500",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102500.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102507.png",
+          "title": "Screenshot 2025 04 29 102507",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102507.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102620.png",
+          "title": "Screenshot 2025 04 29 102620",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102620.png",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Manas Sir/Single Phase IM/Screenshot 2025-04-29 102819.png",
+          "title": "Screenshot 2025 04 29 102819",
+          "type": "PNG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Manas%20Sir/Single%20Phase%20IM/Screenshot%202025-04-29%20102819.png",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "electrical-machines-laboratory",
+      "code": "EM-LAB",
+      "title": "Electrical Machines Laboratory",
+      "shortTitle": "Electrical Machines Laboratory",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy experiment sheets for electrical machines laboratory work.",
+      "tags": [
+        "electrical machines",
+        "laboratory"
+      ],
+      "legacyDirectories": [
+        "legacy/Machines Lab"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Machines Lab/expt 1.pdf",
+          "title": "Expt 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20Lab/expt%201.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Machines Lab/expt 2.pdf",
+          "title": "Expt 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Machines%20Lab/expt%202.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "electrical-measurements-instrumentation",
+      "code": "EMI",
+      "title": "Electrical Measurements & Instrumentation",
+      "shortTitle": "Electrical Measurements & Instrumentation",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy past-question material for electrical measurements and instrumentation.",
+      "tags": [
+        "measurements",
+        "instrumentation",
+        "past papers"
+      ],
+      "legacyDirectories": [],
+      "legacyFiles": [
+        "legacy/PYQ/EMI PYQ.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/PYQ/EMI PYQ.pdf",
+          "title": "EMI PYQ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PYQ/EMI%20PYQ.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "engineering-chemistry",
+      "code": "CHE",
+      "title": "Engineering Chemistry",
+      "shortTitle": "Engineering Chemistry",
+      "category": "Basic Science",
+      "categoryId": "basic-science",
+      "description": "Legacy chemistry notes and assignment material.",
+      "tags": [
+        "chemistry",
+        "entropy",
+        "spectroscopy"
+      ],
+      "legacyDirectories": [
+        "legacy/CHE"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/CHE/CHEM- Module 2 Entropy and Equilibrium.pdf",
+          "title": "CHEM  Module 2 Entropy And Equilibrium",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CHE/CHEM-%20Module%202%20Entropy%20and%20Equilibrium.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/CHE/CHEM- Module III Spectroscopy Assignment.pdf",
+          "title": "CHEM  Module III Spectroscopy Assignment",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CHE/CHEM-%20Module%20III%20Spectroscopy%20Assignment.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/CHE/CHEM- Organic Carbocation and carbanion.pdf",
+          "title": "CHEM  Organic Carbocation And Carbanion",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CHE/CHEM-%20Organic%20Carbocation%20and%20carbanion.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/CHE/CHEM- Stereochemistry Module 4.pdf",
+          "title": "CHEM  Stereochemistry Module 4",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/CHE/CHEM-%20Stereochemistry%20Module%204.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "engineering-economics",
+      "code": "ECO",
+      "title": "Engineering Economics",
+      "shortTitle": "Engineering Economics",
+      "category": "Humanities & Management",
+      "categoryId": "humanities-management",
+      "description": "Legacy economics reference material for engineering study.",
+      "tags": [
+        "economics",
+        "banking",
+        "engineering economics"
+      ],
+      "legacyDirectories": [
+        "legacy/Economics"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Economics/Bank and functions.pdf",
+          "title": "Bank And Functions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Economics/Bank%20and%20functions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Economics/PDF Gallery_20241207_160315.pdf",
+          "title": "PDF Gallery 20241207 160315",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Economics/PDF%20Gallery_20241207_160315.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Economics/PDF Gallery_20241207_160855.pdf",
+          "title": "PDF Gallery 20241207 160855",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Economics/PDF%20Gallery_20241207_160855.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "engineering-physics",
+      "code": "PHY",
+      "title": "Engineering Physics",
+      "shortTitle": "Engineering Physics",
+      "category": "Basic Science",
+      "categoryId": "basic-science",
+      "description": "Legacy physics notes, questions, and laboratory material.",
+      "tags": [
+        "physics",
+        "quantum physics",
+        "optics"
+      ],
+      "legacyDirectories": [
+        "legacy/PHY"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/PHY/PHY Prac- BENDING OF BEAM.pdf",
+          "title": "PHY Prac  BENDING OF BEAM",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY%20Prac-%20BENDING%20OF%20BEAM.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY Prac- DOUBLE SLIT.pdf",
+          "title": "PHY Prac  DOUBLE SLIT",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY%20Prac-%20DOUBLE%20SLIT.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- Assignment - 2 2nd sem.pdf",
+          "title": "PHY  Assignment   2 2nd Sem",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20Assignment%20-%202%202nd%20sem.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- Assignment - 2.pdf",
+          "title": "PHY  Assignment   2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20Assignment%20-%202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- Expt_All Lab Manuals.pdf",
+          "title": "PHY  Expt All Lab Manuals",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20Expt_All%20Lab%20Manuals.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- Laser and Fibre Optics.pdf",
+          "title": "PHY  Laser And Fibre Optics",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20Laser%20and%20Fibre%20Optics.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- Laser by Shailesh.pdf",
+          "title": "PHY  Laser By Shailesh",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20Laser%20by%20Shailesh.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- Questions on Quantum Physics Unsolved.pdf",
+          "title": "PHY  Questions On Quantum Physics Unsolved",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20Questions%20on%20Quantum%20Physics%20Unsolved.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/PHY- quantum solved questions.pdf",
+          "title": "PHY  Quantum Solved Questions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/PHY-%20quantum%20solved%20questions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PHY/physics mod 2.pdf",
+          "title": "Physics Mod 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PHY/physics%20mod%202.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "english-technical-communication",
+      "code": "ENG",
+      "title": "English for Technical Communication",
+      "shortTitle": "English for Technical Communication",
+      "category": "Humanities & Communication",
+      "categoryId": "humanities-communication",
+      "description": "Legacy notes and course material for English, technical communication, and professional writing.",
+      "tags": [
+        "technical communication",
+        "writing",
+        "language skills"
+      ],
+      "legacyDirectories": [
+        "legacy/ENG Saheen Mam",
+        "legacy/ENG Sankhipta Puri"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/ENG Saheen Mam/Bias Free Language ..docx",
+          "title": "Bias Free Language .",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/Bias%20Free%20Language%20..docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/Consonant Sounds in English.docx",
+          "title": "Consonant Sounds In English",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/Consonant%20Sounds%20in%20English.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/Cross-cultural Communication.docx",
+          "title": "Cross Cultural Communication",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/Cross-cultural%20Communication.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/FORMAL LETTER  WRITING.docx",
+          "title": "FORMAL LETTER  WRITING",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/FORMAL%20LETTER%20%20WRITING.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/Module-1, Unit-III-Barriers to Communication.pdf",
+          "title": "Module 1, Unit III Barriers To Communication",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/Module-1%2C%20Unit-III-Barriers%20to%20Communication.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/Stress Pattern.docx",
+          "title": "Stress Pattern",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/Stress%20Pattern.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/THE 7 C's of Paragraph Writing.docx",
+          "title": "THE 7 C'S Of Paragraph Writing",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/THE%207%20C's%20of%20Paragraph%20Writing.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Saheen Mam/Vowel Sounds of English.docx",
+          "title": "Vowel Sounds Of English",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Saheen%20Mam/Vowel%20Sounds%20of%20English.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Channels of Business Communication.pdf",
+          "title": "Channels Of Business Communication",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Channels%20of%20Business%20Communication.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/DIFFERENCES BETWEEN AMERICAN AND BRITISH.pdf",
+          "title": "DIFFERENCES BETWEEN AMERICAN AND BRITISH",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/DIFFERENCES%20BETWEEN%20AMERICAN%20AND%20BRITISH.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/ENGLISH ASSIGNMENT.pdf",
+          "title": "ENGLISH ASSIGNMENT",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/ENGLISH%20ASSIGNMENT.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/English Tense.pdf",
+          "title": "English Tense",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/English%20Tense.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/English for Technical Writing-Syllabus.pdf",
+          "title": "English For Technical Writing Syllabus",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/English%20for%20Technical%20Writing-Syllabus.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/INTONATION RULES.pdf",
+          "title": "INTONATION RULES",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/INTONATION%20RULES.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Importance of Audience and Purpose.pdf",
+          "title": "Importance Of Audience And Purpose",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Importance%20of%20Audience%20and%20Purpose.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module -I-What is Technical Communication.pdf",
+          "title": "Module  I What Is Technical Communication",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%20-I-What%20is%20Technical%20Communication.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 1- Cross Cultural.pdf",
+          "title": "Module 1  Cross Cultural",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%201-%20Cross%20Cultural.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 1- Ethics in communication and Bias free communication.pdf",
+          "title": "Module 1  Ethics In Communication And Bias Free Communication",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%201-%20Ethics%20in%20communication%20and%20Bias%20free%20communication.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 1- Non Verbal Communication, Channels and Barriers.pdf",
+          "title": "Module 1  Non Verbal Communication, Channels And Barriers",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%201-%20Non%20Verbal%20Communication%2C%20Channels%20and%20Barriers.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 3 16 Nov 2023 11-45 am.pdf",
+          "title": "Module 3 16 Nov 2023 11 45 Am",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%203%2016%20Nov%202023%2011-45%20am.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 4- 7Cs and other notes.pdf",
+          "title": "Module 4  7Cs And Other Notes",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%204-%207Cs%20and%20other%20notes.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 4- Letter Writing.pdf",
+          "title": "Module 4  Letter Writing",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%204-%20Letter%20Writing.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 4-Report Writing.pdf",
+          "title": "Module 4 Report Writing",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%204-Report%20Writing.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 5- CV.pdf",
+          "title": "Module 5  CV",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%205-%20CV.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Module 5- Interview Skills (1).pdf",
+          "title": "Module 5  Interview Skills (1)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Module%205-%20Interview%20Skills%20(1).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Process of Communication-Types of Communication(Verbal,Non-Verbal).pdf",
+          "title": "Process Of Communication Types Of Communication(Verbal,Non Verbal)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Process%20of%20Communication-Types%20of%20Communication(Verbal%2CNon-Verbal).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/Stress Rules.pdf",
+          "title": "Stress Rules",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/Stress%20Rules.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-1.pdf",
+          "title": "Null 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-10.pdf",
+          "title": "Null 10",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-10.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-2.pdf",
+          "title": "Null 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-2.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-3.pdf",
+          "title": "Null 3",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-3.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-4.pdf",
+          "title": "Null 4",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-4.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-5.pdf",
+          "title": "Null 5",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-5.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-6.pdf",
+          "title": "Null 6",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-6.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-7.pdf",
+          "title": "Null 7",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-7.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-8.pdf",
+          "title": "Null 8",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-8.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ENG Sankhipta Puri/null-9.pdf",
+          "title": "Null 9",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ENG%20Sankhipta%20Puri/null-9.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "environmental-engineering",
+      "code": "ENV",
+      "title": "Environmental Engineering",
+      "shortTitle": "Environmental Engineering",
+      "category": "Environmental Engineering",
+      "categoryId": "environmental-engineering",
+      "description": "Legacy notes, practice questions, and reference material for environmental engineering.",
+      "tags": [
+        "environmental engineering",
+        "water treatment",
+        "wastewater"
+      ],
+      "legacyDirectories": [
+        "legacy/Environmental Engineering"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Environmental Engineering/01 ENVIRONMENTAL ENGINEERING.pdf",
+          "title": "01 ENVIRONMENTAL ENGINEERING",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/01%20ENVIRONMENTAL%20ENGINEERING.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/02 env engg mod 2.pdf",
+          "title": "02 Env Engg Mod 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/02%20env%20engg%20mod%202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/03 ENVIRONMENTAL ENGINEERING mod3.pdf",
+          "title": "03 ENVIRONMENTAL ENGINEERING Mod3",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/03%20ENVIRONMENTAL%20ENGINEERING%20mod3.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/04 env engg mod 4.pdf",
+          "title": "04 Env Engg Mod 4",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/04%20env%20engg%20mod%204.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Book (for Diagram) Noise pollution of EEpdf.pdf",
+          "title": "Book (For Diagram) Noise Pollution Of EEpdf",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Book%20(for%20Diagram)%20Noise%20pollution%20of%20EEpdf.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Book (for Diagram) Waste Water Treatment.pdf",
+          "title": "Book (For Diagram) Waste Water Treatment",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Book%20(for%20Diagram)%20Waste%20Water%20Treatment.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Book (for Diagram) Water Treatment.pdf",
+          "title": "Book (For Diagram) Water Treatment",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Book%20(for%20Diagram)%20Water%20Treatment.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Book Notes Waste water treatment.pdf",
+          "title": "Book Notes Waste Water Treatment",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Book%20Notes%20Waste%20water%20treatment.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Practice Questions mod 1 EE.docx",
+          "title": "Practice Questions Mod 1 EE",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Practice%20Questions%20mod%201%20EE.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Practice Questions mod 2 EE.docx",
+          "title": "Practice Questions Mod 2 EE",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Practice%20Questions%20mod%202%20EE.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Practice Questions mod 3 EE.docx",
+          "title": "Practice Questions Mod 3 EE",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Practice%20Questions%20mod%203%20EE.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Environmental Engineering/Practice Questions mod 4 EE.docx",
+          "title": "Practice Questions Mod 4 EE",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Environmental%20Engineering/Practice%20Questions%20mod%204%20EE.docx",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "machine-learning",
+      "code": "ML",
+      "title": "Machine Learning",
+      "shortTitle": "Machine Learning",
+      "category": "Artificial Intelligence",
+      "categoryId": "artificial-intelligence",
+      "description": "Legacy machine-learning notes and reference material.",
+      "tags": [
+        "machine learning",
+        "artificial intelligence"
+      ],
+      "legacyDirectories": [
+        "legacy/ML"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/ML/Complete.pdf",
+          "title": "Complete",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ML/Complete.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ML/ML FINAL (1).pdf",
+          "title": "ML FINAL (1)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ML/ML%20FINAL%20(1).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/ML/Sushil AI & ML_250521_185246.pdf",
+          "title": "Sushil AI & ML 250521 185246",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/ML/Sushil%20AI%20%26%20ML_250521_185246.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "microprocessors-microcontrollers-laboratory",
+      "code": "MPMC-LAB",
+      "title": "Microprocessors & Microcontrollers Laboratory",
+      "shortTitle": "Microprocessors & Microcontrollers Laboratory",
+      "category": "Electrical & Electronics",
+      "categoryId": "electrical-electronics",
+      "description": "Legacy laboratory records for microprocessor and microcontroller experiments.",
+      "tags": [
+        "microprocessor",
+        "microcontroller",
+        "laboratory"
+      ],
+      "legacyDirectories": [
+        "legacy/MPMC LAB"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/MPMC LAB/8253 01 Wave DSO.jpg",
+          "title": "8253 01 Wave DSO",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/MPMC%20LAB/8253%2001%20Wave%20DSO.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/MPMC LAB/8253 02 Wave DSO.jpg",
+          "title": "8253 02 Wave DSO",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/MPMC%20LAB/8253%2002%20Wave%20DSO.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/MPMC LAB/8253 03 Wave DSO.jpg",
+          "title": "8253 03 Wave DSO",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/MPMC%20LAB/8253%2003%20Wave%20DSO.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/MPMC LAB/8259 01 LCD Interfacing.jpg",
+          "title": "8259 01 LCD Interfacing",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/MPMC%20LAB/8259%2001%20LCD%20Interfacing.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/MPMC LAB/8259 02 LCD Interfacing.jpg",
+          "title": "8259 02 LCD Interfacing",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/MPMC%20LAB/8259%2002%20LCD%20Interfacing.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/MPMC LAB/Structured Workflow_ LED Blinking Using 8051 Micro.docx",
+          "title": "Structured Workflow  LED Blinking Using 8051 Micro",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/MPMC%20LAB/Structured%20Workflow_%20LED%20Blinking%20Using%208051%20Micro.docx",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "organisational-behaviour",
+      "code": "OB",
+      "title": "Organisational Behaviour",
+      "shortTitle": "Organisational Behaviour",
+      "category": "Humanities & Management",
+      "categoryId": "humanities-management",
+      "description": "Legacy notes, assignments, and past papers for organisational behaviour.",
+      "tags": [
+        "organisational behaviour",
+        "leadership",
+        "motivation"
+      ],
+      "legacyDirectories": [
+        "legacy/OB"
+      ],
+      "legacyFiles": [
+        "legacy/PYQ/OB_PYQ_merged.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/OB/1 OB Module 1 Part-I.pdf",
+          "title": "1 OB Module 1 Part I",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/1%20OB%20Module%201%20Part-I.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/10 Team & Group module-3.pptx",
+          "title": "10 Team & Group Module 3",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/10%20Team%20%26%20Group%20module-3.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/11 Leadership.docx",
+          "title": "11 Leadership",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/11%20Leadership.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/12 Module 4- ORGANISATIONAL CULTURE.pdf",
+          "title": "12 Module 4  ORGANISATIONAL CULTURE",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/12%20Module%204-%20ORGANISATIONAL%20CULTURE.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/13 Organization Change  (1).pdf",
+          "title": "13 Organization Change  (1)",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/13%20Organization%20Change%20%20(1).pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/2 OB- Module 1 Part-II.pdf",
+          "title": "2 OB  Module 1 Part II",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/2%20OB-%20Module%201%20Part-II.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/3 EVOLUTION OF OB.docx",
+          "title": "3 EVOLUTION OF OB",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/3%20EVOLUTION%20OF%20OB.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/4 Organizational Behaviour.2.docx",
+          "title": "4 Organizational Behaviour.2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/4%20Organizational%20Behaviour.2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/5 Theoretical Framework Of OB.pdf",
+          "title": "5 Theoretical Framework Of OB",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/5%20Theoretical%20Framework%20Of%20OB.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/6 Attitude Module-2.pdf",
+          "title": "6 Attitude Module 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/6%20Attitude%20Module-2.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/7 Personality Module- 2.pdf",
+          "title": "7 Personality Module  2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/7%20Personality%20Module-%202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/8 Perception.pdf",
+          "title": "8 Perception",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/8%20Perception.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/9 MOTIVATION-II.pptx",
+          "title": "9 MOTIVATION II",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/9%20MOTIVATION-II.pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/IMG-20250415-WA0012.jpg",
+          "title": "IMG 20250415 WA0012",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/IMG-20250415-WA0012.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/IMG-20250416-WA0001.jpg",
+          "title": "IMG 20250416 WA0001",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/IMG-20250416-WA0001.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/IMG-20250416-WA0002.jpg",
+          "title": "IMG 20250416 WA0002",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/IMG-20250416-WA0002.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/IMG-20250416-WA0003.jpg",
+          "title": "IMG 20250416 WA0003",
+          "type": "JPG",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/IMG-20250416-WA0003.jpg",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB ASSIGNMENT.PDF",
+          "title": "OB ASSIGNMENT",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB%20ASSIGNMENT.PDF",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB ASSIGNMENT1.pdf",
+          "title": "OB ASSIGNMENT1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB%20ASSIGNMENT1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB INTERNAL QUESTIONS.docx",
+          "title": "OB INTERNAL QUESTIONS",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB%20INTERNAL%20QUESTIONS.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB INTERNAL QUESTIONS.pdf",
+          "title": "OB INTERNAL QUESTIONS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB%20INTERNAL%20QUESTIONS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB_2nd internal_answers.pdf",
+          "title": "OB 2nd Internal Answers",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB_2nd%20internal_answers.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB_Important_Questions.docx",
+          "title": "OB Important Questions",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB_Important_Questions.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/OB/OB_Questions.pdf",
+          "title": "OB Questions",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/OB/OB_Questions.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PYQ/OB_PYQ_merged.pdf",
+          "title": "OB PYQ Merged",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PYQ/OB_PYQ_merged.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "power-electronics",
+      "code": "POW-ELEC",
+      "title": "Power Electronics",
+      "shortTitle": "Power Electronics",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy past-question material for power electronics.",
+      "tags": [
+        "power electronics",
+        "past papers"
+      ],
+      "legacyDirectories": [],
+      "legacyFiles": [
+        "legacy/PYQ/Power Electronics PYQ.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/PYQ/Power Electronics PYQ.pdf",
+          "title": "Power Electronics PYQ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PYQ/Power%20Electronics%20PYQ.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "power-station-engineering",
+      "code": "PSE",
+      "title": "Power Station Engineering",
+      "shortTitle": "Power Station Engineering",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy notes and assignments on thermal, hydro, and nuclear power stations.",
+      "tags": [
+        "power station",
+        "thermal power",
+        "hydro power"
+      ],
+      "legacyDirectories": [
+        "legacy/PSE Manas Sir"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/PSE Manas Sir/04 Nuclear Power Plant 03-19-2026 11.35.pdf",
+          "title": "04 Nuclear Power Plant 03 19 2026 11.35",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/04%20Nuclear%20Power%20Plant%2003-19-2026%2011.35.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/05 module V.pdf",
+          "title": "05 Module V",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/05%20module%20V.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/ASS Module – I & III (Hydro Power Plant)-1.pdf",
+          "title": "ASS Module – I & III (Hydro Power Plant) 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/ASS%20Module%20%E2%80%93%20I%20%26%20III%20(Hydro%20Power%20Plant)-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/ASS Thermal Power Plant.pdf",
+          "title": "ASS Thermal Power Plant",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/ASS%20Thermal%20Power%20Plant.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/CamScanner 02-12-2026 10.38.pdf",
+          "title": "CamScanner 02 12 2026 10.38",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/CamScanner%2002-12-2026%2010.38.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/Hydro Power Station Hand.pdf",
+          "title": "Hydro Power Station Hand",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/Hydro%20Power%20Station%20Hand.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/Hydro power station.pdf",
+          "title": "Hydro Power Station",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/Hydro%20power%20station.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSE Manas Sir/Module_1_Power_Station_Engineering.html",
+          "title": "Module 1 Power Station Engineering",
+          "type": "HTML",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSE%20Manas%20Sir/Module_1_Power_Station_Engineering.html",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "power-system-laboratory",
+      "code": "PS-LAB",
+      "title": "Power System Laboratory",
+      "shortTitle": "Power System Laboratory",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy laboratory manual for power-system experiments.",
+      "tags": [
+        "power systems",
+        "laboratory"
+      ],
+      "legacyDirectories": [
+        "legacy/Ps lab"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Ps lab/Power_System_1_Lab_Manual_5th_Sem_Final.docx",
+          "title": "Power System 1 Lab Manual 5th Sem Final",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Ps%20lab/Power_System_1_Lab_Manual_5th_Sem_Final.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Ps lab/Power_System_1_Lab_Manual_5th_Sem_Final.pdf",
+          "title": "Power System 1 Lab Manual 5th Sem Final",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Ps%20lab/Power_System_1_Lab_Manual_5th_Sem_Final.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "power-system-protection",
+      "code": "PSP",
+      "title": "Power System Protection",
+      "shortTitle": "Power System Protection",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy protection notes, assignments, relay material, and past-question papers.",
+      "tags": [
+        "power system protection",
+        "relays",
+        "circuit breakers"
+      ],
+      "legacyDirectories": [
+        "legacy/PSP Ashwini Sir"
+      ],
+      "legacyFiles": [
+        "legacy/Power System Protection PYQ.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/PSP Ashwini Sir/01 Introduction-protection-2026-1.pdf",
+          "title": "01 Introduction Protection 2026 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/01%20Introduction-protection-2026-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/02 Relay-basic-1.pdf",
+          "title": "02 Relay Basic 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/02%20Relay-basic-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/03 Relay basic-2026-2.pdf",
+          "title": "03 Relay Basic 2026 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/03%20Relay%20basic-2026-2.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/04 Relay-2.pdf",
+          "title": "04 Relay 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/04%20Relay-2.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/05 Relay-CT-PT-GROUNDING.pdf",
+          "title": "05 Relay CT PT GROUNDING",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/05%20Relay-CT-PT-GROUNDING.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/06 Merz price-feedder protection-solid state relay.pdf",
+          "title": "06 Merz Price Feedder Protection Solid State Relay",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/06%20Merz%20price-feedder%20protection-solid%20state%20relay.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/07 Aparatus Protection - UT3.pdf",
+          "title": "07 Aparatus Protection   UT3",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/07%20Aparatus%20Protection%20-%20UT3.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/08 Auto-reclosuer-translay relay-carrier current protection..pdf",
+          "title": "08 Auto Reclosuer Translay Relay Carrier Current Protection.",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/08%20Auto-reclosuer-translay%20relay-carrier%20current%20protection..pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/09 circuit breaker - bput.pptx1.pdf",
+          "title": "09 Circuit Breaker   Bput.Pptx1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/09%20circuit%20breaker%20-%20bput.pptx1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/10 numerical relay-ppt..pdf",
+          "title": "10 Numerical Relay Ppt.",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/10%20numerical%20relay-ppt..pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/174206.pdf",
+          "title": "174206",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/174206.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Chapter-3_Electrical_Protection_System.pdf",
+          "title": "Chapter 3 Electrical Protection System",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Chapter-3_Electrical_Protection_System.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Numerical-Relay-PPT-1.pdf",
+          "title": "Numerical Relay PPT 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Numerical-Relay-PPT-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/01 Introduction-protection-2026-1_ocred.pdf",
+          "title": "01 Introduction Protection 2026 1 Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/01%20Introduction-protection-2026-1_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/02 Relay-basic-1_ocred.pdf",
+          "title": "02 Relay Basic 1 Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/02%20Relay-basic-1_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/03 Relay basic-2026-2_ocred.pdf",
+          "title": "03 Relay Basic 2026 2 Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/03%20Relay%20basic-2026-2_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/04 Relay-2_ocred.pdf",
+          "title": "04 Relay 2 Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/04%20Relay-2_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/05 Relay-CT-PT-GROUNDING_ocred.pdf",
+          "title": "05 Relay CT PT GROUNDING Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/05%20Relay-CT-PT-GROUNDING_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/06 Merz price-feedder protection-solid state relay_ocred.pdf",
+          "title": "06 Merz Price Feedder Protection Solid State Relay Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/06%20Merz%20price-feedder%20protection-solid%20state%20relay_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/07 Aparatus Protection - UT3_ocred.pdf",
+          "title": "07 Aparatus Protection   UT3 Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/07%20Aparatus%20Protection%20-%20UT3_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/08 Auto-reclosuer-translay relay-carrier current protection._ocred.pdf",
+          "title": "08 Auto Reclosuer Translay Relay Carrier Current Protection. Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/08%20Auto-reclosuer-translay%20relay-carrier%20current%20protection._ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/09 circuit breaker - bput.pptx1_ocred.pdf",
+          "title": "09 Circuit Breaker   Bput.Pptx1 Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/09%20circuit%20breaker%20-%20bput.pptx1_ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/OCRed/10 numerical relay-ppt._ocred.pdf",
+          "title": "10 Numerical Relay Ppt. Ocred",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/OCRed/10%20numerical%20relay-ppt._ocred.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Power System Protection Assignment 3 Answers.docx",
+          "title": "Power System Protection Assignment 3 Answers",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Power%20System%20Protection%20Assignment%203%20Answers.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Power System Protection Assignment 3 Answers.pdf",
+          "title": "Power System Protection Assignment 3 Answers",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Power%20System%20Protection%20Assignment%203%20Answers.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Protection - assignment 3-CB.docx",
+          "title": "Protection   Assignment 3 CB",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Protection%20-%20assignment%203-CB.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Protection- Assignment- 1.docx",
+          "title": "Protection  Assignment  1",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Protection-%20Assignment-%201.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Protection- Assignment- 1.pdf",
+          "title": "Protection  Assignment  1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Protection-%20Assignment-%201.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PSP Ashwini Sir/Protection-assignment-2.docx",
+          "title": "Protection Assignment 2",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PSP%20Ashwini%20Sir/Protection-assignment-2.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Power System Protection PYQ.pdf",
+          "title": "Power System Protection PYQ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Power%20System%20Protection%20PYQ.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "power-systems-ii",
+      "code": "PS-II",
+      "title": "Power Systems II",
+      "shortTitle": "Power Systems II",
+      "category": "Electrical Engineering",
+      "categoryId": "electrical-engineering",
+      "description": "Legacy assignments and reference material on power-system fault analysis and stability.",
+      "tags": [
+        "power systems",
+        "fault analysis",
+        "stability"
+      ],
+      "legacyDirectories": [
+        "legacy/Power System"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Power System/Fault Analysis DocScanner 11 Apr 2026 7-14 pm.pdf",
+          "title": "Fault Analysis DocScanner 11 Apr 2026 7 14 Pm",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Power%20System/Fault%20Analysis%20DocScanner%2011%20Apr%202026%207-14%E2%80%AFpm.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Power System/PS-II-Assignment-1.pdf",
+          "title": "PS II Assignment 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Power%20System/PS-II-Assignment-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Power System/PS-II-Assignment-2.pdf",
+          "title": "PS II Assignment 2",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Power%20System/PS-II-Assignment-2.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Power System/Power system Stability 04-21-2026 10.27.pdf",
+          "title": "Power System Stability 04 21 2026 10.27",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Power%20System/Power%20system%20Stability%2004-21-2026%2010.27.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "professional-ethics",
+      "code": "ETHICS",
+      "title": "Professional Ethics",
+      "shortTitle": "Professional Ethics",
+      "category": "Humanities & Management",
+      "categoryId": "humanities-management",
+      "description": "Legacy module slides, notes, and past-question papers for professional ethics.",
+      "tags": [
+        "professional ethics",
+        "ethics",
+        "past papers"
+      ],
+      "legacyDirectories": [
+        "legacy/Professional Ethics"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Professional Ethics/01 Professional Ethics (Module-I).pptx",
+          "title": "01 Professional Ethics (Module I)",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/01%20Professional%20Ethics%20(Module-I).pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/02 Professional Ethics (Module-II).pptx",
+          "title": "02 Professional Ethics (Module II)",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/02%20Professional%20Ethics%20(Module-II).pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/03Professional Ethics (Module- III).pptx",
+          "title": "03Professional Ethics (Module  III)",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/03Professional%20Ethics%20(Module-%20III).pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/04 PE (Module-IV).pptx",
+          "title": "04 PE (Module IV)",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/04%20PE%20(Module-IV).pptx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/PE Pani Sir.pdf",
+          "title": "PE Pani Sir",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/PE%20Pani%20Sir.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/PYQs/PROFESSIONAL ETHICS 2ND SEMESTER.pdf",
+          "title": "PROFESSIONAL ETHICS 2ND SEMESTER",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/PYQs/PROFESSIONAL%20ETHICS%202ND%20SEMESTER.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/PYQs/PROFESSIONAL ETHICS- AEIE-AERO-AUTO-BIOTECH-CHEM-CIVIL-CSE-ELECTRICAL-ETC-1ST SEM BACK EXAM-2018-19.pdf",
+          "title": "PROFESSIONAL ETHICS  AEIE AERO AUTO BIOTECH CHEM CIVIL CSE ELECTRICAL ETC 1ST SEM BACK EXAM 2018 19",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/PYQs/PROFESSIONAL%20ETHICS-%20AEIE-AERO-AUTO-BIOTECH-CHEM-CIVIL-CSE-ELECTRICAL-ETC-1ST%20SEM%20BACK%20EXAM-2018-19.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/PYQs/PROFESSIONAL ETHICS-1.pdf",
+          "title": "PROFESSIONAL ETHICS 1",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/PYQs/PROFESSIONAL%20ETHICS-1.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/PYQs/PROFESSIONAL ETHICS-HB776-AE-CHE-CIV-CSE-ELE-ETC-ME-MME-PE-1BPE-19-20.pdf",
+          "title": "PROFESSIONAL ETHICS HB776 AE CHE CIV CSE ELE ETC ME MME PE 1BPE 19 20",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/PYQs/PROFESSIONAL%20ETHICS-HB776-AE-CHE-CIV-CSE-ELE-ETC-ME-MME-PE-1BPE-19-20.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Professional Ethics/Pre Professional Ethics.pptx",
+          "title": "Pre Professional Ethics",
+          "type": "PPTX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Professional%20Ethics/Pre%20Professional%20Ethics.pptx",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "programme-syllabus-reference",
+      "code": "SYLLABUS",
+      "title": "Programme Syllabus & Course Structure",
+      "shortTitle": "Programme Syllabus & Course Structure",
+      "category": "Academic Reference",
+      "categoryId": "academic-reference",
+      "description": "Legacy programme and semester syllabus documents.",
+      "tags": [
+        "syllabus",
+        "course structure",
+        "curriculum"
+      ],
+      "legacyDirectories": [
+        "legacy/Syllabus"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Syllabus/3rd Sem Master.pdf",
+          "title": "3rd Sem Master",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Master.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/01 Mathematics-HSBS2001.pdf",
+          "title": "01 Mathematics HSBS2001",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/01%20Mathematics-HSBS2001.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/02 Electrical Circuit Analysis-EEPC2001.docx.pdf",
+          "title": "02 Electrical Circuit Analysis EEPC2001.Docx",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/02%20Electrical%20Circuit%20Analysis-EEPC2001.docx.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/03 Electrical Machines-I-EEPC2002.pdf",
+          "title": "03 Electrical Machines I EEPC2002",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/03%20Electrical%20Machines-I-EEPC2002.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/04 ANALOG AND DIGITAL ELECTRONICS CIRCUIT-EOPC2002.pdf",
+          "title": "04 ANALOG AND DIGITAL ELECTRONICS CIRCUIT EOPC2002",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/04%20ANALOG%20AND%20DIGITAL%20ELECTRONICS%20CIRCUIT-EOPC2002.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/05 ELECTRICAL CIRCUIT ANALYSIS LAB-EEPC2201.pdf",
+          "title": "05 ELECTRICAL CIRCUIT ANALYSIS LAB EEPC2201",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/05%20ELECTRICAL%20CIRCUIT%20ANALYSIS%20LAB-EEPC2201.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/06 Electrical Machine-I Lab-EEPC2202.pdf",
+          "title": "06 Electrical Machine I Lab EEPC2202",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/06%20Electrical%20Machine-I%20Lab-EEPC2202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/07 ANALOG & DIGITAL ELECTRONICS CIRCUIT LAB-EOPC2202.pdf",
+          "title": "07 ANALOG & DIGITAL ELECTRONICS CIRCUIT LAB EOPC2202",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/07%20ANALOG%20%26%20DIGITAL%20ELECTRONICS%20CIRCUIT%20LAB-EOPC2202.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/3rd Sem Syllabus/ACC1- Python and Maching Learning - Labs.docx",
+          "title": "ACC1  Python And Maching Learning   Labs",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/3rd%20Sem%20Syllabus/ACC1-%20Python%20and%20Maching%20Learning%20-%20Labs.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/EE 4th Sem Syllabus.pdf",
+          "title": "EE 4th Sem Syllabus",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/EE%204th%20Sem%20Syllabus.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/EE 5th Sem Syllabus.pdf",
+          "title": "EE 5th Sem Syllabus",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/EE%205th%20Sem%20Syllabus.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/EE 6th Sem Syllabus.pdf",
+          "title": "EE 6th Sem Syllabus",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/EE%206th%20Sem%20Syllabus.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Syllabus/EE 7th Sem Syllabus.pdf",
+          "title": "EE 7th Sem Syllabus",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Syllabus/EE%207th%20Sem%20Syllabus.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
+    },
+    {
+      "id": "signals-systems",
+      "code": "S&S",
+      "title": "Signals & Systems",
+      "shortTitle": "Signals & Systems",
+      "category": "Electrical & Electronics",
+      "categoryId": "electrical-electronics",
+      "description": "Legacy notes and past-question papers for signals and systems.",
+      "tags": [
+        "signals",
+        "systems",
+        "convolution"
+      ],
+      "legacyDirectories": [
+        "legacy/Signals & Systems"
+      ],
+      "legacyFiles": [
+        "legacy/PYQ/Signal&System_PYQ.pdf"
+      ],
+      "modules": [],
+      "legacy": [
+        {
+          "path": "legacy/Signals & Systems/Elementary_signal_generation.docx",
+          "title": "Elementary Signal Generation",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/Elementary_signal_generation.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNAL & SYSTEMS - ECE-ETC-3RD SEM REGULAR & BACK EXAM-2018-19.pdf",
+          "title": "SIGNAL & SYSTEMS   ECE ETC 3RD SEM REGULAR & BACK EXAM 2018 19",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNAL%20%26%20SYSTEMS%20-%20ECE-ETC-3RD%20SEM%20REGULAR%20%26%20BACK%20EXAM-2018-19.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNAL & SYSTEMS -AEIECSE-ECE-EIE-ETC-IEE-IT - ITE- 5th sem Back Exam-2018-19.pdf",
+          "title": "SIGNAL & SYSTEMS  AEIECSE ECE EIE ETC IEE IT   ITE  5th Sem Back Exam 2018 19",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNAL%20%26%20SYSTEMS%20-AEIECSE-ECE-EIE-ETC-IEE-IT%20-%20ITE-%205th%20sem%20Back%20Exam-2018-19.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNAL & SYSTEMS-HB880-ECE-ETC-2BPE-19-20.pdf",
+          "title": "SIGNAL & SYSTEMS HB880 ECE ETC 2BPE 19 20",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNAL%20%26%20SYSTEMS-HB880-ECE-ETC-2BPE-19-20.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNAL AND SYSTEMS.pdf",
+          "title": "SIGNAL AND SYSTEMS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNAL%20AND%20SYSTEMS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNAL SYSTEMS-3RD SEM-ETC-21-22.pdf",
+          "title": "SIGNAL SYSTEMS 3RD SEM ETC 21 22",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNAL%20SYSTEMS-3RD%20SEM-ETC-21-22.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNALS AND SYSTEMS-3rd-2022-2023-Btech.pdf",
+          "title": "SIGNALS AND SYSTEMS 3rd 2022 2023 Btech",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNALS%20AND%20SYSTEMS-3rd-2022-2023-Btech.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/SIGNALS AND SYSTEMS.pdf",
+          "title": "SIGNALS AND SYSTEMS",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/SIGNALS%20AND%20SYSTEMS.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/SS Questions/Signals and Systems_3rd_23-24_ETC_REC3C002-Btech and Mtech.pdf",
+          "title": "Signals And Systems 3rd 23 24 ETC REC3C002 Btech And Mtech",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/SS%20Questions/Signals%20and%20Systems_3rd_23-24_ETC_REC3C002-Btech%20and%20Mtech.pdf",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/Signals & Systems/convolution.docx",
+          "title": "Convolution",
+          "type": "DOCX",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/Signals%20%26%20Systems/convolution.docx",
+          "collection": "legacy"
+        },
+        {
+          "path": "legacy/PYQ/Signal&System_PYQ.pdf",
+          "title": "Signal&System PYQ",
+          "type": "PDF",
+          "source": "local",
+          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/PYQ/Signal%26System_PYQ.pdf",
+          "collection": "legacy"
+        }
+      ],
+      "practical": []
     }
   ],
   "categories": [
     {
+      "id": "academic-reference",
+      "label": "Academic Reference"
+    },
+    {
+      "id": "artificial-intelligence",
+      "label": "Artificial Intelligence"
+    },
+    {
+      "id": "basic-engineering",
+      "label": "Basic Engineering"
+    },
+    {
+      "id": "basic-science",
+      "label": "Basic Science"
+    },
+    {
+      "id": "computer-science",
+      "label": "Computer Science"
+    },
+    {
+      "id": "electrical-electronics",
+      "label": "Electrical & Electronics"
+    },
+    {
       "id": "electrical-engineering",
       "label": "Electrical Engineering"
+    },
+    {
+      "id": "environmental-engineering",
+      "label": "Environmental Engineering"
+    },
+    {
+      "id": "humanities-communication",
+      "label": "Humanities & Communication"
+    },
+    {
+      "id": "humanities-management",
+      "label": "Humanities & Management"
     }
   ]
 } as const;

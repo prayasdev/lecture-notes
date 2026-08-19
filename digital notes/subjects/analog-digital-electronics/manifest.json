@@ -1,0 +1,17 @@
+{
+  "id": "analog-digital-electronics",
+  "code": "ADE",
+  "title": "Analog & Digital Electronics",
+  "shortTitle": "Analog & Digital Electronics",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy notes and reference material for analog and digital electronic circuits.",
+  "tags": [
+    "analog electronics",
+    "digital logic",
+    "circuits"
+  ],
+  "legacyDirectories": [
+    "legacy/ADE"
+  ]
+}

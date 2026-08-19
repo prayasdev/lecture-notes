@@ -1,0 +1,18 @@
+{
+  "id": "c-programming",
+  "code": "C",
+  "title": "C Programming",
+  "shortTitle": "C Programming",
+  "category": "Computer Science",
+  "categoryId": "computer-science",
+  "description": "Legacy notes and practice material for programming in C.",
+  "tags": [
+    "c programming",
+    "arrays",
+    "functions"
+  ],
+  "legacyDirectories": [
+    "legacy/C Pati Sir",
+    "legacy/C Sheela Ma'am"
+  ]
+}

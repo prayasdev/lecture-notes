@@ -1,0 +1,17 @@
+{
+  "id": "power-station-engineering",
+  "code": "PSE",
+  "title": "Power Station Engineering",
+  "shortTitle": "Power Station Engineering",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy notes and assignments on thermal, hydro, and nuclear power stations.",
+  "tags": [
+    "power station",
+    "thermal power",
+    "hydro power"
+  ],
+  "legacyDirectories": [
+    "legacy/PSE Manas Sir"
+  ]
+}

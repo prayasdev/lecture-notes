@@ -1,0 +1,17 @@
+{
+  "id": "environmental-engineering",
+  "code": "ENV",
+  "title": "Environmental Engineering",
+  "shortTitle": "Environmental Engineering",
+  "category": "Environmental Engineering",
+  "categoryId": "environmental-engineering",
+  "description": "Legacy notes, practice questions, and reference material for environmental engineering.",
+  "tags": [
+    "environmental engineering",
+    "water treatment",
+    "wastewater"
+  ],
+  "legacyDirectories": [
+    "legacy/Environmental Engineering"
+  ]
+}

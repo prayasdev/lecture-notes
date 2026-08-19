@@ -1,0 +1,17 @@
+{
+  "id": "engineering-economics",
+  "code": "ECO",
+  "title": "Engineering Economics",
+  "shortTitle": "Engineering Economics",
+  "category": "Humanities & Management",
+  "categoryId": "humanities-management",
+  "description": "Legacy economics reference material for engineering study.",
+  "tags": [
+    "economics",
+    "banking",
+    "engineering economics"
+  ],
+  "legacyDirectories": [
+    "legacy/Economics"
+  ]
+}

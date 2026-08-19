@@ -1,0 +1,16 @@
+{
+  "id": "machine-learning",
+  "code": "ML",
+  "title": "Machine Learning",
+  "shortTitle": "Machine Learning",
+  "category": "Artificial Intelligence",
+  "categoryId": "artificial-intelligence",
+  "description": "Legacy machine-learning notes and reference material.",
+  "tags": [
+    "machine learning",
+    "artificial intelligence"
+  ],
+  "legacyDirectories": [
+    "legacy/ML"
+  ]
+}

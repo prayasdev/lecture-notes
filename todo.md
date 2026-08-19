@@ -52,4 +52,10 @@
 - [x] Verify Vercel account access and create a professionally named project from the public GitHub repository.
 - [x] Deploy the Vercel-ready configuration to an available free `vercel.app` domain.
 - [x] Validate the published Vercel site and share its public URL.
+
+## Legacy Subject Registration
+
+- [x] Synchronize the repository and inventory the uploaded Legacy subject folders and files.
+- [x] Generate or update per-subject manifests for Legacy-only collections without adding Digital modules.
+- [x] Regenerate the catalogue, validate Legacy filtering and resources, then publish the update.
 ***

@@ -1,0 +1,17 @@
+{
+  "id": "engineering-physics",
+  "code": "PHY",
+  "title": "Engineering Physics",
+  "shortTitle": "Engineering Physics",
+  "category": "Basic Science",
+  "categoryId": "basic-science",
+  "description": "Legacy physics notes, questions, and laboratory material.",
+  "tags": [
+    "physics",
+    "quantum physics",
+    "optics"
+  ],
+  "legacyDirectories": [
+    "legacy/PHY"
+  ]
+}

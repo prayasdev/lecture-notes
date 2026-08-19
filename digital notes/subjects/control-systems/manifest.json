@@ -1,0 +1,17 @@
+{
+  "id": "control-systems",
+  "code": "CS",
+  "title": "Control Systems",
+  "shortTitle": "Control Systems",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy lecture notes for control-system analysis and compensator design.",
+  "tags": [
+    "control systems",
+    "bode plot",
+    "nyquist"
+  ],
+  "legacyDirectories": [
+    "legacy/CS Ashwini Sir"
+  ]
+}

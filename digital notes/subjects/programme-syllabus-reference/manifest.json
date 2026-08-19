@@ -1,0 +1,17 @@
+{
+  "id": "programme-syllabus-reference",
+  "code": "SYLLABUS",
+  "title": "Programme Syllabus & Course Structure",
+  "shortTitle": "Programme Syllabus & Course Structure",
+  "category": "Academic Reference",
+  "categoryId": "academic-reference",
+  "description": "Legacy programme and semester syllabus documents.",
+  "tags": [
+    "syllabus",
+    "course structure",
+    "curriculum"
+  ],
+  "legacyDirectories": [
+    "legacy/Syllabus"
+  ]
+}

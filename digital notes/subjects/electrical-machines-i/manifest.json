@@ -1,0 +1,20 @@
+{
+  "id": "electrical-machines-i",
+  "code": "EM-I",
+  "title": "Electrical Machines I",
+  "shortTitle": "Electrical Machines I",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy notes and past-question material for transformers and DC machines.",
+  "tags": [
+    "electrical machines",
+    "transformers",
+    "dc machines"
+  ],
+  "legacyDirectories": [
+    "legacy/Machines JB Gupta"
+  ],
+  "legacyFiles": [
+    "legacy/PYQ/Electrical Machine Pyq.pdf"
+  ]
+}

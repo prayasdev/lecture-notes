@@ -1,0 +1,17 @@
+{
+  "id": "basic-civil-engineering",
+  "code": "BCE",
+  "title": "Basic Civil Engineering",
+  "shortTitle": "Basic Civil Engineering",
+  "category": "Basic Engineering",
+  "categoryId": "basic-engineering",
+  "description": "Legacy notes covering foundational civil engineering topics and practice material.",
+  "tags": [
+    "civil engineering",
+    "transportation",
+    "irrigation"
+  ],
+  "legacyDirectories": [
+    "legacy/BCE"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "data-structures-algorithms",
+  "code": "DSA",
+  "title": "Data Structures & Algorithms",
+  "shortTitle": "Data Structures & Algorithms",
+  "category": "Computer Science",
+  "categoryId": "computer-science",
+  "description": "Legacy notes and questions covering common data structures and algorithms.",
+  "tags": [
+    "data structures",
+    "algorithms",
+    "graphs"
+  ],
+  "legacyDirectories": [
+    "legacy/DSA Lopa Mam"
+  ]
+}

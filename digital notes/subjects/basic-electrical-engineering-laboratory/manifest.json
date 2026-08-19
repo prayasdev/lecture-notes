@@ -1,0 +1,17 @@
+{
+  "id": "basic-electrical-engineering-laboratory",
+  "code": "BEE-LAB",
+  "title": "Basic Electrical Engineering Laboratory",
+  "shortTitle": "Basic Electrical Engineering Laboratory",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy laboratory manuals and experiment material for basic electrical engineering.",
+  "tags": [
+    "electrical laboratory",
+    "measurements",
+    "circuits"
+  ],
+  "legacyDirectories": [
+    "legacy/EE Lab"
+  ]
+}

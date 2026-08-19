@@ -1,0 +1,17 @@
+{
+  "id": "basic-electrical-engineering",
+  "code": "BEE",
+  "title": "Basic Electrical Engineering",
+  "shortTitle": "Basic Electrical Engineering",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Legacy notes, assignments, and worked material for basic electrical engineering.",
+  "tags": [
+    "circuit analysis",
+    "transformers",
+    "power systems"
+  ],
+  "legacyDirectories": [
+    "legacy/BEE"
+  ]
+}

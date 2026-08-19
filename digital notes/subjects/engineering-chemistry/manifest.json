@@ -1,0 +1,17 @@
+{
+  "id": "engineering-chemistry",
+  "code": "CHE",
+  "title": "Engineering Chemistry",
+  "shortTitle": "Engineering Chemistry",
+  "category": "Basic Science",
+  "categoryId": "basic-science",
+  "description": "Legacy chemistry notes and assignment material.",
+  "tags": [
+    "chemistry",
+    "entropy",
+    "spectroscopy"
+  ],
+  "legacyDirectories": [
+    "legacy/CHE"
+  ]
+}
