@@ -2,7 +2,11 @@
  * Nalanda Archive design system: a catalogue-first scholarly interface powered by distributed subject manifests.
  * The only fixed vocabulary is collection-level; subjects, categories, modules, and resources come from library.generated.ts.
  */
-import { Streamdown } from "streamdown";
+import "katex/dist/katex.min.css";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
+import { defaultRehypePlugins, defaultRemarkPlugins, Streamdown } from "streamdown";
+import type { StreamdownProps } from "streamdown";
 import {
   Archive,
   ArrowLeft,
@@ -73,6 +77,28 @@ const collectionMeta: Record<CollectionKey, { label: string; icon: typeof BookOp
   practical: { label: "Practical", icon: FlaskConical },
 };
 
+const readerRemarkPlugins: NonNullable<StreamdownProps["remarkPlugins"]> = [
+  defaultRemarkPlugins.gfm,
+  [remarkMath, { singleDollarTextMath: true }],
+];
+
+const readerRehypePlugins: NonNullable<StreamdownProps["rehypePlugins"]> = [
+  defaultRehypePlugins.harden,
+  defaultRehypePlugins.raw,
+  [rehypeKatex, { throwOnError: false, strict: "ignore" }],
+];
+
+function normalizeMathDelimiters(markdown: string) {
+  return markdown
+    .replace(/\\\[\s*\n?([\s\S]*?)\n?\s*\\\]/g, (_match, expression: string) => {
+      const normalizedExpression = expression.trim();
+      return /^[\d\s,;–-]+$/.test(normalizedExpression)
+        ? `[${normalizedExpression}]`
+        : `$$\n${normalizedExpression}\n$$`;
+    })
+    .replace(/\\\(([\s\S]*?)\\\)/g, (_match, expression: string) => `$${expression.trim()}$`);
+}
+
 function subjectCount(subject: SubjectItem, collection: CollectionKey) {
   if (collection === "digital") return subject.modules.length;
   if (collection === "legacy") return subject.legacy.length;
@@ -102,16 +128,16 @@ function SubjectRow({ subject, onOpen }: { subject: SubjectItem; onOpen: () => v
   const available = availableCollections(subject);
   return (
     <article className="subject-row">
-      <div className="subject-code">{subject.code}</div>
+      <div className="subject-code"><span>Register</span><b>{subject.code}</b></div>
       <div className="subject-primary">
         <h3>{subject.title}</h3>
         <p>{subject.description}</p>
       </div>
-      <div className="subject-category">{subject.category}</div>
+      <div className="subject-category"><span>Discipline</span><b>{subject.category}</b></div>
       <div className="subject-collections" aria-label="Available collections">
         {available.map((collection) => {
           const Icon = collectionMeta[collection].icon;
-          return <span key={collection} title={`${subjectCount(subject, collection)} ${collectionMeta[collection].label.toLowerCase()} item(s)`}><Icon aria-hidden="true" /> {subjectCount(subject, collection)}</span>;
+          return <span key={collection} title={`${subjectCount(subject, collection)} ${collectionMeta[collection].label.toLowerCase()} item(s)`}><Icon aria-hidden="true" /> <b>{subjectCount(subject, collection)}</b><small>{collectionMeta[collection].label}</small></span>;
         })}
       </div>
       <button className="row-open" type="button" onClick={onOpen} aria-label={`Open ${subject.title}`}>
@@ -154,6 +180,10 @@ export default function Home() {
   const selectedModule = useMemo(
     () => selectedSubject?.modules.find((module) => module.id === selectedModuleId) ?? null,
     [selectedModuleId, selectedSubject],
+  );
+  const renderedModuleContent = useMemo(
+    () => selectedModule ? normalizeMathDelimiters(selectedModule.content) : "",
+    [selectedModule],
   );
   const selectedSubjectCollections = useMemo(
     () => (selectedSubject ? availableCollections(selectedSubject) : []),
@@ -248,7 +278,15 @@ export default function Home() {
                 <button type="button" onClick={() => openExternal(selectedModule.rawUrl)}><FileText aria-hidden="true" /> Raw source</button>
               </div>
             </header>
-            <div className="manuscript-content"><Streamdown>{selectedModule.content}</Streamdown></div>
+            <div className="manuscript-content">
+              <Streamdown
+                parseIncompleteMarkdown={false}
+                remarkPlugins={readerRemarkPlugins}
+                rehypePlugins={readerRehypePlugins}
+              >
+                {renderedModuleContent}
+              </Streamdown>
+            </div>
           </article>
         </main>
       ) : selectedSubject ? (
@@ -317,7 +355,8 @@ export default function Home() {
               {mobileFiltersOpen ? <X aria-hidden="true" /> : <SlidersHorizontal aria-hidden="true" />} Filters
             </button>
             <div className={`filter-bank ${mobileFiltersOpen ? "is-open" : ""}`}>
-              <div className="collection-filter">
+              <div className="collection-filter" aria-label="Collection shelf">
+                <span className="collection-shelf-label">Collection shelf</span>
                 {(Object.keys(collectionMeta) as CollectionKey[]).map((key) => {
                   const Icon = collectionMeta[key].icon;
                   return (

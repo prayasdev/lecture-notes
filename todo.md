@@ -15,4 +15,11 @@
 - [x] Remove empty collection states and collection counts from subject pages when a subject does not include them.
 - [x] Verify the Digital-plus-Legacy subject navigation and document the single-collection manifest convention.
 - [x] Verify that filtering uses only actual collection counts and that subject navigation suppresses absent collections.
+
+## LaTeX Rendering Repair
+
+- [x] Identify the Markdown reader’s current math handling and representative equation syntax in the modules.
+- [x] Add reliable inline and display LaTeX rendering without modifying source note files.
+- [x] Verify mathematical notation in the reader at desktop and mobile widths.
+- [x] Publish the rendering correction and save a stable project checkpoint.
 ***

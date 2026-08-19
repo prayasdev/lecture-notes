@@ -111,3 +111,7 @@ Search, category selection, and sorting should be instant. A selected subject ex
 ### Information architecture
 
 Each subject owns a local `manifest.json` that is the source of truth for its title, code, category, description, tags, and whichever collections it actually contains. A subject can be Digital-only, Legacy-only, Practical-only, or a combination. The synchronization script reads these distributed manifests and creates a generated website index at build time. This makes resource filtering predictable without forcing a person to maintain one large central data file or display empty collections.
+
+### Accepted review amendments
+
+The desktop catalogue uses a visibly distinct **collection shelf** for All, Digital, Legacy, and Practical rather than treating collections as ordinary filter chips. Subject rows remain compact archival records: metadata-forward, ruled by columns, and supported by calm register labels and collection seals. Archive imagery is retained only as a labelled plate; the search, filters, and ordered subject index remain the first-read elements.
