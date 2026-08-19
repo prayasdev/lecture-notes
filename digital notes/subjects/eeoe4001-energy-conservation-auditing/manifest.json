@@ -3,10 +3,15 @@
   "code": "EEOE4001",
   "title": "Energy Conservation & Auditing",
   "shortTitle": "Energy & Auditing",
-  "description": "A five-module reference course covering energy audits, energy management, electrical-system efficiency, power quality, lighting, and economic analysis.",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "Energy systems, auditing, electrical efficiency, power quality, lighting, and project economics.",
+  "tags": ["energy audit", "power quality", "lighting", "economics"],
   "accent": "terracotta",
   "courseHours": 30,
   "legacyDirectory": "legacy/eeoe4001-energy-conservation-auditing",
+  "practicalDirectory": "practical/eeoe4001-energy-conservation-auditing",
+  "practical": [],
   "modules": [
     {
       "id": "module-01",

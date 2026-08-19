@@ -73,9 +73,41 @@ The repository must preserve a scalable content layout:
 | Repository area | Purpose |
 |---|---|
 | `digital notes/subjects/<subject-slug>/modules/` | Rendered Markdown source for each subject module. |
-| `digital notes/subjects/<subject-slug>/legacy/` | Future PDF, PPT, PPTX, and other legacy resources. |
+| `digital notes/legacy/<subject-slug>/` | Future PDF, PPT, PPTX, and other legacy resources. |
 | `digital notes/subjects/<subject-slug>/manifest.json` | Subject metadata, module metadata, and resource definitions. |
 | `website/` | Standalone static website source and build instructions. |
 
-The website will render registered Markdown modules inside the site. Legacy documents are listed from the manifest and opened through a GitHub raw-content URL pattern, so adding files does not break navigation. A subject is added by creating its folder, writing or extending its manifest, and placing the files in the documented locations.
-***
+The website will render registered Markdown modules inside the site. Legacy documents are discovered from the top-level archive and opened through a GitHub raw-content URL pattern, so adding files does not break navigation. A subject is added by creating its folder, writing or extending its manifest, and placing the files in the documented locations.
+
+## Style Decisions — Nalanda Archive Revision
+
+### Chosen direction
+**Nalanda Archive** is a contemporary scholarly interface inspired by the material culture of a historic seat of learning: sun-warmed brick, manuscript paper, cloister shadows, and restrained carved geometry. It is an interpretation rather than a literal historical reconstruction, so the interface remains readable, accessible, and useful for a library of fifty or more subjects.
+
+### Core principles
+
+The site must act as a **catalogue first** and a reader second. The landing page should show a calm search field, high-signal filters, and a compact subject index rather than expanding any one subject into five large cards. Digital notes, legacy documents, and practical resources are peer collections with one common taxonomy. Details appear only after the reader chooses a subject, category, or resource.
+
+### Color and material
+
+Use a **charred-tea black** (#2A211D) ground for the catalogue masthead and navigation, **manuscript parchment** (#F7F0E4) for reading surfaces, **Nalanda brick** (#B44F36) for selection and emphasis, **burnished brass** (#B8813D) for icons and count marks, and **weathered jade** (#476259) for practical-resource signals. This warm palette is grounded in paper, fired clay, metal, and stone rather than default “tech” colours. Avoid shiny gradients, repeated rounded cards, and decorative effects that compete with navigation.
+
+### Layout paradigm
+
+The primary desktop view is a **catalogue court**: a narrow collection rail, a search-and-filter header, and an ordered subject table/grid with concise metadata. The reader is a separate, distraction-free page. On mobile, filters become a compact sheet and the subject index becomes a stacked list; the search field remains visible without requiring a menu.
+
+### Signature elements
+
+The visual language uses one **terracotta threshold rule** for the active collection, small **archive seals** to identify Digital, Legacy, and Practical resource types, and a faint **brick lattice / manuscript-fiber texture** at low opacity. These motifs appear in the shell only—not inside the notes themselves.
+
+### Typography system
+
+**Noto Serif** provides a dignified reading and display voice with broad language coverage. **DM Sans** handles compact navigation, search, filters, and metadata. The hierarchy relies on contrast in scale and spacing rather than many weights: one elegant display level, one readable body level, and one disciplined metadata style.
+
+### Interaction and animation
+
+Search, category selection, and sorting should be instant. A selected subject expands through a short 180 ms fade/slide only; there are no decorative loops or scroll theatrics. Every action retains a clear route back to the catalogue. Reduced-motion preferences remove all nonessential transition.
+
+### Information architecture
+
+Each subject owns a local `manifest.json` that is the source of truth for its title, code, category, description, tags, collections, modules, and external/practical routes. The synchronization script reads these distributed manifests and creates a generated website index at build time. This makes resource filtering predictable without forcing a person to maintain one large central data file.

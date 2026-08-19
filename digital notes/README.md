@@ -1,8 +1,8 @@
-# Digital Notes Library
+# Digital Notes Archive
 
-This directory is the **source library** for every subject shown in the website. Each subject is self-contained so it can be added, moved, or archived without changing the core user interface.
+The archive is intentionally **distributed by subject**. Every subject retains a local manifest, so a new course can be created or moved without maintaining one large central JSON file.
 
-## Subject structure
+## Archive structure
 
 ```text
 digital notes/
@@ -15,21 +15,48 @@ digital notes/
           assets/
   legacy/
     <subject-slug>/
-      <future PDFs, PPTs, PPTXs, or other source materials>
+      <PDF, PPT, PPTX, DOCX, XLSX, ZIP>
+  practical/
+    <subject-slug>/
+      README.md
+      <optional local practical files>
 ```
 
-## Adding a new subject
+## Subject-local manifest
 
-Create a subject folder inside `subjects/`, add a `manifest.json`, and place each Markdown module in its own folder under `modules/`. Create a matching folder at `legacy/<subject-slug>/` for archived files. Run `node website/scripts/sync-notes.mjs` to refresh the generated website data.
+Each `subjects/<subject-slug>/manifest.json` holds only that subject’s metadata. It identifies the subject title, code, category, concise description, tags, Markdown modules, top-level legacy folder, and practical resources. The website synchronizer scans all local manifests and generates its own internal index. You never need to maintain a global catalog by hand.
 
-## Adding a new module
+```json
+{
+  "id": "example-subject",
+  "code": "EE0001",
+  "title": "Example Subject",
+  "shortTitle": "Example",
+  "category": "Electrical Engineering",
+  "categoryId": "electrical-engineering",
+  "description": "A concise catalogue description.",
+  "tags": ["machines", "analysis"],
+  "legacyDirectory": "legacy/example-subject",
+  "practicalDirectory": "practical/example-subject",
+  "practical": [
+    {
+      "id": "lab-site",
+      "title": "Lab practical repository",
+      "type": "Website",
+      "url": "https://example.edu/labs",
+      "description": "Optional WordPress or external reference route."
+    }
+  ],
+  "modules": []
+}
+```
 
-Add the module folder and Markdown file, then add a matching module entry to that subject's `manifest.json`. The entry must include its `id`, `title`, `summary`, `duration`, and the Markdown filename. Run the sync script afterwards. The website renders the Markdown as a full reading view and rewrites local `assets/...` paths to stable GitHub raw-content links.
+## Adding a subject
 
-## Adding legacy material
+Create the subject folder, add its local manifest and module folders, then create matching folders in `legacy/` and `practical/`. Run the synchronizer afterwards:
 
-Put PDF, PPT, PPTX, DOCX, or other legacy files inside `legacy/<subject-slug>/`. The synchronizer automatically discovers supported files and lists them in the website with a direct raw GitHub-content link. Add an optional `legacy` entry to a subject manifest only when you want to override a file title, type, or description. This preserves direct access without attempting to render unsupported formats in the browser.
+```bash
+node website/scripts/sync-notes.mjs
+```
 
-## Important conventions
-
-Use lowercase kebab-case for folders and do not rename a folder after publishing without updating the manifest. Keep related visual assets next to their module source. The Markdown file is the canonical source; generated website data is a build artifact.
+The website then detects the subject, category, collection counts, and resources. PDF and presentation files in the matching legacy folder are listed automatically. Practical resources may be local files or external WordPress, repository, or laboratory links registered in that subject’s own manifest.
