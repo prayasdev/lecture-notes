@@ -40,7 +40,7 @@ function listResources(directory, rootDirectory, allowedExtensions) {
     const absolutePath = path.join(directory, entry.name);
     if (entry.isDirectory()) return listResources(absolutePath, rootDirectory, allowedExtensions);
     const extension = path.extname(entry.name).toLowerCase();
-    if (entry.name.startsWith('.') || !allowedExtensions.has(extension)) return [];
+    if (entry.name.startsWith('.') || entry.name.toLowerCase() === 'readme.md' || entry.name.toLowerCase() === 'readme.txt' || !allowedExtensions.has(extension)) return [];
     return [{
       path: path.relative(rootDirectory, absolutePath).split(path.sep).join('/'),
       title: titleFromFilename(entry.name),

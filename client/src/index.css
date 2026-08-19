@@ -144,6 +144,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .subject-tabs button { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.52rem 0.7rem; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #7b6755; font-size: 0.76rem; font-weight: 700; }
 .subject-tabs button.is-active { border-color: var(--brick); color: var(--brick); }
 .subject-tabs svg { width: 0.86rem; }
+.subject-collection-summary { padding: 0.88rem 0; border-bottom: 1px solid rgba(42, 33, 29, 0.18); }
+.collection-mark { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.34rem 0.48rem; border: 1px solid rgba(42, 33, 29, 0.17); color: #705c4b; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.collection-mark svg { width: 0.82rem; }
+.collection-mark--digital { border-color: rgba(180, 79, 54, 0.38); color: var(--brick); }
+.collection-mark--legacy { border-color: rgba(184, 129, 61, 0.45); color: #876126; }
+.collection-mark--practical { border-color: rgba(71, 98, 89, 0.4); color: var(--jade); }
 .subject-collection-panel { padding-top: 0.75rem; }
 .module-directory, .resource-list { border-top: 1px solid rgba(42, 33, 29, 0.15); }
 .module-row, .resource-row { width: 100%; display: grid; align-items: center; text-align: left; border: 0; border-bottom: 1px solid rgba(42, 33, 29, 0.16); background: rgba(255, 250, 242, 0.34); transition: background 160ms var(--ease), transform 160ms var(--ease); }

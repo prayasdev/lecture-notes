@@ -24,17 +24,6 @@ export const library = {
       "accent": "terracotta",
       "courseHours": 30,
       "legacyDirectory": "legacy/eeoe4001-energy-conservation-auditing",
-      "practicalDirectory": "practical/eeoe4001-energy-conservation-auditing",
-      "practical": [
-        {
-          "path": "README.md",
-          "title": "README",
-          "type": "MD",
-          "source": "local",
-          "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/practical/eeoe4001-energy-conservation-auditing/README.md",
-          "collection": "practical"
-        }
-      ],
       "modules": [
         {
           "id": "module-01",
@@ -106,7 +95,8 @@ export const library = {
           "rawUrl": "https://github.com/prayasdev/lecture-notes/raw/refs/heads/main/digital%20notes/legacy/eeoe4001-energy-conservation-auditing/sample-legacy-reference.pdf",
           "collection": "legacy"
         }
-      ]
+      ],
+      "practical": []
     }
   ],
   "categories": [

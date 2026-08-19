@@ -12,15 +12,16 @@ import {
   FileText,
   FlaskConical,
   FolderOpen,
-  Menu,
   Search,
   SlidersHorizontal,
   X,
 } from "lucide-react";
+import type { CSSProperties } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { library } from "../../../website/src/library.generated";
 
 type CollectionKey = "all" | "digital" | "legacy" | "practical";
+type ContentCollectionKey = Exclude<CollectionKey, "all">;
 
 type ModuleItem = {
   id: string;
@@ -79,11 +80,15 @@ function subjectCount(subject: SubjectItem, collection: CollectionKey) {
   return subject.modules.length + subject.legacy.length + subject.practical.length;
 }
 
+function availableCollections(subject: SubjectItem): ContentCollectionKey[] {
+  return (["digital", "legacy", "practical"] as const).filter((collection) => subjectCount(subject, collection) > 0);
+}
+
 function openExternal(url: string) {
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
-function CollectionMark({ collection }: { collection: Exclude<CollectionKey, "all"> }) {
+function CollectionMark({ collection }: { collection: ContentCollectionKey }) {
   const Icon = collectionMeta[collection].icon;
   return (
     <span className={`collection-mark collection-mark--${collection}`}>
@@ -94,6 +99,7 @@ function CollectionMark({ collection }: { collection: Exclude<CollectionKey, "al
 }
 
 function SubjectRow({ subject, onOpen }: { subject: SubjectItem; onOpen: () => void }) {
+  const available = availableCollections(subject);
   return (
     <article className="subject-row">
       <div className="subject-code">{subject.code}</div>
@@ -103,9 +109,10 @@ function SubjectRow({ subject, onOpen }: { subject: SubjectItem; onOpen: () => v
       </div>
       <div className="subject-category">{subject.category}</div>
       <div className="subject-collections" aria-label="Available collections">
-        <span title={`${subject.modules.length} digital module(s)`}><BookOpenText aria-hidden="true" /> {subject.modules.length}</span>
-        <span title={`${subject.legacy.length} legacy resource(s)`}><Archive aria-hidden="true" /> {subject.legacy.length}</span>
-        <span title={`${subject.practical.length} practical resource(s)`}><FlaskConical aria-hidden="true" /> {subject.practical.length}</span>
+        {available.map((collection) => {
+          const Icon = collectionMeta[collection].icon;
+          return <span key={collection} title={`${subjectCount(subject, collection)} ${collectionMeta[collection].label.toLowerCase()} item(s)`}><Icon aria-hidden="true" /> {subjectCount(subject, collection)}</span>;
+        })}
       </div>
       <button className="row-open" type="button" onClick={onOpen} aria-label={`Open ${subject.title}`}>
         <ChevronRight aria-hidden="true" />
@@ -115,15 +122,6 @@ function SubjectRow({ subject, onOpen }: { subject: SubjectItem; onOpen: () => v
 }
 
 function ResourceList({ resources, collection }: { resources: ResourceItem[]; collection: "legacy" | "practical" }) {
-  if (!resources.length) {
-    return (
-      <div className="collection-empty">
-        <span>{collectionMeta[collection].label} collection is ready for this subject.</span>
-        <small>Add files to the matching archive folder, or register an external practical link in this subject’s manifest.</small>
-      </div>
-    );
-  }
-
   return (
     <div className="resource-list">
       {resources.map((resource) => (
@@ -146,7 +144,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [selectedSubjectId, setSelectedSubjectId] = useState<string | null>(null);
-  const [selectedCollection, setSelectedCollection] = useState<Exclude<CollectionKey, "all">>("digital");
+  const [selectedCollection, setSelectedCollection] = useState<ContentCollectionKey>("digital");
   const [selectedModuleId, setSelectedModuleId] = useState<string | null>(null);
 
   const selectedSubject = useMemo(
@@ -156,6 +154,10 @@ export default function Home() {
   const selectedModule = useMemo(
     () => selectedSubject?.modules.find((module) => module.id === selectedModuleId) ?? null,
     [selectedModuleId, selectedSubject],
+  );
+  const selectedSubjectCollections = useMemo(
+    () => (selectedSubject ? availableCollections(selectedSubject) : []),
+    [selectedSubject],
   );
 
   const filteredSubjects = useMemo(() => {
@@ -179,10 +181,12 @@ export default function Home() {
 
   const resultLabel = collection === "all" ? "subjects" : `${collectionMeta[collection].label.toLowerCase()} subjects`;
 
-  const openSubject = (subject: SubjectItem, preferredCollection?: Exclude<CollectionKey, "all">) => {
+  const openSubject = (subject: SubjectItem, preferredCollection?: ContentCollectionKey) => {
     setSelectedSubjectId(subject.id);
     setSelectedModuleId(null);
-    const targetCollection = preferredCollection ?? (collection === "all" ? "digital" : collection);
+    const available = availableCollections(subject);
+    const requested = preferredCollection ?? (collection === "all" ? undefined : collection);
+    const targetCollection = requested && available.includes(requested) ? requested : available[0] ?? "digital";
     setSelectedCollection(targetCollection);
     setMobileFiltersOpen(false);
     window.setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
@@ -195,15 +199,13 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (selectedSubject && selectedCollection === "digital" && !selectedSubject.modules.length) {
-      setSelectedCollection(selectedSubject.legacy.length ? "legacy" : "practical");
+    if (selectedSubject && !selectedSubjectCollections.includes(selectedCollection)) {
+      setSelectedCollection(selectedSubjectCollections[0] ?? "digital");
     }
-  }, [selectedSubject, selectedCollection]);
-
-  const activeCollectionIcon = collectionMeta[selectedCollection].icon;
+  }, [selectedSubject, selectedCollection, selectedSubjectCollections]);
 
   return (
-    <div className="nalanda-app" style={{ "--lattice": `url(${latticeImage})` } as React.CSSProperties}>
+    <div className="nalanda-app" style={{ "--lattice": `url(${latticeImage})` } as CSSProperties}>
       <header className="archive-topbar">
         <button type="button" className="seal-lockup" onClick={backToCatalogue} aria-label="Return to archive catalogue">
           <img src={sealImage} alt="" />
@@ -259,14 +261,12 @@ export default function Home() {
               <div className="subject-meta"><span>{selectedSubject.code}</span>{selectedSubject.tags?.map((tag) => <span key={tag}>#{tag}</span>)}</div>
             </div>
             <div className="subject-counts">
-              <span>{selectedSubject.modules.length}<small>Digital</small></span>
-              <span>{selectedSubject.legacy.length}<small>Legacy</small></span>
-              <span>{selectedSubject.practical.length}<small>Practical</small></span>
+              {selectedSubjectCollections.map((collection) => <span key={collection}>{subjectCount(selectedSubject, collection)}<small>{collectionMeta[collection].label}</small></span>)}
             </div>
           </header>
 
-          <div className="subject-tabs" role="tablist" aria-label="Subject collections">
-            {(["digital", "legacy", "practical"] as const).map((key) => {
+          {selectedSubjectCollections.length > 1 ? <div className="subject-tabs" role="tablist" aria-label="Subject collections">
+            {selectedSubjectCollections.map((key) => {
               const Icon = collectionMeta[key].icon;
               return (
                 <button key={key} type="button" role="tab" aria-selected={selectedCollection === key} className={selectedCollection === key ? "is-active" : ""} onClick={() => setSelectedCollection(key)}>
@@ -274,7 +274,7 @@ export default function Home() {
                 </button>
               );
             })}
-          </div>
+          </div> : selectedSubjectCollections[0] ? <div className="subject-collection-summary"><CollectionMark collection={selectedSubjectCollections[0]} /></div> : null}
 
           <section className="subject-collection-panel">
             {selectedCollection === "digital" ? (
@@ -299,7 +299,7 @@ export default function Home() {
             <div className="lead-copy">
               <span className="archive-kicker">Distributed subject archive</span>
               <h1>Archive catalogue</h1>
-              <p>Search across notes, original documents, and practical material without expanding the shelf.</p>
+              <p>Search the material each subject actually contains, without expanding the shelf.</p>
             </div>
             <figure className="archive-plate">
               <img src={heroImage} alt="Warm brick cloister study space inspired by a historic scholarly archive" />

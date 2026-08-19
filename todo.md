@@ -8,4 +8,11 @@
 - [x] Redesign the library shell with a responsive Nalanda-inspired archive theme, a revised premium palette, and refined typography.
 - [x] Verify rendered notes, raw GitHub links, filters, sample legacy resource, and mobile layout.
 - [ ] Publish the revised repository state and save a final project checkpoint.
+
+## Optional Collection Correction
+
+- [x] Make Digital, Legacy, and Practical independently optional in each subject manifest.
+- [x] Remove empty collection states and collection counts from subject pages when a subject does not include them.
+- [x] Verify the Digital-plus-Legacy subject navigation and document the single-collection manifest convention.
+- [x] Verify that filtering uses only actual collection counts and that subject navigation suppresses absent collections.
 ***

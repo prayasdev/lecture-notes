@@ -110,4 +110,4 @@ Search, category selection, and sorting should be instant. A selected subject ex
 
 ### Information architecture
 
-Each subject owns a local `manifest.json` that is the source of truth for its title, code, category, description, tags, collections, modules, and external/practical routes. The synchronization script reads these distributed manifests and creates a generated website index at build time. This makes resource filtering predictable without forcing a person to maintain one large central data file.
+Each subject owns a local `manifest.json` that is the source of truth for its title, code, category, description, tags, and whichever collections it actually contains. A subject can be Digital-only, Legacy-only, Practical-only, or a combination. The synchronization script reads these distributed manifests and creates a generated website index at build time. This makes resource filtering predictable without forcing a person to maintain one large central data file or display empty collections.

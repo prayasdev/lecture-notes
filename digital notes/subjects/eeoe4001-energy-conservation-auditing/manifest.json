@@ -10,8 +10,6 @@
   "accent": "terracotta",
   "courseHours": 30,
   "legacyDirectory": "legacy/eeoe4001-energy-conservation-auditing",
-  "practicalDirectory": "practical/eeoe4001-energy-conservation-auditing",
-  "practical": [],
   "modules": [
     {
       "id": "module-01",

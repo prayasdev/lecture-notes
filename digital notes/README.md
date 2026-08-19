@@ -24,7 +24,7 @@ digital notes/
 
 ## Subject-local manifest
 
-Each `subjects/<subject-slug>/manifest.json` holds only that subject’s metadata. It identifies the subject title, code, category, concise description, tags, Markdown modules, top-level legacy folder, and practical resources. The website synchronizer scans all local manifests and generates its own internal index. You never need to maintain a global catalog by hand.
+Each `subjects/<subject-slug>/manifest.json` holds only that subject’s metadata. It identifies the subject title, code, category, concise description, tags, and only the collections that the subject actually has. The website synchronizer scans all local manifests and generates its own internal index. You never need to maintain a global catalog by hand.
 
 ```json
 {
@@ -37,7 +37,6 @@ Each `subjects/<subject-slug>/manifest.json` holds only that subject’s metadat
   "description": "A concise catalogue description.",
   "tags": ["machines", "analysis"],
   "legacyDirectory": "legacy/example-subject",
-  "practicalDirectory": "practical/example-subject",
   "practical": [
     {
       "id": "lab-site",
@@ -59,4 +58,4 @@ Create the subject folder, add its local manifest and module folders, then creat
 node website/scripts/sync-notes.mjs
 ```
 
-The website then detects the subject, category, collection counts, and resources. PDF and presentation files in the matching legacy folder are listed automatically. Practical resources may be local files or external WordPress, repository, or laboratory links registered in that subject’s own manifest.
+The website detects the subject, category, and only the collections with at least one available item. A subject may contain **only Digital notes**, **only Legacy PDFs or presentations**, **only Practical resources**, or any combination. Omit unused collection keys and folders; the interface does not display empty tabs, counts, or placeholder panels. PDF and presentation files in a matching legacy folder are listed automatically. Practical resources may be local files or external WordPress, repository, or laboratory links registered in that subject’s own manifest.
