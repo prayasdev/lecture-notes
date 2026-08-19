@@ -1,0 +1,1217 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 &mdash; Power Station Engineering</title>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                tags: 'all',
+                tagSide: 'right'
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <style>
+        :root {
+            --page-bg: #ffffff;
+            --text: #1a1a1a;
+            --heading: #000000;
+            --accent: #1e3a8a;
+            --accent-light: #e8edf5;
+            --border: #333333;
+            --light-bg: #f8f9fa;
+            --box-bg: #fefefe;
+            --formula-bg: #fffdf7;
+            --note-bg: #f0f4fa;
+            --warning-bg: #fffbf0;
+            --important-bg: #fef5f5;
+            --table-stripe: #f5f6f8;
+            --table-header: #1e3a8a;
+            --table-header-text: #ffffff;
+        }
+        @media print {
+            :root {
+                --page-bg: #ffffff;
+                --text: #000000;
+            }
+            .toolbar {
+                display: none !important;
+            }
+            body {
+                font-size: 10.5pt;
+                line-height: 1.55;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+            @page {
+                margin: 1.8cm 2cm 1.8cm 2cm;
+            }
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', 'Georgia', 'Times New Roman', serif;
+            font-size: 11.5pt;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--page-bg);
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 50px 60px 50px;
+            text-align: justify;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5 {
+            color: var(--heading);
+            font-weight: 700;
+            margin-top: 1.6em;
+            margin-bottom: 0.5em;
+            text-align: left;
+            line-height: 1.3;
+            page-break-after: avoid;
+        }
+        h1 {
+            font-size: 1.9em;
+            text-align: center;
+            border-bottom: 3px double var(--accent);
+            padding-bottom: 14px;
+            margin-bottom: 0.8em;
+            letter-spacing: 0.5px;
+        }
+        h2 {
+            font-size: 1.45em;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 6px;
+            margin-top: 1.8em;
+            color: var(--accent);
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 1.4em;
+            padding-left: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        h4 {
+            font-size: 1.05em;
+            margin-top: 1.2em;
+        }
+        p {
+            margin-bottom: 0.75em;
+            orphans: 3;
+            widows: 3;
+        }
+        ul, ol {
+            margin: 0.5em 0 0.9em 1.8em;
+        }
+        li {
+            margin-bottom: 0.3em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0 1.2em 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+        thead th {
+            background: var(--table-header);
+            color: var(--table-header-text);
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+            letter-spacing: 0.3px;
+        }
+        tbody td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+        tbody tr:nth-child(even) {
+            background: var(--table-stripe);
+        }
+        tbody tr:hover {
+            background: #eef1f7;
+        }
+        .formula-box {
+            background: var(--formula-bg);
+            border: 1.5px solid var(--accent);
+            border-left: 6px solid var(--accent);
+            padding: 14px 18px;
+            margin: 1em 0;
+            font-family: 'Cambria Math', 'Times New Roman', serif;
+            page-break-inside: avoid;
+        }
+        .formula-box .formula-label {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+        }
+        .note-box {
+            background: var(--note-bg);
+            border: 1.5px solid #4a6db5;
+            border-left: 6px solid #4a6db5;
+            padding: 12px 16px;
+            margin: 1em 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+        .note-box::before {
+            content: '📘 NOTE';
+            display: block;
+            font-weight: 700;
+            color: #4a6db5;
+            font-size: 0.8em;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+        .warning-box {
+            background: var(--warning-bg);
+            border: 1.5px solid #c9a030;
+            border-left: 6px solid #c9a030;
+            padding: 12px 16px;
+            margin: 1em 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+        .warning-box::before {
+            content: '⚠️ IMPORTANT EXAM POINT';
+            display: block;
+            font-weight: 700;
+            color: #b08800;
+            font-size: 0.8em;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+        .important-box {
+            background: var(--important-bg);
+            border: 1.5px solid #c04040;
+            border-left: 6px solid #c04040;
+            padding: 12px 16px;
+            margin: 1em 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+        .important-box::before {
+            content: '🔴 CRITICAL CONCEPT';
+            display: block;
+            font-weight: 700;
+            color: #c04040;
+            font-size: 0.8em;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+        .memory-aid {
+            background: #f5fdf5;
+            border: 1.5px solid #5a9e5a;
+            border-left: 6px solid #5a9e5a;
+            padding: 12px 16px;
+            margin: 1em 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+        .memory-aid::before {
+            content: '🧠 MEMORY AID';
+            display: block;
+            font-weight: 700;
+            color: #3a7a3a;
+            font-size: 0.8em;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 1.2em 0;
+            page-break-inside: avoid;
+        }
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .figure-caption {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #444;
+            margin-top: 4px;
+            margin-bottom: 0.8em;
+        }
+        .derivation-step {
+            counter-reset: step;
+        }
+        .derivation-step li {
+            list-style: none;
+            counter-increment: step;
+            margin-bottom: 0.5em;
+            padding-left: 2em;
+            position: relative;
+        }
+        .derivation-step li::before {
+            content: 'Step ' counter(step) ':';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            font-weight: 600;
+            width: 25%;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 2em 0;
+        }
+        .toolbar {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 8px;
+            background: #ffffff;
+            padding: 6px 10px;
+            border: 1.5px solid #333;
+            border-radius: 2px;
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .toolbar button {
+            background: #ffffff;
+            border: 1.5px solid #1e3a8a;
+            color: #1e3a8a;
+            padding: 5px 12px;
+            cursor: pointer;
+            font-size: 0.78em;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            transition: background 0.15s, color 0.15s;
+        }
+        .toolbar button:hover {
+            background: #1e3a8a;
+            color: #ffffff;
+        }
+        .syllabus-block {
+            background: #fafafa;
+            border: 1.5px solid #555;
+            padding: 18px 22px;
+            margin: 0.8em 0 1.8em 0;
+            font-size: 0.94em;
+            line-height: 1.65;
+        }
+        .syllabus-block h3 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+            color: #000;
+        }
+        .indian-ref {
+            font-style: italic;
+            color: #444;
+            font-size: 0.92em;
+        }
+        sub, sup {
+            font-size: 0.78em;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        @media screen and (max-width: 860px) {
+            body {
+                padding: 20px 24px 40px 24px;
+                font-size: 10.5pt;
+            }
+            .toolbar {
+                top: 4px;
+                right: 4px;
+                gap: 3px;
+                padding: 4px 6px;
+            }
+            .toolbar button {
+                padding: 4px 7px;
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>    <!-- TOOLBAR -->    <div class="toolbar" id="toolbar">
+        <button onclick="window.print()" title="Print document">🖨 Print</button>
+        <button onclick="downloadPDF()" title="Download as PDF">📄 PDF</button>
+        <button onclick="downloadDOCX()" title="Download as DOCX">📝 DOCX</button>
+    </div>    <!-- ==================== TITLE ==================== -->    <h1>MODULE 1<br><small style="font-size:0.65em;font-weight:400;color:#555;">POWER STATION ENGINEERING</small></h1>    <!-- ==================== SYLLABUS ==================== -->    <div class="syllabus-block">
+        <h3>Module 1 Syllabus</h3>
+        <p><strong>Hours: 05</strong></p>
+        <p>Introduction to different sources of energy and general discussion on their application to generation, Indian Energy Scenario. Prediction of Load: Connected Load, Maximum Load, Demand Factor, Average Load, Load Factor, Load Duration Curves, Diversity Factor, Choice of Type of Generation, Capacity Factor, Reserve Factor, Plant Use Factor, Base Load, Intermediate Load and Peak Load Plants. Economics of Power Generation: Cost of Electrical Energy, Construction Costs, Fixed Cost, Costs for Energy, Depreciation of Plant, Fuel Cost, Economic Scheduling Principle, Annual Operating Costs, Effect of Load Factor on Cost per kWh, Tariff or Charge to Consumer.</p>
+    </div>    <!-- ==================== SECTION 1: ENERGY SOURCES ==================== -->    <h2>1. Sources of Energy for Power Generation</h2>    <h3>1.1 Classification of Energy Sources</h3>
+    <p>Energy is the fundamental driver of modern civilisation. In the context of electric power generation, energy sources are broadly classified based on their origin, renewability, and commercial viability. A thorough understanding of each source is essential for making informed decisions about generation mix, plant siting, and long-term energy planning.</p>    <div class="svg-container">
+        <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <defs>
+                <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                    <polygon points="0 0, 8 3, 0 6" fill="#1e3a8a"/>
+                </marker>
+            </defs>
+            <!-- Root -->
+            <rect x="260" y="10" width="200" height="36" rx="2" fill="#1e3a8a" stroke="#000" stroke-width="1.5"/>
+            <text x="360" y="33" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">ENERGY SOURCES</text>
+            <!-- Lines from root -->
+            <line x1="300" y1="46" x2="160" y2="70" stroke="#1e3a8a" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+            <line x1="420" y1="46" x2="560" y2="70" stroke="#1e3a8a" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+            <!-- Conventional -->
+            <rect x="60" y="72" width="200" height="30" rx="2" fill="#e8edf5" stroke="#1e3a8a" stroke-width="1.5"/>
+            <text x="160" y="92" text-anchor="middle" fill="#000" font-size="12" font-weight="700">CONVENTIONAL</text>
+            <text x="160" y="115" text-anchor="middle" fill="#444" font-size="11">(Non-Renewable)</text>
+            <!-- Non-Conventional -->
+            <rect x="460" y="72" width="200" height="30" rx="2" fill="#e8edf5" stroke="#1e3a8a" stroke-width="1.5"/>
+            <text x="560" y="92" text-anchor="middle" fill="#000" font-size="12" font-weight="700">NON-CONVENTIONAL</text>
+            <text x="560" y="115" text-anchor="middle" fill="#444" font-size="11">(Renewable)</text>
+            <!-- Conventional sub-items -->
+            <rect x="15" y="140" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="60" y="157" text-anchor="middle" fill="#000" font-size="10">Coal</text>
+            <rect x="115" y="140" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="160" y="157" text-anchor="middle" fill="#000" font-size="10">Oil / Diesel</text>
+            <rect x="215" y="140" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="260" y="157" text-anchor="middle" fill="#000" font-size="10">Natural Gas</text>
+            <rect x="65" y="178" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="110" y="195" text-anchor="middle" fill="#000" font-size="10">Nuclear</text>
+            <rect x="165" y="178" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="210" y="195" text-anchor="middle" fill="#000" font-size="10">Large Hydro</text>
+            <!-- Non-Conventional sub-items -->
+            <rect x="420" y="140" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="465" y="157" text-anchor="middle" fill="#000" font-size="10">Solar</text>
+            <rect x="520" y="140" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="565" y="157" text-anchor="middle" fill="#000" font-size="10">Wind</text>
+            <rect x="420" y="178" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="465" y="195" text-anchor="middle" fill="#000" font-size="10">Biomass</text>
+            <rect x="520" y="178" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="565" y="195" text-anchor="middle" fill="#000" font-size="10">Small Hydro</text>
+            <rect x="470" y="216" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="515" y="233" text-anchor="middle" fill="#000" font-size="10">Geothermal</text>
+            <rect x="380" y="254" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="425" y="271" text-anchor="middle" fill="#000" font-size="10">Tidal</text>
+            <rect x="480" y="254" width="90" height="26" rx="2" fill="#fff" stroke="#333" stroke-width="1"/>
+            <text x="525" y="271" text-anchor="middle" fill="#000" font-size="10">OTEC</text>
+            <!-- Lines from conventional -->
+            <line x1="110" y1="102" x2="60" y2="140" stroke="#555" stroke-width="0.8"/>
+            <line x1="160" y1="102" x2="160" y2="140" stroke="#555" stroke-width="0.8"/>
+            <line x1="210" y1="102" x2="260" y2="140" stroke="#555" stroke-width="0.8"/>
+            <line x1="140" y1="102" x2="110" y2="178" stroke="#555" stroke-width="0.8"/>
+            <line x1="180" y1="102" x2="210" y2="178" stroke="#555" stroke-width="0.8"/>
+            <!-- Lines from non-conventional -->
+            <line x1="510" y1="102" x2="465" y2="140" stroke="#555" stroke-width="0.8"/>
+            <line x1="560" y1="102" x2="565" y2="140" stroke="#555" stroke-width="0.8"/>
+            <line x1="510" y1="102" x2="465" y2="178" stroke="#555" stroke-width="0.8"/>
+            <line x1="560" y1="102" x2="565" y2="178" stroke="#555" stroke-width="0.8"/>
+            <line x1="530" y1="102" x2="515" y2="216" stroke="#555" stroke-width="0.8"/>
+            <line x1="490" y1="102" x2="425" y2="254" stroke="#555" stroke-width="0.8"/>
+            <line x1="550" y1="102" x2="525" y2="254" stroke="#555" stroke-width="0.8"/>
+            <!-- Legend -->
+            <rect x="180" y="310" width="14" height="14" fill="#e8edf5" stroke="#1e3a8a" stroke-width="1"/>
+            <text x="200" y="322" fill="#000" font-size="10">Depleting / Finite</text>
+            <rect x="380" y="310" width="14" height="14" fill="#e8edf5" stroke="#1e3a8a" stroke-width="1"/>
+            <text x="400" y="322" fill="#000" font-size="10">Replenishable / Infinite</text>
+        </svg>
+        <div class="figure-caption">Figure 1.1: Classification of Energy Sources for Power Generation</div>
+    </div>    <h3>1.2 Conventional (Non-Renewable) Energy Sources</h3>    <h4>1.2.1 Coal</h4>
+    <p>Coal is the most abundant and widely used fossil fuel for thermal power generation globally. In India, coal-fired thermal plants constitute the backbone of the electricity grid, contributing approximately 48&ndash;50% of the total installed capacity as of 2024&ndash;25. India possesses the fifth-largest coal reserves in the world, primarily concentrated in the eastern and central regions &mdash; Jharkhand, Odisha, Chhattisgarh, West Bengal, and Madhya Pradesh. The major coal-producing entities are Coal India Limited (CIL) and Singareni Collieries Company Limited (SCCL).</p>
+    <p><strong>Principle of Generation:</strong> Pulverised coal is burnt in a boiler furnace. The heat released converts demineralised water into high-pressure, high-temperature superheated steam. This steam expands through a steam turbine coupled to a synchronous generator, producing electricity at 50 Hz.</p>
+    <p><strong>Indian Reference:</strong> NTPC Vindhyachal Super Thermal Power Station (Madhya Pradesh, 4,760 MW) and NTPC Mundra (Gujarat) are among the largest coal-based plants. The ultra-mega power projects (UMPPs) such as Sasan (Madhya Pradesh, 3,960 MW) and Mundra UMPP (4,000 MW) represent large-scale coal-based generation in India.</p>    <div class="svg-container">
+        <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <!-- Block diagram coal plant -->
+            <rect x="10" y="90" width="80" height="40" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="50" y="107" text-anchor="middle" fill="#000" font-size="10" font-weight="600">Coal</text>
+            <text x="50" y="121" text-anchor="middle" fill="#000" font-size="10" font-weight="600">Supply</text>
+            <polygon points="90,110 102,100 102,120" fill="#1e3a8a"/>
+            <rect x="105" y="85" width="80" height="50" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="145" y="103" text-anchor="middle" fill="#000" font-size="9">Pulverising</text>
+            <text x="145" y="117" text-anchor="middle" fill="#000" font-size="9">Mill</text>
+            <text x="145" y="131" text-anchor="middle" fill="#000" font-size="9">&amp; Burner</text>
+            <polygon points="185,110 197,100 197,120" fill="#1e3a8a"/>
+            <rect x="200" y="75" width="90" height="60" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="245" y="93" text-anchor="middle" fill="#000" font-size="9">Boiler</text>
+            <text x="245" y="107" text-anchor="middle" fill="#000" font-size="9">(Steam</text>
+            <text x="245" y="121" text-anchor="middle" fill="#000" font-size="9">Generation)</text>
+            <!-- Steam line -->
+            <polygon points="290,95 302,85 302,105" fill="#c04040"/>
+            <rect x="305" y="75" width="80" height="50" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="345" y="95" text-anchor="middle" fill="#000" font-size="9">Steam</text>
+            <text x="345" y="109" text-anchor="middle" fill="#000" font-size="9">Turbine</text>
+            <text x="345" y="123" text-anchor="middle" fill="#000" font-size="9">(HP, IP, LP)</text>
+            <!-- Shaft -->
+            <line x1="385" y1="100" x2="420" y2="100" stroke="#000" stroke-width="2.5" stroke-dasharray="5,2"/>
+            <rect x="422" y="80" width="70" height="40" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="457" y="97" text-anchor="middle" fill="#000" font-size="9">Alternator</text>
+            <text x="457" y="111" text-anchor="middle" fill="#000" font-size="9">(50 Hz)</text>
+            <polygon points="492,100 504,90 504,110" fill="#1e3a8a"/>
+            <rect x="508" y="82" width="70" height="36" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="543" y="104" text-anchor="middle" fill="#000" font-size="9">Grid</text>
+            <!-- Condenser loop -->
+            <line x1="315" y1="125" x2="315" y2="170" stroke="#1e3a8a" stroke-width="1.2"/>
+            <rect x="280" y="170" width="70" height="34" rx="3" fill="#fff" stroke="#000" stroke-width="1.2"/>
+            <text x="315" y="185" text-anchor="middle" fill="#000" font-size="8">Condenser</text>
+            <text x="315" y="197" text-anchor="middle" fill="#000" font-size="8">(Cooling Water)</text>
+            <line x1="315" y1="160" x2="260" y2="160" stroke="#1e3a8a" stroke-width="1.2"/>
+            <line x1="260" y1="160" x2="260" y2="75" stroke="#1e3a8a" stroke-width="1.2"/>
+            <polygon points="257,80 260,72 263,80" fill="#1e3a8a"/>
+            <text x="238" y="68" fill="#1e3a8a" font-size="8">Feed Water</text>
+        </svg>
+        <div class="figure-caption">Figure 1.2: Simplified Schematic of a Coal-Fired Thermal Power Plant</div>
+    </div>    <p><strong>Advantages:</strong> Abundant domestic availability in India; mature technology; low fuel cost per kWh; provides firm base-load power; well-established supply chain and skilled workforce.</p>
+    <p><strong>Disadvantages:</strong> High CO<sub>2</sub> and particulate emissions; significant ash handling problem (Indian coal has 30&ndash;45% ash content); large land requirement; long gestation period (4&ndash;6 years); water-intensive; environmental clearance challenges.</p>    <h4>1.2.2 Oil (Diesel) and Natural Gas</h4>
+    <p><strong>Diesel Power Plants:</strong> Used primarily for small isolated loads, emergency backup, and peak-load shaving. Diesel engine-generator sets ranging from a few kVA to about 15 MW per unit are common. In India, diesel generation is extensively used in remote areas (islands, hilly terrain, border areas) and as standby power in industries, hospitals, and commercial establishments. However, the high cost of diesel (approximately ₹90&ndash;100 per litre in 2024&ndash;25) makes it uneconomical for bulk generation.</p>
+    <p><strong>Natural Gas Power Plants:</strong> Natural gas can be used in (a) gas turbines operating on the Brayton cycle, (b) combined cycle gas turbine (CCGT) plants where waste heat from the gas turbine generates steam for a secondary steam turbine, achieving thermal efficiencies of 55&ndash;62%, and (c) gas engines for smaller capacities. India's gas-based capacity is approximately 25 GW, concentrated in Gujarat, Maharashtra, and along the HBJ (Hazira-Bijaipur-Jagdishpur) pipeline corridor. Major gas-based stations include NTPC Kawas (Gujarat), NTPC Dadri (Uttar Pradesh), and Reliance's Samalkot plant (Andhra Pradesh).</p>    <div class="svg-container">
+        <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="310" y="20" text-anchor="middle" fill="#000" font-size="12" font-weight="700">Combined Cycle Gas Turbine (CCGT) Schematic</text>
+            <!-- Gas Turbine section -->
+            <rect x="30" y="50" width="70" height="32" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="65" y="70" text-anchor="middle" fill="#000" font-size="9">Air Inlet</text>
+            <polygon points="100,66 112,56 112,76" fill="#1e3a8a"/>
+            <rect x="115" y="48" width="60" height="36" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="145" y="63" text-anchor="middle" fill="#000" font-size="9">Compressor</text>
+            <text x="145" y="77" text-anchor="middle" fill="#000" font-size="8">(Axial)</text>
+            <polygon points="175,66 187,56 187,76" fill="#1e3a8a"/>
+            <rect x="190" y="48" width="70" height="36" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="225" y="63" text-anchor="middle" fill="#000" font-size="9">Combustion</text>
+            <text x="225" y="77" text-anchor="middle" fill="#000" font-size="9">Chamber</text>
+            <!-- Fuel -->
+            <line x1="225" y1="48" x2="225" y2="30" stroke="#c04040" stroke-width="1.3"/>
+            <text x="240" y="28" fill="#c04040" font-size="8">Natural Gas</text>
+            <polygon points="260,66 272,56 272,76" fill="#1e3a8a"/>
+            <rect x="275" y="48" width="70" height="36" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="310" y="63" text-anchor="middle" fill="#000" font-size="9">Gas Turbine</text>
+            <text x="310" y="77" text-anchor="middle" fill="#000" font-size="8">(Expander)</text>
+            <line x1="345" y1="66" x2="375" y2="66" stroke="#000" stroke-width="2"/>
+            <rect x="378" y="52" width="65" height="30" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="410" y="71" text-anchor="middle" fill="#000" font-size="9">Generator 1</text>
+            <!-- Exhaust to HRSG -->
+            <line x1="310" y1="84" x2="310" y2="120" stroke="#c04040" stroke-width="2" stroke-dasharray="6,3"/>
+            <text x="280" y="105" fill="#c04040" font-size="8">Hot Exhaust</text>
+            <text x="280" y="116" fill="#c04040" font-size="8">~500&ndash;600&deg;C</text>
+            <!-- HRSG -->
+            <rect x="240" y="122" width="140" height="60" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <text x="310" y="142" text-anchor="middle" fill="#000" font-size="10" font-weight="600">HRSG</text>
+            <text x="310" y="157" text-anchor="middle" fill="#000" font-size="8">Heat Recovery Steam</text>
+            <text x="310" y="170" text-anchor="middle" fill="#000" font-size="8">Generator</text>
+            <!-- Steam turbine -->
+            <polygon points="380,152 392,142 392,162" fill="#1e3a8a"/>
+            <rect x="395" y="138" width="70" height="30" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="430" y="157" text-anchor="middle" fill="#000" font-size="9">Steam Turbine</text>
+            <line x1="465" y1="153" x2="495" y2="153" stroke="#000" stroke-width="2"/>
+            <rect x="498" y="139" width="60" height="30" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="528" y="158" text-anchor="middle" fill="#000" font-size="9">Generator 2</text>
+            <!-- Condenser -->
+            <line x1="430" y1="168" x2="430" y2="210" stroke="#1e3a8a" stroke-width="1.2"/>
+            <rect x="395" y="210" width="70" height="28" rx="2" fill="#fff" stroke="#000" stroke-width="1.2"/>
+            <text x="430" y="228" text-anchor="middle" fill="#000" font-size="8">Condenser</text>
+            <line x1="430" y1="238" x2="430" y2="260" stroke="#1e3a8a" stroke-width="1.2"/>
+            <line x1="395" y1="260" x2="310" y2="260" stroke="#1e3a8a" stroke-width="1.2"/>
+            <line x1="310" y1="260" x2="310" y2="182" stroke="#1e3a8a" stroke-width="1.2"/>
+            <polygon points="307,185 310,178 313,185" fill="#1e3a8a"/>
+            <text x="330" y="272" fill="#1e3a8a" font-size="8">Feed Water Pump</text>
+            <!-- Efficiency note -->
+            <text x="310" y="278" text-anchor="middle" fill="#1e3a8a" font-size="10" font-weight="600">Overall Thermal Efficiency: 55&ndash;62%</text>
+        </svg>
+        <div class="figure-caption">Figure 1.3: Combined Cycle Gas Turbine (CCGT) Plant &mdash; Schematic Flow Diagram</div>
+    </div>    <p><strong>Advantages of Gas:</strong> High thermal efficiency in CCGT mode; lower CO<sub>2</sub> per kWh than coal; quick start-up (15&ndash;30 minutes to full load); lower water requirement; smaller footprint; can be located near load centres.</p>
+    <p><strong>Disadvantages:</strong> Fuel cost volatility; limited domestic gas availability in India requiring LNG imports; gas pipeline infrastructure is still developing; less suited for base-load if gas supply is uncertain.</p>    <h4>1.2.3 Nuclear Power</h4>
+    <p>Nuclear power plants harness the energy released during nuclear fission of heavy elements such as Uranium-235. The heat produced in the reactor core is transferred to a coolant, which generates steam (either directly in boiling water reactors or through a heat exchanger in pressurised heavy water reactors). India operates predominantly Pressurised Heavy Water Reactors (PHWRs) owing to its three-stage nuclear programme envisioned by Dr. Homi J. Bhabha.</p>
+    <p><strong>Indian Nuclear Programme:</strong> Stage 1 &mdash; PHWRs using natural uranium; Stage 2 &mdash; Fast Breeder Reactors (FBRs) using plutonium; Stage 3 &mdash; Thorium-based reactors leveraging India's vast thorium reserves (monazite sands of Kerala and Tamil Nadu coasts). As of 2024&ndash;25, India has 22 operating reactors with a total capacity of about 6,780 MW, including plants at Tarapur (Maharashtra), Rawatbhata (Rajasthan), Kalpakkam (Tamil Nadu), Narora (Uttar Pradesh), Kakrapar (Gujarat), and Kudankulam (Tamil Nadu, VVER-1000 units with Russian collaboration).</p>
+    <p><strong>Advantages:</strong> Extremely high energy density (1 kg of uranium yields energy equivalent to ~2,500 tonnes of coal); zero greenhouse gas emissions during operation; very low fuel cost per kWh; reliable base-load operation at high plant load factor (PLF ~80&ndash;90% in Indian context).</p>
+    <p><strong>Disadvantages:</strong> Very high initial capital cost (₹12&ndash;15 crore per MW); long construction period (6&ndash;10 years); radioactive waste management challenges; public perception and siting difficulties; stringent safety regulations; limited indigenous uranium availability necessitating imports.</p>    <div class="important-box">
+        <p><strong>Exam Point &mdash; Energy Density Comparison:</strong></p>
+        <table style="margin:0;font-size:0.9em;">
+            <tr><td style="width:40%;">Coal (bituminous)</td><td>~24 MJ/kg</td></tr>
+            <tr><td>Oil (diesel)</td><td>~42 MJ/kg</td></tr>
+            <tr><td>Natural Gas</td><td>~50 MJ/kg</td></tr>
+            <tr><td>Uranium-235 (fission)</td><td>~80,000,000 MJ/kg (i.e., ~80 TJ/kg)</td></tr>
+        </table>
+        <p style="margin-top:6px;">This stark difference explains why nuclear plants refuel once every 12&ndash;18 months while coal plants require continuous fuel supply.</p>
+    </div>    <h4>1.2.4 Large Hydro Power</h4>
+    <p>Hydroelectric power harnesses the potential energy of water stored at an elevation. The power output is given by $P = \eta \rho g Q H$ where $\eta$ is the overall efficiency, $\rho = 1000\ \text{kg/m}^3$, $g = 9.81\ \text{m/s}^2$, $Q$ is the discharge in m<sup>3</sup>/s, and $H$ is the net head in metres. India has an assessed hydro potential of about 1,48,700 MW (at 60% load factor), of which approximately 46,000 MW has been developed. Major hydro stations include Bhakra Nangal (Punjab/Himachal, 1,325 MW), Tehri Dam (Uttarakhand, 2,400 MW including pumped storage), Koyna (Maharashtra, 1,960 MW), and Nathpa Jhakri (Himachal, 1,500 MW).</p>
+    <p><strong>Classification:</strong> Large hydro (&gt;25 MW), Small hydro (2&ndash;25 MW), Mini (&lt;2 MW), Micro (&lt;100 kW). Only large hydro is considered conventional; small hydro is classified as renewable in India.</p>
+    <p><strong>Advantages:</strong> Zero fuel cost; long plant life (60&ndash;100 years); very low operating cost; rapid response to load changes (ideal for peak load and frequency regulation); no emissions during operation; provides ancillary benefits (irrigation, flood control, water supply).</p>
+    <p><strong>Disadvantages:</strong> Very high initial capital cost; long gestation period (6&ndash;10 years); large land submergence causing displacement and ecological impact; generation dependent on monsoon and seasonal rainfall; siltation reduces reservoir capacity over time; transmission cost from remote Himalayan locations to load centres.</p>    <h3>1.3 Non-Conventional (Renewable) Energy Sources</h3>    <h4>1.3.1 Solar Energy</h4>
+    <p>India receives solar radiation of about 5&ndash;7 kWh/m<sup>2</sup>/day with 300&ndash;330 sunny days per year in most regions. The National Solar Mission (part of the National Action Plan on Climate Change) targets 500 GW of renewable capacity by 2030, with solar contributing the lion's share. Two primary technologies exist: (a) Solar Photovoltaic (PV) &mdash; direct conversion using semiconductor cells (mono-crystalline, poly-crystalline, thin-film); (b) Concentrated Solar Power (CSP) &mdash; using mirrors to focus sunlight on a receiver to produce steam for a turbine.</p>
+    <p><strong>Indian Landmarks:</strong> Bhadla Solar Park (Rajasthan, ~2,245 MW) is among the world's largest. Pavagada Solar Park (Karnataka, 2,050 MW), Rewa Solar Park (Madhya Pradesh, 750 MW). India's total installed solar capacity crossed 80 GW in 2024&ndash;25.</p>    <div class="svg-container">
+        <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="280" y="18" text-anchor="middle" fill="#000" font-size="11" font-weight="700">Solar Photovoltaic Generation &mdash; Schematic</text>
+            <!-- Sun -->
+            <circle cx="50" cy="45" r="22" fill="none" stroke="#000" stroke-width="1.5"/>
+            <circle cx="50" cy="45" r="14" fill="#f5d000" stroke="#000" stroke-width="0.8"/>
+            <!-- Rays -->
+            <line x1="72" y1="30" x2="90" y2="20" stroke="#c9a030" stroke-width="1"/>
+            <line x1="72" y1="45" x2="92" y2="45" stroke="#c9a030" stroke-width="1"/>
+            <line x1="72" y1="60" x2="90" y2="70" stroke="#c9a030" stroke-width="1"/>
+            <!-- Arrow to panel -->
+            <line x1="92" y1="45" x2="130" y2="45" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+            <text x="111" y="38" fill="#000" font-size="8">Solar</text>
+            <text x="111" y="60" fill="#000" font-size="8">Radiation</text>
+            <!-- PV Array -->
+            <rect x="135" y="22" width="100" height="46" rx="2" fill="#fff" stroke="#000" stroke-width="1.5"/>
+            <line x1="155" y1="22" x2="155" y2="68" stroke="#1e3a8a" stroke-width="0.6"/>
+            <line x1="175" y1="22" x2="175" y2="68" stroke="#1e3a8a" stroke-width="0.6"/>
+            <line x1="195" y1="22" x2="195" y2="68" stroke="#1e3a8a" stroke-width="0.6"/>
+            <line x1="215" y1="22" x2="215" y2="68" stroke="#1e3a8a" stroke-width="0.6"/>
+            <line x1="135" y1="35" x2="235" y2="35" stroke="#1e3a8a" stroke-width="0.6"/>
+            <line x1="135" y1="50" x2="235" y2="50" stroke="#1e3a8a" stroke-width="0.6"/>
+            <text x="185" y="80" text-anchor="middle" fill="#000" font-size="8">PV Module Array</text>
+            <!-- DC to Inverter -->
+            <line x1="235" y1="45" x2="275" y2="45" stroke="#000" stroke-width="1.5"/>
+            <rect x="278" y="30" width="70" height="30" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="313" y="49" text-anchor="middle" fill="#000" font-size="9">Inverter</text>
+            <text x="313" y="62" text-anchor="middle" fill="#000" font-size="7">DC &rarr; AC</text>
+            <!-- Transformer -->
+            <line x1="348" y1="45" x2="380" y2="45" stroke="#000" stroke-width="1.5"/>
+            <rect x="383" y="28" width="70" height="34" rx="2" fill="#fff" stroke="#000" stroke-width="1.3"/>
+            <text x="418" y="45" text-anchor="middle" fill="#000" font-size="9">Step-Up</text>
+            <text x="418" y="58" text-anchor="middle" fill="#000" font-size="9">Transformer</text>
+            <!-- Grid -->
+            <line x1="453" y1="45" x2="500" y2="45" stroke="#000" stroke-width="1.5"/>
+            <rect x="503" y="30" width="45" height="30" rx="2" fill="#e8edf5" stroke="#1e3a8a" stroke-width="1.3"/>
+            <text x="525" y="49" text-anchor="middle" fill="#1e3a8a" font-size="9" font-weight="600">GRID</text>
+            <!-- Labels -->
+            <text x="280" y="105" text-anchor="middle" fill="#1e3a8a" font-size="8">DC Power</text>
+            <text x="418" y="105" text-anchor="middle" fill="#1e3a8a" font-size="8">AC Power (400V &rarr; 11/33 kV)</text>
+            <!-- Power curve hint -->
+            <path d="M40,150 Q100,130 180,145 Q260,160 340,140 Q420,120 500,138" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+            <text x="180" y="175" text-anchor="middle" fill="#555" font-size="9">Typical Daily PV Output Curve (Peak ~Noon, Zero at Night)</text>
+            <!-- X-axis labels -->
+            <text x="40" y="185" text-anchor="middle" fill="#555" font-size="7">6 AM</text>
+            <text x="180" y="185" text-anchor="middle" fill="#555" font-size="7">12 Noon</text>
+            <text x="500" y="185" text-anchor="middle" fill="#555" font-size="7">6 PM</text>
+            <line x1="40" y1="148" x2="500" y2="148" stroke="#000" stroke-width="0.8"/>
+        </svg>
+        <div class="figure-caption">Figure 1.4: Solar PV System Schematic with Typical Daily Output Profile</div>
+    </div>    <p><strong>Advantages:</strong> Abundant and free fuel; zero emissions; modular and scalable (rooftop to utility-scale); quick installation (months, not years); declining cost (solar tariff in India dropped to as low as ₹1.99/kWh in reverse auctions).</p>
+    <p><strong>Disadvantages:</strong> Intermittent and variable (no generation at night, reduced during clouds/monsoon); low capacity factor (18&ndash;22% in India); large land requirement for utility-scale plants (~4&ndash;5 acres per MW); requires energy storage or grid balancing for high penetration; inverter and panel degradation over time.</p>    <h4>1.3.2 Wind Energy</h4>
+    <p>India has an assessed wind power potential of over 695 GW at 120 m hub height (National Institute of Wind Energy). The installed wind capacity exceeds 45 GW, concentrated in eight windy states: Gujarat, Tamil Nadu, Maharashtra, Karnataka, Rajasthan, Andhra Pradesh, Madhya Pradesh, and Telangana. The power in wind is proportional to the cube of wind speed: $P = \frac{1}{2} \rho A v^3 C_p$, where $C_p$ is the power coefficient (Betz limit = 0.593). Modern wind turbines of 2&ndash;3 MW rating with rotor diameters exceeding 120 m are common.</p>
+    <p><strong>Advantages:</strong> Zero fuel cost; no emissions; can co-exist with agriculture; relatively quick construction; mature technology. <strong>Disadvantages:</strong> Intermittent and variable; noise and visual impact; bird mortality concerns; requires strong grid for evacuation; capacity factor typically 20&ndash;30% in Indian conditions.</p>    <h4>1.3.3 Biomass, Small Hydro, Geothermal, Tidal, and OTEC</h4>
+    <p><strong>Biomass:</strong> Agricultural residues (rice husk, bagasse, coconut shells), forestry waste, and municipal solid waste can be used for power generation through direct combustion, gasification, or anaerobic digestion (biogas). India, with its vast agricultural sector, has significant biomass potential. Cogeneration in sugar mills (bagasse-based) is particularly successful. Total biomass power capacity in India is about 10 GW.</p>
+    <p><strong>Small Hydro:</strong> Plants up to 25 MW classified as renewable. India has identified about 21,000 MW of small hydro potential across Himalayan and Western Ghats regions. Run-of-river schemes are preferred to minimise environmental impact.</p>
+    <p><strong>Geothermal:</strong> Limited potential in India; identified sites include Puga Valley (Ladakh), Tattapani (Chhattisgarh), and Manikaran (Himachal Pradesh). Total estimated potential is about 10,600 MW (thermal), but commercial exploitation is negligible.</p>
+    <p><strong>Tidal Energy:</strong> India has identified potential sites in the Gulf of Kutch (Gujarat, ~1,200 MW estimated), Gulf of Khambhat, and Sundarbans (West Bengal). Technology is still at a nascent stage; high capital cost and environmental concerns limit development.</p>
+    <p><strong>OTEC (Ocean Thermal Energy Conversion):</strong> Exploits the temperature difference between warm surface water and cold deep ocean water. Requires a minimum temperature gradient of ~20&deg;C. India's tropical coastline offers theoretical potential, but no commercial OTEC plant exists in India yet.</p>    <div class="comparison-table avoid-break">
+        <h4 style="margin-top:0;">Table 1.1: Comparison of Major Energy Sources for Power Generation</h4>
+        <table>
+            <thead>
+                <tr><th>Parameter</th><th>Coal</th><th>Gas (CCGT)</th><th>Nuclear</th><th>Hydro</th><th>Solar PV</th><th>Wind</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Capital Cost (₹ Cr/MW)</td><td>6&ndash;8</td><td>4&ndash;5</td><td>12&ndash;15</td><td>8&ndash;12</td><td>3.5&ndash;4.5</td><td>5&ndash;7</td></tr>
+                <tr><td>Construction Period</td><td>4&ndash;6 yr</td><td>2&ndash;3 yr</td><td>6&ndash;10 yr</td><td>6&ndash;10 yr</td><td>0.5&ndash;1 yr</td><td>1&ndash;2 yr</td></tr>
+                <tr><td>Fuel Cost</td><td>Moderate</td><td>High</td><td>Very Low</td><td>Zero</td><td>Zero</td><td>Zero</td></tr>
+                <tr><td>Plant Life</td><td>30&ndash;40 yr</td><td>25&ndash;30 yr</td><td>40&ndash;60 yr</td><td>60&ndash;100 yr</td><td>25&ndash;30 yr</td><td>20&ndash;25 yr</td></tr>
+                <tr><td>Capacity Factor (India)</td><td>60&ndash;75%</td><td>50&ndash;70%</td><td>80&ndash;90%</td><td>30&ndash;50%</td><td>18&ndash;22%</td><td>20&ndash;30%</td></tr>
+                <tr><td>CO<sub>2</sub> Emission</td><td>~0.9 kg/kWh</td><td>~0.4 kg/kWh</td><td>Zero</td><td>Zero</td><td>Zero</td><td>Zero</td></tr>
+                <tr><td>Grid Stability</td><td>Excellent</td><td>Good</td><td>Excellent</td><td>Good</td><td>Poor</td><td>Poor</td></tr>
+                <tr><td>Typical Application</td><td>Base Load</td><td>Base/Peak</td><td>Base Load</td><td>Peak/Base</td><td>Daytime</td><td>Variable</td></tr>
+            </tbody>
+        </table>
+    </div>    <!-- ==================== SECTION 2: INDIAN ENERGY SCENARIO ==================== -->    <h2>2. Indian Energy Scenario</h2>    <h3>2.1 Overview of the Indian Power Sector</h3>
+    <p>India is the third-largest producer and consumer of electricity in the world, after China and the United States. The Indian power sector has undergone a remarkable transformation from a chronic power deficit nation to one with surplus generation capacity. The installed generation capacity as of early 2025 stands at approximately 460 GW, comprising a diverse mix of thermal, hydro, nuclear, and renewable sources. The erstwhile Planning Commission's five-year plans have been replaced by the National Electricity Plan (NEP) formulated by the Central Electricity Authority (CEA).</p>    <div class="svg-container">
+        <svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="310" y="18" text-anchor="middle" fill="#000" font-size="12" font-weight="700">India's Installed Generation Capacity Mix (Approx. 460 GW, 2024&ndash;25)</text>
+            <!-- Pie chart -->
+            <circle cx="310" cy="175" r="120" fill="none" stroke="#000" stroke-width="1.5"/>
+            <!-- Thermal ~55% = 198° -->
+            <path d="M310,175 L310,55 A120,120 0 0,1 412,91 Z" fill="#555" stroke="#000" stroke-width="0.8"/>
+            <text x="385" y="80" fill="#fff" font-size="9" font-weight="600">Thermal</text>
+            <text x="400" y="93" fill="#fff" font-size="9" font-weight="600">~55%</text>
+            <!-- Coal (within thermal, ~48% of total = 173°) -->
+            <!-- Renewable ~32% = 115° starting from thermal end -->
+            <path d="M310,175 L412,91 A120,120 0 0,1 217,272 Z" fill="#4a9e4a" stroke="#000" stroke-width="0.8"/>
+            <text x="250" y="260" fill="#000" font-size="9" font-weight="600">Renewable</text>
+            <text x="255" y="273" fill="#000" font-size="9" font-weight="600">~32%</text>
+            <!-- Large Hydro ~10% = 36° -->
+            <path d="M310,175 L217,272 A120,120 0 0,1 310,55 Z" fill="#3a7abd" stroke="#000" stroke-width="0.8"/>
+            <text x="275" y="140" fill="#fff" font-size="9" font-weight="600">Large</text>
+            <text x="265" y="153" fill="#fff" font-size="9" font-weight="600">Hydro ~10%</text>
+            <!-- Nuclear ~3% -->
+            <path d="M310,175 L310,55 A120,120 0 0,1 330,56 Z" fill="#c04040" stroke="#000" stroke-width="0.8"/>
+            <text x="332" y="62" fill="#fff" font-size="8" font-weight="600">Nuclear ~3%</text>
+            <!-- Legend -->
+            <rect x="40" y="310" width="14" height="14" fill="#555"/>
+            <text x="60" y="322" fill="#000" font-size="10">Thermal (Coal + Gas + Diesel)</text>
+            <rect x="240" y="310" width="14" height="14" fill="#4a9e4a"/>
+            <text x="260" y="322" fill="#000" font-size="10">Renewable (Solar, Wind, Biomass, SHP)</text>
+            <rect x="460" y="310" width="14" height="14" fill="#3a7abd"/>
+            <text x="480" y="322" fill="#000" font-size="10">Large Hydro</text>
+            <circle cx="50" cy="340" r="7" fill="#c04040" stroke="#000" stroke-width="0.5"/>
+            <text x="64" y="344" fill="#000" font-size="10">Nuclear</text>
+        </svg>
+        <div class="figure-caption">Figure 2.1: India's Installed Generation Capacity by Source (Approximate, 2024&ndash;25)</div>
+    </div>    <h3>2.2 Key Institutions and Framework</h3>
+    <p>The Indian power sector operates under a well-defined institutional framework. The <strong>Ministry of Power (MoP)</strong> formulates policy. The <strong>Central Electricity Authority (CEA)</strong> provides technical planning and standards. The <strong>Central Electricity Regulatory Commission (CERC)</strong> and <strong>State Electricity Regulatory Commissions (SERCs)</strong> regulate tariffs and inter-state transmission. Generation is dominated by <strong>NTPC Limited</strong> (India's largest power utility, ~73 GW capacity), <strong>NHPC Limited</strong> (hydro), <strong>Nuclear Power Corporation of India Limited (NPCIL)</strong>, and a growing private sector (Adani Power, Tata Power, JSW Energy, ReNew Power). The <strong>Power Grid Corporation of India Limited (PGCIL)</strong> operates the national transmission network.</p>    <h3>2.3 Key Statistics and Trends</h3>
+    <ul>
+        <li><strong>Per Capita Consumption:</strong> Approximately 1,300&ndash;1,400 kWh per annum (2024&ndash;25), significantly lower than the world average (~3,200 kWh), indicating substantial growth potential.</li>
+        <li><strong>Peak Demand Met:</strong> Approximately 240&ndash;250 GW (2024&ndash;25), with peak shortages now negligible in most regions.</li>
+        <li><strong>Transmission &amp; Distribution (T&amp;D) Losses:</strong> Historically high at 20&ndash;25%, though improving with schemes like UDAY and RDSS. The target is to bring it below 15%.</li>
+        <li><strong>Renewable Energy Target:</strong> 500 GW from non-fossil fuel sources by 2030, as announced at COP26 (Glasgow).</li>
+        <li><strong>One Nation, One Grid, One Price:</strong> India operates a synchronous national grid at 50 Hz, with real-time electricity markets through power exchanges (IEX, PXIL).</li>
+    </ul>    <div class="note-box">
+        <p><strong>Indian Energy Scenario &mdash; Key Facts for Exams:</strong></p>
+        <ul style="margin:0;">
+            <li>India ranks 3<sup>rd</sup> globally in electricity production and consumption.</li>
+            <li>Total installed capacity: ~460 GW (2024&ndash;25).</li>
+            <li>Coal remains the largest single source (~48% of capacity, ~70% of actual generation due to higher PLF).</li>
+            <li>NTPC Limited is India's largest generation company (~73 GW).</li>
+            <li>National grid frequency: 50 Hz (per Indian Electricity Rules).</li>
+            <li>Renewable capacity target: 500 GW by 2030.</li>
+        </ul>
+    </div>    <!-- ==================== SECTION 3: LOAD PREDICTION ==================== -->    <hr>
+    <h2>3. Prediction of Load</h2>
+    <p>Accurate load prediction is the foundation of power system planning, operation, and economics. The sizing of generation capacity, transmission lines, and distribution networks depends entirely on the anticipated electrical load. Overestimation leads to idle capital; underestimation causes load shedding and blackouts. Load prediction is performed at different time horizons: short-term (hours to days for operational scheduling), medium-term (weeks to months for maintenance planning), and long-term (years to decades for generation and transmission planning).</p>    <h3>3.1 Connected Load</h3>
+    <p><strong>Definition:</strong> The connected load is the sum of the nameplate (rated) power ratings of all electrical equipment and appliances installed at the consumer's premises, expressed in kW or kVA. It represents the total load that <em>could</em> be switched on simultaneously if every appliance were operated at its full rated capacity at the same instant.</p>    <div class="formula-box">
+        <div class="formula-label">Connected Load</div>
+        $$\text{Connected Load} = \sum_{i=1}^{n} P_{\text{rated},i}$$
+        <p style="margin-top:6px;">where $P_{\text{rated},i}$ is the nameplate rating of the $i$-th appliance (in kW or kVA).</p>
+    </div>    <p><strong>Practical Example &mdash; Indian Context:</strong> Consider a typical Indian household with the following connected appliances:</p>
+    <table style="font-size:0.9em;">
+        <thead><tr><th>Appliance</th><th>Rating</th><th>Quantity</th><th>Total (kW)</th></tr></thead>
+        <tbody>
+            <tr><td>LED Bulbs</td><td>9 W</td><td>10</td><td>0.09</td></tr>
+            <tr><td>Ceiling Fans</td><td>75 W</td><td>4</td><td>0.30</td></tr>
+            <tr><td>Refrigerator</td><td>200 W</td><td>1</td><td>0.20</td></tr>
+            <tr><td>Air Conditioner (1.5 TR)</td><td>1,800 W</td><td>2</td><td>3.60</td></tr>
+            <tr><td>Geyser</td><td>2,000 W</td><td>1</td><td>2.00</td></tr>
+            <tr><td>Washing Machine</td><td>500 W</td><td>1</td><td>0.50</td></tr>
+            <tr><td>Television</td><td>120 W</td><td>1</td><td>0.12</td></tr>
+            <tr><td>Miscellaneous</td><td>&mdash;</td><td>&mdash;</td><td>0.50</td></tr>
+            <tr style="font-weight:700;"><td colspan="3">Connected Load</td><td>7.31 kW</td></tr>
+        </tbody>
+    </table>
+    <p>In reality, all these appliances are never operated simultaneously at full capacity. This leads to the concept of demand factor.</p>    <h3>3.2 Maximum Demand</h3>
+    <p><strong>Definition:</strong> The maximum demand is the highest average power demand over a specified time interval (typically 15 or 30 minutes, as per Indian standards) during a given period (day, month, or year). It is the greatest of all the demands that have occurred during the period under consideration. Maximum demand is measured in kW or kVA.</p>
+    <p><strong>Significance:</strong> The entire generation, transmission, and distribution infrastructure must be sized to meet the maximum demand. The capacity of generating stations, transformers, circuit breakers, cables, and protective devices is determined by the maximum demand, not the connected load. Electricity tariffs for large consumers (industrial and commercial) invariably include a <em>demand charge</em> based on the recorded maximum demand in kVA.</p>    <h3>3.3 Demand Factor</h3>
+    <p><strong>Definition:</strong> The demand factor is the ratio of the maximum demand of a system (or part of a system) to the total connected load of that system.</p>    <div class="formula-box">
+        <div class="formula-label">Demand Factor</div>
+        $$\text{Demand Factor} = \frac{\text{Maximum Demand}}{\text{Connected Load}}$$
+        <p style="margin-top:4px;">Always $\leq 1$. Typical values: Residential: 0.4&ndash;0.7; Commercial: 0.5&ndash;0.8; Industrial: 0.7&ndash;0.9.</p>
+    </div>    <p><strong>Interpretation:</strong> A demand factor of 0.6 for a residential colony means that even at the time of peak usage, only 60% of the total connected load is drawn. The remaining 40% of appliances are either off, operating at part-load, or are non-coincident in their usage patterns.</p>
+    <p><strong>Application:</strong> Used for sizing distribution transformers, service connections, and feeder cables. For example, a distribution transformer for a residential colony with 1,000 kW connected load and a demand factor of 0.5 would be sized for 500 kVA (plus a safety margin).</p>    <h3>3.4 Average Load and Load Factor</h3>    <h4>3.4.1 Average Load</h4>
+    <p><strong>Definition:</strong> The average load is the total energy consumed over a given period divided by the number of hours in that period.</p>
+    <div class="formula-box">
+        <div class="formula-label">Average Load</div>
+        $$\text{Average Load} = \frac{\text{Total Energy Consumed (kWh)}}{\text{Time Period (hours)}}$$
+    </div>    <h4>3.4.2 Load Factor</h4>
+    <p><strong>Definition:</strong> The load factor is the ratio of the average load to the maximum demand over a specified period (day, month, or year). It is a measure of how effectively the installed capacity is being utilised.</p>    <div class="formula-box">
+        <div class="formula-label">Load Factor (LF)</div>
+        $$\text{Load Factor} = \frac{\text{Average Load}}{\text{Maximum Demand}} = \frac{\text{Energy Consumed in Period (kWh)}}{\text{Maximum Demand (kW)} \times \text{Period (hours)}}$$
+        <p style="margin-top:4px;">For a daily load factor: $\text{LF}_{\text{day}} = \frac{\text{kWh in 24 h}}{\text{Max Demand (kW)} \times 24}$</p>
+        <p>For an annual load factor: $\text{LF}_{\text{annual}} = \frac{\text{Annual Energy (kWh)}}{\text{Annual Max Demand (kW)} \times 8760}$</p>
+    </div>    <div class="warning-box">
+        <p><strong>Exam Point:</strong> Load factor is always $\leq 1$ (or $\leq 100\%$). A higher load factor indicates more uniform demand, better utilisation of plant capacity, and lower cost per kWh generated. Utilities always strive to improve the load factor through tariff incentives (e.g., time-of-day tariffs, demand-side management).</p>
+    </div>    <p><strong>Numerical Example:</strong> A generating station has a maximum demand of 50,000 kW and generates 300 million kWh (300 &times; 10<sup>6</sup> kWh) annually. Calculate the annual load factor.</p>
+    <p><strong>Solution:</strong>
+        $\text{Average Load} = \frac{300 \times 10^6}{8760} = 34,246.6\ \text{kW}$
+        $\text{Load Factor} = \frac{34,246.6}{50,000} = 0.685 = 68.5\%$
+    </p>    <div class="memory-aid">
+        <p><strong>Memory Aid &mdash; Key Ratios:</strong></p>
+        <p>Demand Factor = Max Demand / Connected Load &nbsp;|&nbsp; Load Factor = Average Load / Max Demand &nbsp;|&nbsp; Both are fractions $\leq 1$. The product Demand Factor &times; Load Factor = Average Load / Connected Load gives the overall utilisation of connected capacity.</p>
+    </div>    <h3>3.5 Load Curves and Load Duration Curves</h3>    <h4>3.5.1 Load Curve</h4>
+    <p><strong>Definition:</strong> A load curve is a graphical representation of the variation of load (power demand) on a power station with respect to time. The time axis may span 24 hours (daily load curve), one week, one month, or one year (annual load curve). The area under the load curve represents the total energy generated or consumed in the corresponding period.</p>    <div class="svg-container">
+        <svg viewBox="0 0 650 320" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="325" y="22" text-anchor="middle" fill="#000" font-size="12" font-weight="700">Typical Daily Load Curve of an Indian Utility (Winter Weekday)</text>
+            <!-- Axes -->
+            <line x1="65" y1="30" x2="65" y2="270" stroke="#000" stroke-width="1.5"/>
+            <line x1="65" y1="270" x2="620" y2="270" stroke="#000" stroke-width="1.5"/>
+            <polygon points="65,26 61,34 69,34" fill="#000"/>
+            <polygon points="620,266 612,262 612,270" fill="#000"/>
+            <!-- Y-axis label -->
+            <text x="18" y="150" text-anchor="middle" fill="#000" font-size="10" transform="rotate(-90,18,150)">Load (MW)</text>
+            <!-- X-axis label -->
+            <text x="342" y="300" text-anchor="middle" fill="#000" font-size="10">Time of Day (Hours)</text>
+            <!-- Y-axis ticks -->
+            <line x1="55" y1="270" x2="65" y2="270" stroke="#000" stroke-width="1"/>
+            <text x="50" y="274" text-anchor="end" fill="#000" font-size="8">0</text>
+            <line x1="55" y1="222" x2="65" y2="222" stroke="#000" stroke-width="1"/>
+            <text x="50" y="226" text-anchor="end" fill="#000" font-size="8">200</text>
+            <line x1="55" y1="174" x2="65" y2="174" stroke="#000" stroke-width="1"/>
+            <text x="50" y="178" text-anchor="end" fill="#000" font-size="8">400</text>
+            <line x1="55" y1="126" x2="65" y2="126" stroke="#000" stroke-width="1"/>
+            <text x="50" y="130" text-anchor="end" fill="#000" font-size="8">600</text>
+            <line x1="55" y1="78" x2="65" y2="78" stroke="#000" stroke-width="1"/>
+            <text x="50" y="82" text-anchor="end" fill="#000" font-size="8">800</text>
+            <!-- X-axis ticks -->
+            <text x="65" y="286" text-anchor="middle" fill="#000" font-size="9">0</text>
+            <text x="135" y="286" text-anchor="middle" fill="#000" font-size="9">4</text>
+            <text x="205" y="286" text-anchor="middle" fill="#000" font-size="9">8</text>
+            <text x="275" y="286" text-anchor="middle" fill="#000" font-size="9">12</text>
+            <text x="345" y="286" text-anchor="middle" fill="#000" font-size="9">16</text>
+            <text x="415" y="286" text-anchor="middle" fill="#000" font-size="9">20</text>
+            <text x="485" y="286" text-anchor="middle" fill="#000" font-size="9">24</text>
+            <!-- Grid lines -->
+            <line x1="65" y1="222" x2="620" y2="222" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="65" y1="174" x2="620" y2="174" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="65" y1="126" x2="620" y2="126" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="65" y1="78" x2="620" y2="78" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <!-- Load curve -->
+            <polyline points="65,240 80,235 95,230 110,225 125,220 140,215 155,212 170,210 185,212 200,218 215,225 230,235 245,248 260,252 275,250 290,245 305,240 320,240 335,242 350,255 365,268 380,274 395,272 410,265 425,255 440,248 455,245 470,244 485,246 500,252 515,258 530,264 545,267 560,266 575,262 590,255 605,248 620,242" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+            <!-- Peak label -->
+            <circle cx="380" cy="274" r="3" fill="#c04040"/>
+            <text x="380" y="292" text-anchor="middle" fill="#c04040" font-size="9" font-weight="600">Peak Load (Evening)</text>
+            <line x1="380" y1="274" x2="380" y2="288" stroke="#c04040" stroke-width="0.8" stroke-dasharray="3,3"/>
+            <!-- Base load label -->
+            <line x1="200" y1="210" x2="320" y2="210" stroke="#4a9e4a" stroke-width="1.5" stroke-dasharray="6,3"/>
+            <text x="420" y="202" fill="#4a9e4a" font-size="9" font-weight="600">Base Load Region</text>
+            <!-- Morning peak -->
+            <circle cx="260" cy="252" r="2.5" fill="#c9a030"/>
+            <text x="240" y="266" text-anchor="middle" fill="#c9a030" font-size="8">Morning Peak</text>
+            <!-- Midnight valley -->
+            <circle cx="130" cy="220" r="2.5" fill="#1e3a8a"/>
+            <text x="120" y="210" text-anchor="middle" fill="#1e3a8a" font-size="8">Night Valley</text>
+            <!-- Area shading -->
+            <polygon points="65,270 65,240 80,235 95,230 110,225 125,220 140,215 155,212 170,210 185,212 200,218 215,225 230,235 245,248 260,252 275,250 290,245 305,240 320,240 335,242 350,255 365,268 380,274 395,272 410,265 425,255 440,248 455,245 470,244 485,246 500,252 515,258 530,264 545,267 560,266 575,262 590,255 605,248 620,242 620,270" fill="#e8edf5" opacity="0.6"/>
+            <text x="450" y="160" fill="#1e3a8a" font-size="9">Area = Total Energy (kWh)</text>
+        </svg>
+        <div class="figure-caption">Figure 3.1: Typical Daily Load Curve Showing Morning and Evening Peaks, and Night-Time Valley</div>
+    </div>    <p><strong>Explanation of the Daily Load Curve:</strong> The load curve exhibits characteristic features: (a) <em>Night Valley (00:00&ndash;06:00):</em> Load is at its minimum as most domestic, commercial, and industrial activities cease. This is the base-load region. (b) <em>Morning Ramp (06:00&ndash;10:00):</em> Load rises sharply as industries start, offices open, and domestic activity increases. (c) <em>Daytime Plateau (10:00&ndash;16:00):</em> Load remains relatively high and steady. (d) <em>Evening Peak (17:00&ndash;20:00):</em> The highest load of the day occurs when domestic lighting, cooking, and entertainment loads coincide with still-operating commercial and industrial loads. In Indian utilities, the evening peak is typically 20&ndash;40% higher than the daytime average. (e) <em>Late Evening Decline (20:00&ndash;24:00):</em> Load gradually decreases as commercial activities cease and domestic consumption reduces.</p>
+    <p><strong>Utility of the Load Curve:</strong> (i) Determines the required generating capacity, (ii) guides the scheduling of different types of plants (base, intermediate, peak), (iii) reveals the pattern of demand for tariff design, (iv) helps in planning maintenance outages, and (v) serves as the basis for calculating load factor, energy generated, and other operational metrics.</p>    <h4>3.5.2 Load Duration Curve (LDC)</h4>
+    <p><strong>Definition:</strong> The load duration curve is a rearrangement of the load curve data. Instead of chronological order, the loads are arranged in descending order of magnitude. The abscissa represents the number of hours in the period (typically 8,760 hours for a year) during which the load equals or exceeds a given value. The LDC provides a powerful visual summary of the load characteristics over the entire period.</p>    <div class="svg-container">
+        <svg viewBox="0 0 650 300" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="325" y="22" text-anchor="middle" fill="#000" font-size="12" font-weight="700">Annual Load Duration Curve</text>
+            <!-- Axes -->
+            <line x1="70" y1="30" x2="70" y2="260" stroke="#000" stroke-width="1.5"/>
+            <line x1="70" y1="260" x2="620" y2="260" stroke="#000" stroke-width="1.5"/>
+            <text x="20" y="145" text-anchor="middle" fill="#000" font-size="10" transform="rotate(-90,20,145)">Load (MW)</text>
+            <text x="345" y="290" text-anchor="middle" fill="#000" font-size="10">Duration (Hours) &rarr;</text>
+            <!-- X axis -->
+            <text x="70" y="278" text-anchor="middle" fill="#000" font-size="8">0</text>
+            <text x="208" y="278" text-anchor="middle" fill="#000" font-size="8">2190</text>
+            <text x="345" y="278" text-anchor="middle" fill="#000" font-size="8">4380</text>
+            <text x="483" y="278" text-anchor="middle" fill="#000" font-size="8">6570</text>
+            <text x="620" y="278" text-anchor="middle" fill="#000" font-size="8">8760</text>
+            <!-- Y axis -->
+            <text x="60" y="264" text-anchor="end" fill="#000" font-size="8">0</text>
+            <text x="60" y="218" text-anchor="end" fill="#000" font-size="8">200</text>
+            <text x="60" y="172" text-anchor="end" fill="#000" font-size="8">400</text>
+            <text x="60" y="126" text-anchor="end" fill="#000" font-size="8">600</text>
+            <text x="60" y="80" text-anchor="end" fill="#000" font-size="8">800</text>
+            <!-- Grid -->
+            <line x1="70" y1="218" x2="620" y2="218" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="70" y1="172" x2="620" y2="172" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="70" y1="126" x2="620" y2="126" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <!-- LDC Curve -->
+            <polyline points="70,90 100,97 140,105 190,115 250,126 320,140 400,155 480,172 550,188 600,205 620,218 620,260" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+            <!-- Peak Load line -->
+            <line x1="70" y1="90" x2="250" y2="90" stroke="#c04040" stroke-width="1.2" stroke-dasharray="6,3"/>
+            <text x="260" y="94" fill="#c04040" font-size="9" font-weight="600">Peak Load (800 MW) &mdash; Occurs very few hours/year</text>
+            <!-- Base load -->
+            <line x1="400" y1="218" x2="620" y2="218" stroke="#4a9e4a" stroke-width="1.2" stroke-dasharray="6,3"/>
+            <text x="400" y="238" fill="#4a9e4a" font-size="9" font-weight="600">Base Load (200 MW) &mdash; Occurs all 8760 hours</text>
+            <!-- Area shading -->
+            <polygon points="70,260 70,90 100,97 140,105 190,115 250,126 320,140 400,155 480,172 550,188 600,205 620,218 620,260" fill="#e8edf5" opacity="0.5"/>
+            <text x="240" y="175" fill="#1e3a8a" font-size="9">Area = Total Annual</text>
+            <text x="240" y="190" fill="#1e3a8a" font-size="9">Energy (kWh)</text>
+        </svg>
+        <div class="figure-caption">Figure 3.2: Annual Load Duration Curve &mdash; Loads Arranged in Descending Order</div>
+    </div>    <p><strong>Explanation:</strong> The LDC immediately reveals: (a) The peak load occurs for only a few hours per year; (b) A load of about 400 MW is exceeded for approximately 4,380 hours (50% of the year); (c) The base load of 200 MW persists for all 8,760 hours. The area under the LDC equals the total annual energy generated. The LDC is the primary tool for deciding the type and size of generating units. Base-load plants (coal, nuclear) are chosen to supply the load that persists for &gt;5,000&ndash;6,000 hours/year. Peak-load plants (gas turbines, pumped storage, diesel) supply the top portion of the curve (typically &lt;1,500&ndash;2,000 hours/year). Intermediate plants (older coal, combined cycle gas) fill the middle band.</p>    <h3>3.6 Diversity Factor</h3>
+    <p><strong>Definition:</strong> The diversity factor is the ratio of the sum of the individual maximum demands of all the consumers (or sub-divisions of a system) to the maximum demand of the whole system (or group of consumers).</p>    <div class="formula-box">
+        <div class="formula-label">Diversity Factor (DF)</div>
+        $$\text{Diversity Factor} = \frac{\sum \text{Individual Maximum Demands}}{\text{Maximum Demand of the Whole System}}$$
+        <p style="margin-top:4px;">Always $\geq 1$. Typical values: Residential feeders: 1.2&ndash;2.0; Distribution substations: 1.1&ndash;1.5; Transmission level: 1.05&ndash;1.15.</p>
+    </div>    <p><strong>Physical Interpretation:</strong> All consumers do not experience their individual maximum demands at the same instant of time. The diversity in usage patterns (different lifestyles, working hours, industrial shifts, day/night usage) means that the system peak is less than the arithmetic sum of individual peaks. Higher diversity factor is beneficial because it reduces the required system capacity.</p>    <p><strong>Numerical Example:</strong> A distribution transformer supplies four feeders with individual maximum demands of 200 kW, 180 kW, 220 kW, and 160 kW. The measured maximum demand at the transformer is 520 kW. Calculate the diversity factor.</p>
+    <p><strong>Solution:</strong>
+        $\sum \text{Individual Max Demands} = 200 + 180 + 220 + 160 = 760\ \text{kW}$
+        $\text{Diversity Factor} = \frac{760}{520} = 1.462$
+    </p>
+    <p><strong>Interpretation:</strong> The transformer is rated for 520 kW (plus margin) rather than 760 kW, resulting in capital savings of approximately 30% in transformer and upstream infrastructure. This is why diversity factor is one of the most economically significant parameters in distribution system design.</p>    <div class="warning-box">
+        <p><strong>Exam Caution:</strong> Students often confuse demand factor and diversity factor. Demand factor relates connected load to maximum demand at the <em>same consumer</em>. Diversity factor relates <em>sum of individual peaks</em> to <em>coincident peak</em> of the group. Demand factor $\leq 1$; Diversity factor $\geq 1$.</p>
+    </div>    <h3>3.7 Choice of Type of Generation</h3>
+    <p>The selection of generating plant type is a multi-criteria decision involving technical, economic, and environmental considerations. The load duration curve is the primary technical input. The choice is governed by the following principles:</p>
+    <ol>
+        <li><strong>Base-Load Plants (Capacity Factor &gt; 60%):</strong> Operate continuously for &gt;6,000 hours/year. Must have low running cost (fuel cost). High capital cost is acceptable since it is amortised over a large number of units. Typical choices: Large coal-fired thermal, nuclear, run-of-river hydro (if water is available).</li>
+        <li><strong>Intermediate-Load Plants (Capacity Factor 30&ndash;60%):</strong> Operate for 2,000&ndash;6,000 hours/year, typically during daytime. Moderate capital and operating costs. Typical choices: Older coal plants, combined cycle gas turbines (CCGT), small hydro with storage.</li>
+        <li><strong>Peak-Load Plants (Capacity Factor &lt; 30%):</strong> Operate for &lt;2,000 hours/year, only during peak demand periods. Must have very low capital cost, quick start-up capability, and high ramp rates. High running cost is acceptable because the plant operates for few hours. Typical choices: Open cycle gas turbines (OCGT), diesel engines, pumped storage hydro.</li>
+    </ol>    <div class="svg-container">
+        <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="310" y="20" text-anchor="middle" fill="#000" font-size="12" font-weight="700">Choice of Generation Type Using Load Duration Curve</text>
+            <!-- Axes -->
+            <line x1="60" y1="40" x2="60" y2="250" stroke="#000" stroke-width="1.5"/>
+            <line x1="60" y1="250" x2="600" y2="250" stroke="#000" stroke-width="1.5"/>
+            <text x="18" y="145" text-anchor="middle" fill="#000" font-size="9" transform="rotate(-90,18,145)">Load (MW)</text>
+            <text x="330" y="276" text-anchor="middle" fill="#000" font-size="9">Hours per Year &rarr;</text>
+            <text x="600" y="266" text-anchor="middle" fill="#000" font-size="10">8760 h</text>
+            <!-- LDC -->
+            <polyline points="60,65 120,75 200,90 300,110 410,135 500,165 570,195 600,220 600,250" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+            <!-- Peak zone -->
+            <rect x="60" y="55" width="540" height="45" fill="#ffcccc" opacity="0.4"/>
+            <text x="450" y="70" fill="#c04040" font-size="11" font-weight="700">PEAK LOAD PLANTS</text>
+            <text x="450" y="85" fill="#c04040" font-size="9">Gas Turbine, Diesel, Pumped Storage</text>
+            <text x="450" y="97" fill="#c04040" font-size="8">~0&ndash;2000 h/yr, Cap. Factor &lt; 30%</text>
+            <!-- Intermediate zone -->
+            <rect x="60" y="100" width="540" height="55" fill="#fff4cc" opacity="0.5"/>
+            <text x="420" y="118" fill="#c9a030" font-size="11" font-weight="700">INTERMEDIATE LOAD PLANTS</text>
+            <text x="420" y="133" fill="#c9a030" font-size="9">CCGT, Older Coal, Small Hydro</text>
+            <text x="420" y="147" fill="#c9a030" font-size="8">~2000&ndash;6000 h/yr, Cap. Factor 30&ndash;60%</text>
+            <!-- Base zone -->
+            <rect x="60" y="155" width="540" height="95" fill="#ccffcc" opacity="0.4"/>
+            <text x="380" y="175" fill="#4a9e4a" font-size="11" font-weight="700">BASE LOAD PLANTS</text>
+            <text x="380" y="190" fill="#4a9e4a" font-size="9">Coal Thermal, Nuclear, Large Hydro</text>
+            <text x="380" y="205" fill="#4a9e4a" font-size="8">~6000&ndash;8760 h/yr, Cap. Factor &gt; 60%</text>
+            <!-- Horizontal separators -->
+            <line x1="60" y1="100" x2="600" y2="100" stroke="#c04040" stroke-width="1" stroke-dasharray="8,4"/>
+            <line x1="60" y1="155" x2="600" y2="155" stroke="#c9a030" stroke-width="1" stroke-dasharray="8,4"/>
+            <line x1="60" y1="250" x2="600" y2="250" stroke="#000" stroke-width="1.5"/>
+            <!-- X markers -->
+            <line x1="380" y1="245" x2="380" y2="255" stroke="#000" stroke-width="1"/>
+            <text x="380" y="268" text-anchor="middle" fill="#000" font-size="8">~2000 h</text>
+            <line x1="250" y1="245" x2="250" y2="255" stroke="#000" stroke-width="1"/>
+            <text x="250" y="268" text-anchor="middle" fill="#000" font-size="8">~6000 h</text>
+        </svg>
+        <div class="figure-caption">Figure 3.3: Load Duration Curve Partitioned into Base, Intermediate, and Peak Load Regions</div>
+    </div>    <h3>3.8 Capacity Factor (Plant Capacity Factor)</h3>
+    <p><strong>Definition:</strong> The capacity factor (also called plant capacity factor or plant load factor, PLF) is the ratio of the actual energy generated by a plant over a period to the maximum possible energy that could have been generated if the plant operated continuously at its rated (installed) capacity throughout the same period.</p>    <div class="formula-box">
+        <div class="formula-label">Capacity Factor (CF) / Plant Load Factor (PLF)</div>
+        $$\text{Capacity Factor} = \frac{\text{Actual Energy Generated (kWh)}}{\text{Installed Capacity (kW)} \times \text{Period (hours)}}$$
+    </div>    <p><strong>Significance:</strong> The capacity factor reflects the actual utilisation of the installed capacity. For thermal plants in India, the PLF has been declining from ~78% (2007&ndash;08) to about 60&ndash;65% (2024&ndash;25) due to increasing renewable penetration and demand patterns. For solar PV, the capacity factor in India is 18&ndash;22% (due to night-time and cloudy weather); for wind, 20&ndash;30%; for nuclear, 80&ndash;90% (Indian PHWRs).</p>    <div class="note-box">
+        <p><strong>Distinction:</strong> Load factor and capacity factor are different concepts. Load factor relates average demand to peak demand (demand-side metric). Capacity factor relates actual generation to the theoretical maximum generation (supply-side metric). For a single plant serving an isolated load, if the plant is perfectly matched to the load, capacity factor can equal load factor. In a grid-connected system with multiple plants, individual plant capacity factors depend on the merit order dispatch.</p>
+    </div>    <h3>3.9 Reserve Factor and Plant Use Factor</h3>    <h4>3.9.1 Reserve Factor</h4>
+    <p><strong>Definition:</strong> The reserve factor is the ratio of the installed capacity of the power system to the maximum demand on the system.</p>
+    <div class="formula-box">
+        <div class="formula-label">Reserve Factor</div>
+        $$\text{Reserve Factor} = \frac{\text{Installed Capacity}}{\text{Maximum Demand}}$$
+        <p style="margin-top:4px;">Always $\geq 1$. Typical value for a well-planned system: 1.15&ndash;1.25 (i.e., 15&ndash;25% reserve margin).</p>
+    </div>
+    <p><strong>Purpose:</strong> Reserve capacity is essential for: (a) scheduled maintenance of generating units, (b) forced outages and breakdowns, (c) unexpected load growth, (d) frequency and voltage regulation services. The Indian grid typically maintains a reserve margin of about 15&ndash;20%, although with renewable integration, higher reserves are increasingly required for managing variability.</p>    <h4>3.9.2 Plant Use Factor (Utilisation Factor)</h4>
+    <p><strong>Definition:</strong> The plant use factor is the ratio of the actual energy generated to the product of the installed capacity and the number of hours the plant was <em>actually in operation</em> (not the total hours in the period).</p>
+    <div class="formula-box">
+        <div class="formula-label">Plant Use Factor</div>
+        $$\text{Plant Use Factor} = \frac{\text{Actual Energy Generated (kWh)}}{\text{Installed Capacity (kW)} \times \text{Operating Hours}}$$
+        <p style="margin-top:4px;">Note: Operating hours = Total hours &minus; Shutdown hours (maintenance + forced outage).</p>
+    </div>
+    <p><strong>Comparison with Capacity Factor:</strong> Capacity factor uses total hours in the period (8,760 for a year). Plant use factor uses only the operating hours. Therefore, Plant Use Factor $\geq$ Capacity Factor. A plant with low capacity factor but high plant use factor indicates it operates at near-full capacity whenever it runs (typical of peak-load plants).</p>    <div class="comparison-table avoid-break">
+        <h4 style="margin-top:0;">Table 3.1: Summary of Key Load and Plant Factors</h4>
+        <table>
+            <thead>
+                <tr><th>Factor</th><th>Formula</th><th>Range</th><th>Significance</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Demand Factor</td><td>Max Demand / Connected Load</td><td>0.4&ndash;0.9</td><td>Sizing of distribution equipment</td></tr>
+                <tr><td>Load Factor</td><td>Avg Load / Max Demand</td><td>0.3&ndash;0.8</td><td>Uniformity of demand; cost/kWh</td></tr>
+                <tr><td>Diversity Factor</td><td>Sum of Indiv. Max / System Max</td><td>1.1&ndash;2.0</td><td>Economic sizing of system capacity</td></tr>
+                <tr><td>Capacity Factor (PLF)</td><td>Actual Energy / (Cap. &times; Total Hours)</td><td>0.2&ndash;0.9</td><td>Plant utilisation; generation planning</td></tr>
+                <tr><td>Reserve Factor</td><td>Installed Cap. / Max Demand</td><td>1.15&ndash;1.30</td><td>System reliability and adequacy</td></tr>
+                <tr><td>Plant Use Factor</td><td>Actual Energy / (Cap. &times; Op. Hours)</td><td>0.5&ndash;1.0</td><td>Utilisation during running hours</td></tr>
+            </tbody>
+        </table>
+    </div>    <!-- ==================== SECTION 4: BASE, INTERMEDIATE, PEAK ==================== -->    <hr>
+    <h2>4. Base Load, Intermediate Load, and Peak Load Plants</h2>    <h3>4.1 Base Load Plants</h3>
+    <p>Base load plants are designed to operate continuously at a near-constant output level, supplying the minimum level of demand on the grid that persists throughout the day and year. These plants are characterised by high capital cost, low running (fuel) cost, high efficiency at rated output, and slow start-up times. They are designed to run for 6,000&ndash;8,760 hours per year at capacity factors exceeding 60&ndash;70%.</p>
+    <p><strong>Typical Base Load Technologies:</strong> Large coal-fired thermal plants (e.g., NTPC Vindhyachal, Talcher), nuclear power plants (e.g., Kudankulam, Tarapur), and large run-of-river hydro plants (e.g., Nathpa Jhakri). In the Indian context, coal plants of 500&ndash;800 MW unit size form the backbone of base load supply.</p>
+    <p><strong>Operating Characteristics:</strong> (i) Operate at steady, near-rated output for maximum thermal efficiency, (ii) Start-up from cold takes 6&ndash;12 hours for coal, 24&ndash;48 hours for nuclear, (iii) Load following capability is limited and thermally inefficient, (iv) Lowest variable cost per kWh among all thermal options.</p>    <h3>4.2 Intermediate Load Plants</h3>
+    <p>Intermediate load plants bridge the gap between base load and peak load, operating during daytime and early evening hours (typically 2,000&ndash;6,000 hours per year). They have moderate capital and operating costs, and better load-following capability than base-load plants. In India, older coal plants (210&ndash;250 MW units), combined cycle gas plants, and storage-based hydro plants with limited reservoir capacity serve as intermediate plants.</p>    <h3>4.3 Peak Load Plants</h3>
+    <p>Peak load plants (also called peaking plants or peakers) operate for relatively few hours per year (&lt;2,000 hours, often &lt;500 hours) to meet the top slice of the load duration curve. They are characterised by low capital cost (to minimise idle investment), high running cost (acceptable due to low utilisation), very fast start-up (minutes), and high ramp rates. These plants can be brought online rapidly to meet sudden demand surges or to compensate for loss of other generation.</p>
+    <p><strong>Typical Peak Load Technologies:</strong> Open cycle gas turbines (OCGT), diesel engine generators, pumped storage hydro plants. In India, gas turbines at NTPC Auraiya, NTPC Anta, and various state-sector plants provide peaking support. Pumped storage plants like Tehri (1,000 MW pumped storage component) and Kadamparai (Tamil Nadu, 400 MW) are critical for peak load management.</p>    <div class="svg-container">
+        <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="300" y="20" text-anchor="middle" fill="#000" font-size="12" font-weight="700">Schematic Dispatch Order (Merit Order) Over 24 Hours</text>
+            <!-- Axes -->
+            <line x1="50" y1="40" x2="50" y2="240" stroke="#000" stroke-width="1.5"/>
+            <line x1="50" y1="240" x2="580" y2="240" stroke="#000" stroke-width="1.5"/>
+            <!-- Load curve -->
+            <polyline points="50,210 80,200 110,195 140,190 170,185 200,182 220,180 240,190 260,200 280,210 300,218 320,220 340,215 360,205 380,195 400,190 420,185 440,180 460,178 480,175 500,178 520,185 540,195 560,210 580,218" fill="none" stroke="#000" stroke-width="2.5"/>
+            <!-- Base layer -->
+            <rect x="50" y="190" width="530" height="50" fill="#4a9e4a" opacity="0.5"/>
+            <text x="315" y="218" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">BASE LOAD</text>
+            <text x="315" y="233" text-anchor="middle" fill="#fff" font-size="9">Coal + Nuclear (Continuous, Low Cost)</text>
+            <!-- Intermediate layer -->
+            <path d="M50,165 L200,182 L320,175 L460,175 L580,175 L580,190 L50,190 Z" fill="#c9a030" opacity="0.5"/>
+            <text x="315" y="178" text-anchor="middle" fill="#000" font-size="11" font-weight="700">INTERMEDIATE</text>
+            <text x="315" y="191" text-anchor="middle" fill="#000" font-size="8">CCGT, Old Coal, Hydro with storage</text>
+            <!-- Peak layer -->
+            <path d="M50,160 L50,165 L200,165 L280,170 L340,160 L400,170 L480,165 L540,160 L580,165 L580,175 L460,175 L320,175 L200,182 L50,165 Z" fill="#c04040" opacity="0.5"/>
+            <text x="315" y="152" text-anchor="middle" fill="#000" font-size="11" font-weight="700">PEAK LOAD</text>
+            <text x="315" y="163" text-anchor="middle" fill="#000" font-size="8">Gas Turbine, Diesel, Pumped Storage</text>
+            <!-- Y label -->
+            <text x="15" y="140" text-anchor="middle" fill="#000" font-size="9" transform="rotate(-90,15,140)">System Load (MW)</text>
+            <!-- X label -->
+            <text x="315" y="265" text-anchor="middle" fill="#000" font-size="9">Time (0&ndash;24 Hours)</text>
+            <text x="50" y="256" text-anchor="middle" fill="#000" font-size="7">0</text>
+            <text x="315" y="256" text-anchor="middle" fill="#000" font-size="7">12</text>
+            <text x="580" y="256" text-anchor="middle" fill="#000" font-size="7">24</text>
+        </svg>
+        <div class="figure-caption">Figure 4.1: Daily Load Curve with Generation Stacked by Plant Type (Merit Order Dispatch)</div>
+    </div>    <div class="important-box">
+        <p><strong>Merit Order Dispatch Principle:</strong> Generating plants are dispatched in ascending order of their variable (marginal) cost per kWh. Plants with the lowest variable cost (nuclear, large coal, hydro) are dispatched first as base load. As demand increases, plants with progressively higher variable costs are brought online. Economic scheduling (discussed in Section 5.7) formalises this process to minimise the total system operating cost.</p>
+    </div>    <div class="comparison-table avoid-break">
+        <h4 style="margin-top:0;">Table 4.1: Comparison of Base, Intermediate, and Peak Load Plants</h4>
+        <table>
+            <thead>
+                <tr><th>Parameter</th><th>Base Load</th><th>Intermediate Load</th><th>Peak Load</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Capital Cost (₹/kW)</td><td>Very High (50,000&ndash;1,20,000)</td><td>Moderate (35,000&ndash;50,000)</td><td>Low (20,000&ndash;35,000)</td></tr>
+                <tr><td>Running Cost (₹/kWh)</td><td>Low (2.5&ndash;4)</td><td>Moderate (4&ndash;6)</td><td>High (6&ndash;12)</td></tr>
+                <tr><td>Start-Up Time</td><td>6&ndash;48 hours</td><td>1&ndash;4 hours</td><td>2&ndash;20 minutes</td></tr>
+                <tr><td>Capacity Factor</td><td>&gt;60%</td><td>30&ndash;60%</td><td>&lt;30%</td></tr>
+                <tr><td>Hours/Year</td><td>6,000&ndash;8,760</td><td>2,000&ndash;6,000</td><td>&lt;2,000</td></tr>
+                <tr><td>Load Following</td><td>Poor</td><td>Good</td><td>Excellent</td></tr>
+                <tr><td>Examples (India)</td><td>NTPC Vindhyachal, Kudankulam</td><td>NTPC Dadri Gas, old coal units</td><td>Auraiya GT, Tehri PSP</td></tr>
+            </tbody>
+        </table>
+    </div>    <!-- ==================== SECTION 5: ECONOMICS ==================== -->    <hr>
+    <h2>5. Economics of Power Generation</h2>
+    <p>The economics of power generation is the study of the costs involved in producing electrical energy and the principles governing the minimisation of these costs while maintaining reliability. Since electricity cannot be economically stored in large quantities, generation must instantaneously match demand. The economic analysis of power generation is therefore concerned with both the <em>fixed costs</em> of creating generating capacity and the <em>variable costs</em> of operating it to meet the continuously varying load.</p>    <h3>5.1 Cost of Electrical Energy &mdash; Classification</h3>
+    <p>The total cost of producing electrical energy is conventionally divided into three principal categories:</p>
+    <ol>
+        <li><strong>Fixed Costs (or Standing Costs):</strong> Costs that are incurred regardless of whether the plant generates any energy. They are time-dependent, not energy-dependent. Includes interest on capital, depreciation, taxes, insurance, and a portion of salaries.</li>
+        <li><strong>Semi-Fixed Costs:</strong> Costs that vary with the <em>capacity</em> made available but not directly with energy generated. Includes operation and maintenance (O&amp;M) staff salaries, routine maintenance, and administrative overheads.</li>
+        <li><strong>Running Costs (or Variable Costs):</strong> Costs that are directly proportional to the energy generated. Includes fuel cost, lubricating oil, water charges, and consumables.</li>
+    </ol>    <h3>5.2 Construction Costs (Capital Costs)</h3>
+    <p>The construction cost (or capital cost) is the total investment required to bring the power plant from conception to commercial operation. It includes:</p>
+    <ul>
+        <li><strong>Direct Costs:</strong> Land acquisition, civil works (foundations, buildings, chimneys, cooling towers), mechanical equipment (boilers, turbines, generators, condensers, material handling), electrical equipment (transformers, switchgear, control systems, protection), and erection/commissioning.</li>
+        <li><strong>Indirect Costs:</strong> Engineering and project management, interest during construction (IDC), financing charges, statutory approvals, and contingencies.</li>
+    </ul>
+    <p><strong>Indian Capital Cost Benchmarks (2024&ndash;25, approximate):</strong></p>
+    <table>
+        <thead><tr><th>Plant Type</th><th>Capital Cost (₹ Crore per MW)</th><th>Remarks</th></tr></thead>
+        <tbody>
+            <tr><td>Coal (Supercritical)</td><td>6&ndash;8</td><td>500&ndash;800 MW units; includes FGD for emission control</td></tr>
+            <tr><td>CCGT (Combined Cycle)</td><td>4&ndash;5</td><td>Excluding gas pipeline infrastructure</td></tr>
+            <tr><td>Nuclear (PHWR)</td><td>12&ndash;15</td><td>700 MW indigenous PHWR; includes fuel cycle costs</td></tr>
+            <tr><td>Large Hydro</td><td>8&ndash;12</td><td>Highly site-specific; Himalayan projects costlier</td></tr>
+            <tr><td>Solar PV (Utility)</td><td>3.5&ndash;4.5</td><td>Declining rapidly; includes module, BOS, land</td></tr>
+            <tr><td>Wind (Onshore)</td><td>5&ndash;7</td><td>2&ndash;3 MW turbines; hub height &gt;120 m</td></tr>
+        </tbody>
+    </table>    <h3>5.3 Fixed Costs &mdash; Detailed Breakdown</h3>
+    <p>Fixed costs are annualised costs that must be recovered irrespective of generation. The two most significant components are interest and depreciation.</p>    <h4>5.3.1 Interest on Capital</h4>
+    <p>The capital invested in a power plant is borrowed from financial institutions or raised through equity. The annual interest cost is calculated on the outstanding loan amount. For a plant with total capital cost $C$ and an interest rate of $i$ (expressed as a fraction), the annual interest cost in the initial years (before significant repayment) is approximately:</p>
+    <div class="formula-box">
+        $$\text{Annual Interest} \approx C \times i$$
+        <p style="margin-top:4px;">However, as the loan is repaid, the outstanding principal reduces, and the interest cost declines. In levelised cost calculations, a weighted average cost of capital (WACC) is used.</p>
+    </div>
+    <p><strong>Indian Context:</strong> Power projects in India are typically financed with a debt-to-equity ratio of 70:30. The interest rate on long-term debt for power projects ranges from 8&ndash;11% per annum. The CERC norm for return on equity is 15.5% (pre-tax) for thermal and hydro projects. The WACC for Indian power projects is typically 10&ndash;12%.</p>    <h4>5.3.2 Depreciation of Plant</h4>
+    <p>Depreciation accounts for the gradual loss in the value of the plant and equipment due to wear and tear, obsolescence, and ageing. It is a non-cash expense that is set aside annually to create a fund for eventual replacement of the plant at the end of its useful life. Several methods of calculating depreciation are used:</p>    <p><strong>(a) Straight-Line Method:</strong> The simplest method. The same amount is depreciated each year.</p>
+    <div class="formula-box">
+        $$\text{Annual Depreciation} = \frac{\text{Initial Cost} - \text{Salvage Value}}{\text{Useful Life (years)}}$$
+    </div>
+    <p>For a coal plant costing ₹6,000 Crore (1,000 MW) with a salvage value of ₹600 Crore and a useful life of 30 years:
+        $\text{Annual Depreciation} = \frac{6000 - 600}{30} = 180\ \text{Crore/year}$
+    </p>    <p><strong>(b) Sinking Fund Method:</strong> A fixed sum is set aside annually and invested at compound interest so that the accumulated fund at the end of the plant's life equals the depreciable amount (initial cost minus salvage value).</p>
+    <div class="formula-box">
+        $$\text{Annual Sinking Fund Deposit} = (C - S) \times \frac{r}{(1+r)^n - 1}$$
+        <p style="margin-top:4px;">where $C$ = initial cost, $S$ = salvage value, $r$ = sinking fund interest rate (decimal), $n$ = useful life in years.</p>
+    </div>    <p><strong>(c) Diminishing Value Method:</strong> A fixed percentage of the <em>book value</em> (not initial cost) is depreciated each year. This results in higher depreciation in early years and lower in later years, which better reflects the actual decline in asset productivity.</p>    <div class="note-box">
+        <p><strong>CERC Depreciation Norms (India):</strong> The Central Electricity Regulatory Commission specifies depreciation rates for tariff determination. For thermal plants, the rate is 5.28% per annum (straight-line) for the first 12 years, and the remaining depreciable value is spread over the remaining useful life. The total useful life is considered as 25&ndash;40 years depending on the technology.</p>
+    </div>    <h3>5.4 Costs for Energy (Running Costs)</h3>
+    <p>Running costs vary directly with the electrical energy output. The dominant component is fuel cost, which typically accounts for 60&ndash;75% of the total cost per kWh for thermal plants.</p>    <h4>5.4.1 Fuel Cost</h4>
+    <p>For a thermal power station, the fuel cost per kWh is determined by the heat rate of the plant and the cost of fuel delivered to the station.</p>
+    <div class="formula-box">
+        <div class="formula-label">Fuel Cost per kWh</div>
+        $$\text{Fuel Cost (₹/kWh)} = \text{Heat Rate (kcal/kWh)} \times \frac{\text{Fuel Cost (₹/kg or ₹/kcal)}}{\text{Calorific Value (kcal/kg)}}$$
+        <p style="margin-top:6px;">Or, more directly:</p>
+        $$\text{Fuel Cost (₹/kWh)} = \frac{\text{Specific Fuel Consumption (kg/kWh)} \times \text{Fuel Price (₹/kg)}}{\text{}}$$
+    </div>    <p><strong>Numerical Example &mdash; Indian Coal Plant:</strong> A 500 MW coal unit has a heat rate of 2,400 kcal/kWh. The coal used has a calorific value of 4,000 kcal/kg and a delivered cost of ₹2,500 per tonne (₹2.5/kg). Calculate the fuel cost per kWh.</p>
+    <p><strong>Solution:</strong>
+        $\text{Coal required per kWh} = \frac{2400}{4000} = 0.6\ \text{kg/kWh}$
+        $\text{Fuel Cost per kWh} = 0.6 \times 2.5 = \text{₹}1.50\ \text{per kWh}$
+    </p>
+    <p>For comparison, a combined cycle gas plant with a heat rate of 1,800 kcal/kWh using imported LNG at ₹500 per MMBTU (~₹1.7 per 1,000 kcal):
+        $\text{Fuel Cost} = 1800 \times 0.0017 = \text{₹}3.06\ \text{per kWh}$
+    </p>
+    <p>This stark difference (₹1.50 vs ₹3.06) explains why coal remains the economic backbone of Indian power generation despite environmental concerns.</p>    <h4>5.4.2 Other Running Costs</h4>
+    <p>Lubricating oil and grease, water treatment chemicals, consumables, ash handling and disposal (for coal plants), and cooling water make-up. These typically add ₹0.10&ndash;0.30 per kWh for a coal plant.</p>    <h3>5.5 Annual Operating Costs</h3>
+    <p>The total annual operating cost of a power station is the sum of all fixed charges and all running costs incurred during the year.</p>
+    <div class="formula-box">
+        <div class="formula-label">Total Annual Operating Cost</div>
+        $$C_{\text{total}} = C_{\text{fixed}} + C_{\text{running}}$$
+        $$C_{\text{total}} = (\text{Interest} + \text{Depreciation} + \text{Taxes} + \text{Insurance} + \text{O\&amp;M Staff}) + (\text{Fuel} + \text{Lubricants} + \text{Consumables})$$
+    </div>
+    <p>The cost per kWh is then obtained by dividing the total annual cost by the annual energy generated:</p>
+    <div class="formula-box">
+        <div class="formula-label">Cost per kWh (Generation Cost)</div>
+        $$\text{Cost per kWh} = \frac{C_{\text{total}}}{\text{Annual Energy Generated (kWh)}} = \frac{C_{\text{fixed}} + C_{\text{running}}}{E_{\text{annual}}}$$
+    </div>    <h3>5.6 Effect of Load Factor on Cost per kWh</h3>
+    <p>The load factor has a profound and inverse relationship with the cost per kWh. This is one of the most critical insights in power system economics.</p>
+    <p>Let $C_f$ = total annual fixed cost (₹), $C_v$ = running cost per kWh (₹/kWh), $P_{\text{max}}$ = maximum demand (kW), $\text{LF}$ = load factor, $E = P_{\text{max}} \times \text{LF} \times 8760$ = annual energy (kWh).</p>
+    <div class="formula-box">
+        <div class="formula-label">Cost per kWh as a Function of Load Factor</div>
+        $$\text{Cost per kWh} = \frac{C_f}{P_{\text{max}} \times \text{LF} \times 8760} + C_v$$
+        $$\text{Cost per kWh} = \frac{\text{Fixed Cost per kW per year}}{8760 \times \text{LF}} + \text{Variable Cost per kWh}$$
+    </div>
+    <p><strong>Interpretation:</strong> The fixed cost component is inversely proportional to the load factor. As the load factor increases, the fixed cost is spread over more kWh, reducing the cost per kWh. The variable cost component is independent of load factor. This relationship drives the fundamental economic incentive to improve load factor.</p>    <div class="svg-container">
+        <svg viewBox="0 0 580 320" xmlns="http://www.w3.org/2000/svg" style="background:#fff;">
+            <text x="290" y="22" text-anchor="middle" fill="#000" font-size="12" font-weight="700">Effect of Load Factor on Cost per kWh</text>
+            <!-- Axes -->
+            <line x1="70" y1="40" x2="70" y2="270" stroke="#000" stroke-width="1.5"/>
+            <line x1="70" y1="270" x2="550" y2="270" stroke="#000" stroke-width="1.5"/>
+            <text x="20" y="155" text-anchor="middle" fill="#000" font-size="10" transform="rotate(-90,20,155)">Cost per kWh (₹/kWh)</text>
+            <text x="310" y="300" text-anchor="middle" fill="#000" font-size="10">Load Factor (%)</text>
+            <!-- X ticks -->
+            <text x="70" y="286" text-anchor="middle" fill="#000" font-size="9">0</text>
+            <text x="166" y="286" text-anchor="middle" fill="#000" font-size="9">20</text>
+            <text x="262" y="286" text-anchor="middle" fill="#000" font-size="9">40</text>
+            <text x="358" y="286" text-anchor="middle" fill="#000" font-size="9">60</text>
+            <text x="454" y="286" text-anchor="middle" fill="#000" font-size="9">80</text>
+            <text x="550" y="286" text-anchor="middle" fill="#000" font-size="9">100</text>
+            <!-- Y ticks -->
+            <text x="58" y="274" text-anchor="end" fill="#000" font-size="8">0</text>
+            <text x="58" y="228" text-anchor="end" fill="#000" font-size="8">2</text>
+            <text x="58" y="182" text-anchor="end" fill="#000" font-size="8">4</text>
+            <text x="58" y="136" text-anchor="end" fill="#000" font-size="8">6</text>
+            <text x="58" y="90" text-anchor="end" fill="#000" font-size="8">8</text>
+            <text x="58" y="44" text-anchor="end" fill="#000" font-size="8">10</text>
+            <!-- Grid -->
+            <line x1="70" y1="228" x2="550" y2="228" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="70" y1="182" x2="550" y2="182" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <line x1="70" y1="136" x2="550" y2="136" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4,4"/>
+            <!-- Total cost curve -->
+            <path d="M90,260 Q150,220 200,190 Q280,155 370,134 Q460,120 540,113" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+            <text x="500" y="106" fill="#1e3a8a" font-size="10" font-weight="600">Total Cost</text>
+            <!-- Fixed cost component -->
+            <path d="M90,200 Q150,140 200,108 Q280,72 370,54 Q460,42 540,36" fill="none" stroke="#c04040" stroke-width="2" stroke-dasharray="8,3"/>
+            <text x="460" y="46" fill="#c04040" font-size="9">Fixed Cost Component</text>
+            <!-- Variable cost line (horizontal) -->
+            <line x1="70" y1="160" x2="550" y2="160" stroke="#4a9e4a" stroke-width="2"/>
+            <text x="460" y="155" fill="#4a9e4a" font-size="9">Variable Cost (Constant)</text>
+            <!-- Annotations -->
+            <circle cx="310" cy="150" r="3" fill="#000"/>
+            <text x="318" y="153" fill="#000" font-size="8">At LF=50%: Total = Fixed + Variable</text>
+            <!-- Arrow showing decrease -->
+            <line x1="240" y1="170" x2="180" y2="195" stroke="#000" stroke-width="1" marker-end="url(#arrowhead)"/>
+            <text x="150" y="210" fill="#000" font-size="8">As LF increases,</text>
+            <text x="150" y="222" fill="#000" font-size="8">cost per kWh falls</text>
+        </svg>
+        <div class="figure-caption">Figure 5.1: Variation of Cost per kWh with Load Factor &mdash; Fixed Cost per kWh Decreases Hyperbolically, Variable Cost Remains Constant</div>
+    </div>    <div class="warning-box">
+        <p><strong>Key Exam Insight:</strong> Doubling the load factor does NOT halve the total cost per kWh. It halves only the <em>fixed cost component</em>. The variable cost remains unchanged. Therefore, the total cost reduction is less than 50%. For a plant with 40% fixed cost and 60% variable cost at a load factor of 50%, doubling the load factor to 100% reduces the total cost by only 20% (not 50%).</p>
+    </div>    <h3>5.7 Economic Scheduling Principle</h3>
+    <p>Economic scheduling (also called economic load dispatch or merit order dispatch) is the process of allocating the total system load among the available generating units in such a way that the total operating cost is minimised, subject to the constraints of meeting the load demand and respecting the operating limits of each unit.</p>    <p><strong>Fundamental Principle:</strong> For thermal plants, the running cost (fuel cost) is a function of the power output. The incremental fuel cost (IFC) is the derivative of the fuel cost with respect to power output: $\text{IFC} = \frac{dF}{dP}$, typically expressed in ₹/MWh. For economic scheduling without transmission losses, the condition for optimality is that all operating units must have <em>equal incremental fuel costs</em>.</p>    <div class="formula-box">
+        <div class="formula-label">Equal Incremental Cost Criterion (Neglecting Losses)</div>
+        $$\frac{dF_1}{dP_1} = \frac{dF_2}{dP_2} = \dots = \frac{dF_n}{dP_n} = \lambda$$
+        <p style="margin-top:4px;">Subject to: $\sum_{i=1}^{n} P_i = P_{\text{load}}$ and $P_{i,\min} \leq P_i \leq P_{i,\max}$</p>
+        <p>where $\lambda$ is the system incremental cost (Lagrange multiplier), representing the cost of supplying the next incremental MW.</p>
+    </div>    <p><strong>Fuel Cost Characteristic:</strong> The fuel cost of a thermal unit is typically modelled as a quadratic function of its power output:
+        $$F_i(P_i) = a_i P_i^2 + b_i P_i + c_i \quad \text{(₹/hour)}$$
+    where $a_i$, $b_i$, $c_i$ are cost coefficients for unit $i$. The incremental fuel cost is then:
+        $$\frac{dF_i}{dP_i} = 2a_i P_i + b_i \quad \text{(₹/MWh)}$$
+    </p>    <p><strong>With Transmission Losses:</strong> When transmission losses are considered, the optimality condition is modified using the penalty factor $L_i$:
+        $$\frac{dF_i}{dP_i} \times \frac{1}{1 - \frac{\partial P_L}{\partial P_i}} = \lambda$$
+    where $\frac{\partial P_L}{\partial P_i}$ is the incremental transmission loss with respect to unit $i$'s output.</p>    <p><strong>Practical Implementation in India:</strong> The economic scheduling of generating stations connected to the Indian grid is carried out by the Regional Load Despatch Centres (RLDCs) and the National Load Despatch Centre (NLDC). The scheduling process uses the declared incremental costs (or variable charges) submitted by generating stations. The stations are stacked in ascending order of variable cost, and the load is allocated starting from the cheapest source. The most expensive plant dispatched to meet the last MW of demand determines the system marginal price (SMP) in the power exchange.</p>    <div class="note-box">
+        <p><strong>Principle of Merit Order:</strong> Plants are dispatched in the following order of increasing variable cost: (1) Must-run plants (nuclear, run-of-river hydro &mdash; zero or very low variable cost), (2) Large efficient coal plants, (3) Older/smaller coal plants, (4) Combined cycle gas, (5) Open cycle gas turbines, (6) Diesel generators (highest variable cost, dispatched only during extreme peaks or emergencies).</p>
+    </div>    <h3>5.8 Tariff or Charge to Consumer</h3>
+    <p>The tariff is the price at which electrical energy is sold to consumers. The design of tariffs is a complex exercise balancing the need to recover the total cost of supply (generation + transmission + distribution) with socio-economic objectives such as affordability, equity, and encouraging efficient use of electricity.</p>    <h4>5.8.1 Objectives of Tariff Design</h4>
+    <ol>
+        <li><strong>Cost Recovery:</strong> The total revenue from tariffs must cover the total cost of supply plus a reasonable return on investment.</li>
+        <li><strong>Fairness:</strong> Similar consumers should pay similar rates; cross-subsidisation should be transparent and limited.</li>
+        <li><strong>Simplicity:</strong> The tariff structure should be understandable to consumers and easy to administer.</li>
+        <li><strong>Economic Signal:</strong> Tariffs should encourage efficient use of electricity and discourage wasteful consumption. Time-of-day tariffs, for example, incentivise shifting load away from peak hours.</li>
+        <li><strong>Revenue Stability:</strong> The utility must have predictable revenue streams for financial planning.</li>
+    </ol>    <h4>5.8.2 Types of Tariffs</h4>    <p><strong>(a) Simple Tariff (Uniform Rate):</strong> A single fixed rate per kWh consumed, irrespective of the quantity or time of consumption.</p>
+    <div class="formula-box">
+        $$\text{Bill} = r \times \text{kWh consumed}$$
+        <p style="margin-top:4px;">where $r$ is the rate in ₹/kWh.</p>
+    </div>
+    <p><em>Advantages:</em> Simplest to understand and administer. <em>Disadvantages:</em> Does not distinguish between high-cost and low-cost consumers; does not reflect the fixed costs of providing the connection; does not encourage load factor improvement.</p>    <p><strong>(b) Flat Rate Tariff:</strong> Different categories of consumers (domestic, commercial, industrial, agricultural) are charged at different flat rates per kWh. The rate classification is based on the nature of use.</p>
+    <p><em>Example (Indian Context):</em> Domestic consumers may be charged ₹5/kWh, commercial ₹8/kWh, industrial ₹7/kWh, and agricultural ₹1/kWh (highly subsidised in many Indian states).</p>    <p><strong>(c) Block Rate Tariff:</strong> The rate per kWh varies with the quantity of energy consumed. Common variants:</p>
+    <ul>
+        <li><strong>Step (Block) Tariff:</strong> The rate per kWh changes for each block of consumption. For example: First 100 units at ₹4/kWh, next 200 units at ₹6/kWh, beyond 300 units at ₹8/kWh.</li>
+        <li><strong>Two-Part Tariff:</strong> The total bill has two components: a fixed charge based on the connected load or maximum demand (₹/kW or ₹/kVA per month) and a running charge based on the energy consumed (₹/kWh).</li>
+    </ul>
+    <div class="formula-box">
+        <div class="formula-label">Two-Part Tariff</div>
+        $$\text{Total Bill} = a \times \text{Max Demand (kVA)} + b \times \text{Energy (kWh)}$$
+        <p style="margin-top:4px;">where $a$ is the demand charge per kVA per month, $b$ is the energy charge per kWh.</p>
+    </div>    <p><strong>(d) Three-Part Tariff:</strong> Extends the two-part tariff by adding a third component: a fixed monthly service charge independent of both demand and consumption.</p>
+    <div class="formula-box">
+        $$\text{Total Bill} = c + a \times \text{Max Demand (kVA)} + b \times \text{Energy (kWh)}$$
+        <p style="margin-top:4px;">where $c$ is the fixed monthly service charge (₹ per month).</p>
+    </div>    <p><strong>(e) Time-of-Day (ToD) Tariff:</strong> The energy charge varies with the time of consumption, reflecting the higher cost of generation during peak hours and lower cost during off-peak hours. This is increasingly used in India for large industrial and commercial consumers.</p>
+    <table>
+        <thead><tr><th>Time Block</th><th>Hours</th><th>Rate (₹/kWh)</th></tr></thead>
+        <tbody>
+            <tr><td>Normal (Day)</td><td>06:00&ndash;18:00</td><td>6.00</td></tr>
+            <tr><td>Peak (Evening)</td><td>18:00&ndash;23:00</td><td>9.00 (150% of normal)</td></tr>
+            <tr><td>Off-Peak (Night)</td><td>23:00&ndash;06:00</td><td>4.50 (75% of normal)</td></tr>
+        </tbody>
+    </table>    <p><strong>(f) Power Factor Tariff:</strong> A penalty or incentive is applied based on the consumer's power factor. Consumers with low power factor (&lt;0.85 or &lt;0.90 lagging) pay a penalty because they impose higher current and losses on the system. Consumers maintaining high power factor may receive a rebate.</p>    <h4>5.8.3 Indian Tariff Framework</h4>
+    <p>In India, electricity tariffs for distribution licensees are determined by the respective State Electricity Regulatory Commissions (SERCs) under the Electricity Act, 2003. The tariff determination follows a cost-plus methodology where the Aggregate Revenue Requirement (ARR) of the distribution company is calculated, and tariffs are designed to recover the ARR from various consumer categories. Key features include:</p>
+    <ul>
+        <li><strong>Cross-Subsidisation:</strong> Industrial and commercial consumers typically pay tariffs higher than the cost of supply, while agricultural and low-income domestic consumers pay below cost. The National Tariff Policy aims to reduce cross-subsidy to within &plusmn;20% of the average cost of supply.</li>
+        <li><strong>Subsidy Mechanism:</strong> State governments provide direct subsidy to distribution companies for supplying free or subsidised electricity to agricultural and low-income domestic consumers. This is a significant fiscal burden, with annual power subsidies exceeding ₹1.5 lakh crore across Indian states.</li>
+        <li><strong>Open Access:</strong> Consumers with a connected load exceeding 1 MW can purchase electricity directly from generators through open access, paying only wheeling charges and cross-subsidy surcharge to the distribution company.</li>
+    </ul>    <div class="important-box">
+        <p><strong>Exam Concept &mdash; Effect of Load Factor on Consumer Tariff:</strong> Consumers with high load factor are more profitable for the utility because the fixed costs are spread over more units. Therefore, two-part and three-part tariffs, ToD tariffs, and load-factor-based rebates are designed to reward high-load-factor consumers. An industrial consumer operating three shifts with a load factor of 0.8 will have a lower average cost per kWh than a single-shift consumer with a load factor of 0.3, even though both may be on the same tariff schedule &mdash; because the demand charge per kWh is lower for the high-load-factor consumer.</p>
+    </div>    <h3>5.9 Levelised Cost of Energy (LCOE) &mdash; An Integrated Approach</h3>
+    <p>The levelised cost of energy is the constant per-unit cost of generating electricity over the lifetime of a plant that makes the present value of revenues equal to the present value of costs. It is the most widely used metric for comparing the economic competitiveness of different generation technologies.</p>
+    <div class="formula-box">
+        <div class="formula-label">Levelised Cost of Energy (LCOE)</div>
+        $$\text{LCOE} = \frac{\sum_{t=0}^{n} \frac{I_t + O_t + F_t}{(1+r)^t}}{\sum_{t=0}^{n} \frac{E_t}{(1+r)^t}}$$
+        <p style="margin-top:4px;">where $I_t$ = investment expenditure in year $t$, $O_t$ = O&amp;M expenditure, $F_t$ = fuel expenditure, $E_t$ = energy generated, $r$ = discount rate, $n$ = plant life.</p>
+    </div>
+    <p>For Indian conditions (discount rate ~10%), approximate LCOE values (2024&ndash;25) are: Coal: ₹3.5&ndash;4.5/kWh; Solar PV: ₹2.5&ndash;3.5/kWh; Wind: ₹3.0&ndash;4.0/kWh; CCGT: ₹4.5&ndash;6.0/kWh; Nuclear: ₹4.0&ndash;5.5/kWh; Large Hydro: ₹3.0&ndash;4.5/kWh. The declining LCOE of solar and wind is driving the energy transition in India.</p>    <hr>
+    <h2>Summary of Key Formulas &mdash; Quick Reference for Examination</h2>
+    <table>
+        <thead>
+            <tr><th>Quantity</th><th>Formula</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Connected Load</td><td>$\sum P_{\text{rated},i}$</td></tr>
+            <tr><td>Demand Factor</td><td>$\text{Max Demand} / \text{Connected Load}$</td></tr>
+            <tr><td>Average Load</td><td>$\text{Energy (kWh)} / \text{Time (h)}$</td></tr>
+            <tr><td>Load Factor</td><td>$\text{Avg Load} / \text{Max Demand} = \text{Energy} / (\text{Max Demand} \times T)$</td></tr>
+            <tr><td>Diversity Factor</td><td>$\sum \text{Individual Max} / \text{System Max}$</td></tr>
+            <tr><td>Capacity Factor (PLF)</td><td>$\text{Energy} / (\text{Installed Capacity} \times T)$</td></tr>
+            <tr><td>Reserve Factor</td><td>$\text{Installed Capacity} / \text{Max Demand}$</td></tr>
+            <tr><td>Plant Use Factor</td><td>$\text{Energy} / (\text{Installed Capacity} \times \text{Operating Hours})$</td></tr>
+            <tr><td>Cost per kWh</td><td>$\text{Fixed Cost} / (P_{\max} \times \text{LF} \times 8760) + \text{Variable Cost}$</td></tr>
+            <tr><td>Hydro Power</td><td>$P = \eta \rho g Q H$</td></tr>
+            <tr><td>Wind Power</td><td>$P = \tfrac{1}{2} \rho A v^3 C_p$</td></tr>
+            <tr><td>Equal Incremental Cost</td><td>$dF_1/dP_1 = dF_2/dP_2 = \dots = \lambda$</td></tr>
+        </tbody>
+    </table>    <div class="memory-aid">
+        <p><strong>Final Memory Aid &mdash; Mnemonic for Load Factors:</strong></p>
+        <p><strong>&ldquo;DCL-PRD&rdquo;</strong> &mdash; <strong>D</strong>emand Factor (Connected&rarr;Max), <strong>C</strong>apacity Factor (Installed&rarr;Energy), <strong>L</strong>oad Factor (Max&rarr;Average). <strong>P</strong>lant Use Factor (Operating hrs&rarr;Energy), <strong>R</strong>eserve Factor (Max&rarr;Installed), <strong>D</strong>iversity Factor (Sum of peaks&rarr;Coincident peak).</p>
+        <p>Remember: Demand Factor and Load Factor are $\leq 1$. Diversity Factor and Reserve Factor are $\geq 1$.</p>
+        <p>Cost per kWh = Fixed component (inversely proportional to load factor) + Variable component (independent of load factor).</p>
+    </div>    <!-- MathJax rendering trigger -->    <script>
+        // Trigger MathJax re-render if needed
+        if (typeof MathJax !== 'undefined') {
+            MathJax.typesetPromise();
+        }
+    </script>    <!-- ==================== TOOLBAR SCRIPTS ==================== -->    <script>
+        function downloadPDF() {
+            // Use browser's print functionality with correct settings for PDF
+            const title = document.title || 'Module_1_Power_Station_Engineering';
+            const style = document.createElement('style');
+            style.textContent = '@media print { .toolbar { display:none !important; } body { font-size:10pt; } @page { margin:1.5cm 2cm; } }';
+            document.head.appendChild(style);
+            window.print();
+            setTimeout(() => { document.head.removeChild(style); }, 1000);
+        }
+
+        function downloadDOCX() {
+            // Convert HTML to a Word-compatible format using Blob
+            const htmlContent = document.documentElement.outerHTML;
+            const docxBlob = new Blob(['\ufeff' + htmlContent], {
+                type: 'application/msword'
+            });
+            const url = URL.createObjectURL(docxBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Module_1_Power_Station_Engineering.doc';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+    </script></body>
+</html>
