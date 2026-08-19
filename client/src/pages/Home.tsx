@@ -207,7 +207,7 @@ export default function Home() {
           <div className="shelf-legacy-note">
             <FileArchive aria-hidden="true" />
             <p>
-              Add PDF and PPT resources inside a subject’s <code>legacy</code> folder, register them in its manifest, and they appear here as direct source links.
+              Add PDF and PPT resources inside <code>digital notes/legacy/&lt;subject&gt;</code>; the library discovers them and creates direct source links.
             </p>
           </div>
         </aside>
@@ -295,7 +295,7 @@ export default function Home() {
                   <span className="eyebrow">Legacy shelf</span>
                   <h2>Source material belongs in the same library.</h2>
                   <p>
-                    Add earlier PDFs, slide decks, and archival references inside the subject’s <code>legacy</code> folder. They stay organized beside the rendered modules and open as raw GitHub files when needed.
+                    Add earlier PDFs, slide decks, and archival references inside the top-level <code>digital notes/legacy</code> archive, organized by subject. They stay beside the rendered modules and open as raw GitHub files when needed.
                   </p>
                   {activeSubject.legacy.length ? (
                     <div className="legacy-list">
@@ -312,7 +312,7 @@ export default function Home() {
                   ) : (
                     <div className="legacy-empty">
                       <Bookmark aria-hidden="true" />
-                      <span>No legacy resources are registered for this subject yet.</span>
+                      <span>No legacy resources have been added for this subject yet.</span>
                     </div>
                   )}
                 </div>
