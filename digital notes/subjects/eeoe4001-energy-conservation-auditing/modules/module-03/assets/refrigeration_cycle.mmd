@@ -1,0 +1,16 @@
+flowchart LR
+    A[Low-pressure vapour] --> B[Compressor\nwork input]
+    B --> C[High-pressure hot vapour]
+    C --> D[Condenser\nreject heat to ambient]
+    D --> E[High-pressure liquid]
+    E --> F[Expansion valve\npressure drop]
+    F --> G[Low-pressure cold mixture]
+    G --> H[Evaporator\nabsorb heat from space/process]
+    H --> A
+
+    classDef compressor fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef heat fill:#fce5cd,stroke:#b45f06,stroke-width:1.2px,color:#5a2d00;
+    classDef control fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class B compressor;
+    class D,H heat;
+    class F control;

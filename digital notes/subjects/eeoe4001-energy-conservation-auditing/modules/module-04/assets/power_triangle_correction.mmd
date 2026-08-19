@@ -1,0 +1,13 @@
+flowchart TB
+    A[Apparent power S\nkVA] --> B[Active power P\nkW: useful work]
+    A --> C[Reactive power Q\nkVAr: field exchange]
+    D[Power factor = P / S = cos phi] --> A
+    E[Capacitor supplies leading kVAr locally] --> C
+    F[Lower upstream current\nsmaller apparent demand\nreduced current-related losses] --> D
+
+    classDef main fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef reactive fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    classDef action fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    class A,B,D main;
+    class C,E reactive;
+    class F action;

@@ -1,0 +1,19 @@
+flowchart LR
+    A[Visual task and user needs] --> B[Lighting design\nilluminance, uniformity, glare, colour]
+    B --> C[Luminaire and lamp/LED selection\nefficacy, optics, maintenance]
+    C --> D[Zones and circuits]
+    D --> E[Lighting controls]
+    E --> E1[Manual switching]
+    E --> E2[Time scheduling]
+    E --> E3[Occupancy sensing]
+    E --> E4[Daylight response and dimming]
+    E --> F[Commission and verify]
+    F --> G[Maintained visual service\nwith minimum practical energy]
+    H[Daylight and occupancy inputs] --> E
+
+    classDef design fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef control fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef outcome fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class A,B,C,D,F design;
+    class E,E1,E2,E3,E4,H control;
+    class G outcome;

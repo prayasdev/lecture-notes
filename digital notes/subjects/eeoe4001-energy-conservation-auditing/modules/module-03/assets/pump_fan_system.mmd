@@ -1,0 +1,15 @@
+flowchart LR
+    A[Electrical input] --> B[Motor]
+    B --> C[Drive / coupling]
+    C --> D[Pump, fan, or blower]
+    D --> E[Pipe, duct, valve, or damper system]
+    E --> F[Required flow and pressure service]
+    E --> L[Throttling, bypass, leakage, excess pressure]
+    D --> M[Maintenance: alignment, lubrication, cleaning]
+
+    classDef input fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef useful fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef loss fill:#f4cccc,stroke:#990000,stroke-width:1.2px,color:#5a0000;
+    class A,B,C,D,E input;
+    class F,M useful;
+    class L loss;

@@ -1,0 +1,21 @@
+flowchart LR
+    U[Utility / service point] --> M[Main incomer]
+    M --> B1[Main bus capacitor bank\ncentral correction]
+    M --> D1[Distribution board]
+    D1 --> B2[Board-level capacitor bank\ngroup correction]
+    D1 --> L1[Motor control centre]
+    L1 --> B3[Group capacitor bank\nselected loads]
+    L1 --> M1[Motor / inductive load]
+    M1 --> B4[Individual capacitor\nlocal correction]
+    M1 --> O[Useful mechanical output]
+    M --> H[Harmonic-rich loads\nVFD, UPS, rectifier, LED driver]
+    H --> R[Measure distortion and check resonance\nbefore capacitor connection]
+
+    classDef supply fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef cap fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef load fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    classDef warning fill:#f4cccc,stroke:#990000,stroke-width:1.2px,color:#5a0000;
+    class U,M,D1,L1 supply;
+    class B1,B2,B3,B4 cap;
+    class M1,O,H load;
+    class R warning;

@@ -1,0 +1,20 @@
+flowchart LR
+    T0[Year 0\nInitial investment\n−C0] --> T1[Years 1…n\nAnnual energy and demand savings\n+S_t]
+    T1 --> T2[Years 1…n\nMaintenance and operating costs\n−M_t]
+    T2 --> TR[Replacement year\nMajor repair or replacement\n−R_t]
+    TR --> TN[End of study period\nResidual / salvage value\n+RV_n]
+    T0 --> D[Discount all future cash flows\nto present value]
+    T1 --> D
+    T2 --> D
+    TR --> D
+    TN --> D
+    D --> NPV[Net present worth\nPV benefits − PV costs]
+
+    classDef time fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef cost fill:#f4cccc,stroke:#990000,stroke-width:1.2px,color:#5a0000;
+    classDef benefit fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef result fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class T0,TR time;
+    class T2 cost;
+    class T1,TN benefit;
+    class D,NPV result;

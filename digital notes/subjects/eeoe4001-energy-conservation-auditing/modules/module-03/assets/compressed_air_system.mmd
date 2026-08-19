@@ -1,0 +1,19 @@
+flowchart LR
+    A[Ambient air] --> B[Inlet filter]
+    B --> C[Compressor and motor]
+    C --> D[Aftercooler / separator]
+    D --> E[Dryer and filters]
+    E --> F[Receiver / storage]
+    F --> G[Distribution network]
+    G --> H[End uses]
+    G --> L[Leaks and pressure drop]
+    H --> W[Useful pneumatic work]
+    C --> X[Waste heat / unloaded running]
+    H --> Y[Inappropriate uses]
+
+    classDef supply fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef demand fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef loss fill:#f4cccc,stroke:#990000,stroke-width:1.2px,color:#5a0000;
+    class A,B,C,D,E,F,G supply;
+    class H,W demand;
+    class L,X,Y loss;

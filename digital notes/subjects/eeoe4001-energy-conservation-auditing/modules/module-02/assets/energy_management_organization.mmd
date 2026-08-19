@@ -1,0 +1,26 @@
+flowchart TB
+    S[Senior management sponsor]
+    D[Energy director / programme coordinator]
+    T[Cross-functional energy team]
+    E[Engineering and utilities]
+    O[Operations and production]
+    M[Maintenance and facilities]
+    P[Procurement and finance]
+    H[Human resources, training and communications]
+    Q[Environment, health and safety]
+
+    S --> D
+    D --> T
+    T --> E
+    T --> O
+    T --> M
+    T --> P
+    T --> H
+    T --> Q
+
+    classDef leadership fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef coordinator fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef team fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class S leadership;
+    class D coordinator;
+    class T team;

@@ -1,0 +1,19 @@
+flowchart LR
+    A[Condition survey] --> B[Audit mandate]
+    B --> C[Define scope]
+    C --> D[Analyze energy use and cost]
+    D --> E[Compare performance]
+    E --> F[Profile energy patterns]
+    F --> G[Inventory and measure loads]
+    G --> H[Identify energy-management opportunities]
+    H --> I[Assess savings and co-benefits]
+    I --> J[Report for action]
+    J --> K{Further study needed?}
+    K -- No --> L[Implement and verify]
+    K -- Yes --> M[Detailed micro-audit]
+    M --> I
+
+    classDef audit fill:#e8f1f8,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef decision fill:#fff3cd,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class A,B,C,D,E,F,G,H,I,J,L,M audit;
+    class K decision;

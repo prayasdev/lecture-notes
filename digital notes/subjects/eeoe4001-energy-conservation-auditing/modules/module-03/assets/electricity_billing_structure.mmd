@@ -1,0 +1,18 @@
+flowchart LR
+    S[Utility supply] --> M[Metering and tariff classification]
+    M --> H[HT supply\nconsumer-side transformer\nusually bulk/high-voltage intake]
+    M --> L[LT supply\nlow-voltage service\nsmaller or downstream intake]
+    H --> B[Bill components]
+    L --> B
+    B --> F[Fixed / service charge]
+    B --> E[Energy charge\nkWh or kVAh]
+    B --> D[Demand charge\nmaximum kW or kVA]
+    B --> P[Power-factor / reactive-power adjustment]
+    B --> T[Taxes, duties, other tariff items]
+
+    classDef source fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef supply fill:#cfe2f3,stroke:#24557a,stroke-width:1.2px,color:#102a43;
+    classDef bill fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class S source;
+    class M,H,L supply;
+    class B,F,E,D,P,T bill;

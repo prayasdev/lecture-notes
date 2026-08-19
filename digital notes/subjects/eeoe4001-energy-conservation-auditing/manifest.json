@@ -1,0 +1,52 @@
+{
+  "id": "eeoe4001-energy-conservation-auditing",
+  "code": "EEOE4001",
+  "title": "Energy Conservation & Auditing",
+  "shortTitle": "Energy & Auditing",
+  "description": "A five-module reference course covering energy audits, energy management, electrical-system efficiency, power quality, lighting, and economic analysis.",
+  "accent": "terracotta",
+  "courseHours": 30,
+  "modules": [
+    {
+      "id": "module-01",
+      "number": "I",
+      "title": "Energy Audit Fundamentals",
+      "summary": "Definitions, audit types, energy and cost indices, graphical tools, industrial audits, and building audit principles.",
+      "duration": "06 hours",
+      "file": "EEOE4001_Module_I_Lecture_Notes.md"
+    },
+    {
+      "id": "module-02",
+      "number": "II",
+      "title": "Energy Management",
+      "summary": "Principles, programme organization, planning, controls, monitoring, reporting, and continual improvement.",
+      "duration": "05 hours",
+      "file": "EEOE4001_Module_II_Lecture_Notes.md"
+    },
+    {
+      "id": "module-03",
+      "number": "III",
+      "title": "Electrical Energy Efficiency",
+      "summary": "Billing, transformers, motors, pumps, fans, compressed air, HVAC, cooling towers, heating, DG sets, and harmonics.",
+      "duration": "08 hours",
+      "file": "EEOE4001_Module_III_Lecture_Notes.md"
+    },
+    {
+      "id": "module-04",
+      "number": "IV",
+      "title": "Power Factor & Lighting",
+      "summary": "Power-factor correction, nonlinear loads, harmonics, motor controllers, lighting design, controls, and audit methods.",
+      "duration": "06 hours",
+      "file": "EEOE4001_Module_IV_Lecture_Notes.md"
+    },
+    {
+      "id": "module-05",
+      "number": "V",
+      "title": "Economic Analysis",
+      "summary": "Depreciation, time value of money, payback, NPV, rate of return, replacement analysis, and life-cycle costing.",
+      "duration": "05 hours",
+      "file": "EEOE4001_Module_V_Lecture_Notes.md"
+    }
+  ],
+  "legacy": []
+}

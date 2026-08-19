@@ -1,0 +1,13 @@
+flowchart LR
+    D0[Defender at present\nExisting motor / lamp / equipment\nCurrent operating cost] --> D1[Defender future years\nRepair, energy, maintenance\nResidual value]
+    C0[Challenger at present\nNew efficient alternative\nInitial investment] --> C1[Challenger future years\nEnergy, maintenance, replacement\nResidual value]
+    D1 --> A[Compare alternatives over common study period]
+    C1 --> A
+    A --> R[Choose lower present worth cost\nor higher net present worth]
+
+    classDef defender fill:#f4cccc,stroke:#990000,stroke-width:1.2px,color:#5a0000;
+    classDef challenger fill:#d9ead3,stroke:#38761d,stroke-width:1.2px,color:#1f3d12;
+    classDef compare fill:#fff2cc,stroke:#9a6700,stroke-width:1.2px,color:#3b2f00;
+    class D0,D1 defender;
+    class C0,C1 challenger;
+    class A,R compare;
