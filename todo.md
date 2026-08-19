@@ -41,4 +41,9 @@
 
 - [x] Confirm all current project files are committed and pushed to the public GitHub branch.
 - [x] Verify the repository’s current commit is ready for external Vercel deployment.
+
+## External Hosting Portability
+
+- [x] Copy generated branding assets into the Vercel-served public directory and replace platform-only asset references.
+- [ ] Commit and push the fully self-contained Vercel-ready project state.
 ***

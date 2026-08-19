@@ -67,9 +67,9 @@ type CategoryItem = { id: string; label: string };
 
 const subjects = library.subjects as unknown as SubjectItem[];
 const categories = library.categories as unknown as CategoryItem[];
-const heroImage = "/manus-storage/nalanda-archive-hero_c37e3dda.png";
-const latticeImage = "/manus-storage/nalanda-brick-lattice_45f8d117.png";
-const archiveMark = "/manus-storage/prayas-archive-mark-01_d3f5e7c2.png";
+const heroImage = "/archive/study-court.webp";
+const latticeImage = "/archive/brick-lattice.webp";
+const archiveMark = "/archive/archive-seed.webp";
 
 const collectionMeta: Record<CollectionKey, { label: string; icon: typeof BookOpenText }> = {
   all: { label: "All", icon: FolderOpen },

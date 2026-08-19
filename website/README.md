@@ -41,4 +41,6 @@ The repository identity and raw-link branch are intentionally explicit at the to
 
 Every content change must include both the authored files under `digital notes/` and the regenerated `website/src/library.generated.ts`. This keeps the static site deterministic and allows any host to build or serve the same catalogue without a runtime database.
 
+The archive shell’s compact visual assets live in `client/public/archive/`, so GitHub-based deployments such as Vercel serve the interface without depending on platform-specific media URLs.
+
 See [`../README.md`](../README.md) for the project map and [`../AI_AUTHORING_README.md`](../AI_AUTHORING_README.md) for the content-generation contract.

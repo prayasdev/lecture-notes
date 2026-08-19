@@ -16,6 +16,7 @@ digital notes/                         # Authoritative content source
 website/scripts/sync-notes.mjs          # Reads distributed content
 website/src/library.generated.ts        # Generated build artifact; do not edit
 client/                                 # React reader and catalogue interface
+client/public/archive/                  # Compact, repository-hosted visual assets
 ```
 
 | Layer | Owns | Rule |
@@ -24,6 +25,7 @@ client/                                 # React reader and catalogue interface
 | Legacy / Practical folders | Optional local resources | A subject may omit either or both. |
 | Synchronizer | Generated website library | Run after every content or manifest change. |
 | React client | Search, catalogue, and Markdown reader | Do not put lecture content in UI code. |
+| `client/public/archive/` | Visual assets required by the published interface | Keep images compact and reference them with root-relative paths. |
 
 ## Add or change content
 
@@ -49,3 +51,7 @@ Commit the source content **and** the regenerated `website/src/library.generated
 Use lowercase kebab-case subject slugs, keep every module in its declared `module-XX` folder, and keep its Markdown `file` name identical to the manifest entry. Link module images with relative Markdown paths such as `![Load profile](assets/load-profile.png)`. Use `\(...\)` for inline mathematics and `\[...\]` for display mathematics; use ordinary `[1]` style citations, never escaped bracket citations.
 
 For a new subject, start with the AI authoring guide, create the directory structure it specifies, and register only the collections that genuinely exist.
+
+## Vercel deployment
+
+The repository includes `vercel.json`. Import `prayasdev/lecture-notes` in Vercel and keep the repository root as the project root. Vercel will run `pnpm build`, publish `dist/public`, and preserve client-side routes through the configured rewrite. All archive-shell assets are committed under `client/public/archive/`; no Manus-hosted asset URL is required.
