@@ -1,6 +1,6 @@
 /**
  * Marginalia & Marigold design system — content synchronizer.
- * The canonical source remains in ../../digital notes; this script emits website-ready data.
+ * The canonical sources remain in ../../digital notes; this script emits website-ready data.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,11 +9,13 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repositoryRoot = path.resolve(__dirname, '../..');
-const subjectsRoot = path.join(repositoryRoot, 'digital notes', 'subjects');
+const digitalNotesRoot = path.join(repositoryRoot, 'digital notes');
+const subjectsRoot = path.join(digitalNotesRoot, 'subjects');
 const outputPath = path.join(repositoryRoot, 'website', 'src', 'library.generated.ts');
 const owner = 'prayasdev';
 const repository = 'lecture-notes';
 const branch = 'main';
+const supportedLegacyExtensions = new Set(['.pdf', '.ppt', '.pptx', '.doc', '.docx', '.xls', '.xlsx', '.zip']);
 
 const rawUrl = (relativePath) =>
   `https://raw.githubusercontent.com/${owner}/${repository}/${branch}/${relativePath
@@ -22,6 +24,27 @@ const rawUrl = (relativePath) =>
     .join('/')}`;
 
 const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
+const titleFromFilename = (filename) =>
+  filename
+    .replace(path.extname(filename), '')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+function listLegacyFiles(directory, rootDirectory = directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const absolutePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) return listLegacyFiles(absolutePath, rootDirectory);
+    const extension = path.extname(entry.name).toLowerCase();
+    if (entry.name.startsWith('.') || !supportedLegacyExtensions.has(extension)) return [];
+    return [{
+      path: path.relative(rootDirectory, absolutePath).split(path.sep).join('/'),
+      title: titleFromFilename(entry.name),
+      type: extension.slice(1).toUpperCase(),
+    }];
+  });
+}
+
 const subjectDirectories = fs
   .readdirSync(subjectsRoot, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
@@ -34,23 +57,25 @@ const subjects = subjectDirectories.map((subjectSlug) => {
   const modules = manifest.modules.map((module) => {
     const markdownPath = path.join(subjectDirectory, 'modules', module.id, module.file);
     const repoRelativeModulePath = path.relative(repositoryRoot, markdownPath);
-    const content = fs.readFileSync(markdownPath, 'utf8').replaceAll(
-      '](assets/',
-      `](${rawUrl(path.relative(repositoryRoot, path.join(subjectDirectory, 'modules', module.id, 'assets')))} /`
-    );
-
-    const normalizedContent = content.replaceAll(' /', '/');
+    const assetBaseUrl = rawUrl(path.relative(repositoryRoot, path.join(subjectDirectory, 'modules', module.id, 'assets')));
+    const content = fs.readFileSync(markdownPath, 'utf8').replaceAll('](assets/', `](${assetBaseUrl}/`);
     return {
       ...module,
       sourcePath: repoRelativeModulePath.split(path.sep).join('/'),
       rawUrl: rawUrl(repoRelativeModulePath),
-      content: normalizedContent,
+      content,
     };
   });
 
-  const legacy = (manifest.legacy || []).map((resource) => ({
+  const legacyDirectory = manifest.legacyDirectory || `legacy/${subjectSlug}`;
+  const legacyRoot = path.join(digitalNotesRoot, legacyDirectory);
+  const registeredLegacy = manifest.legacy || [];
+  const overrides = new Map(registeredLegacy.map((resource) => [resource.path, resource]));
+  const discoveredLegacy = listLegacyFiles(legacyRoot).map((resource) => ({ ...resource, ...(overrides.get(resource.path) || {}) }));
+  const onlyRegistered = registeredLegacy.filter((resource) => !discoveredLegacy.some((item) => item.path === resource.path));
+  const legacy = [...discoveredLegacy, ...onlyRegistered].map((resource) => ({
     ...resource,
-    rawUrl: rawUrl(path.join('digital notes', 'subjects', subjectSlug, resource.path)),
+    rawUrl: rawUrl(path.join('digital notes', legacyDirectory, resource.path)),
   }));
 
   return { ...manifest, modules, legacy };

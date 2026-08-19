@@ -13,13 +13,14 @@ digital notes/
         module-01/
           <module-notes>.md
           assets/
-      legacy/
-        <future PDFs, PPTs, PPTXs, or other source materials>
+  legacy/
+    <subject-slug>/
+      <future PDFs, PPTs, PPTXs, or other source materials>
 ```
 
 ## Adding a new subject
 
-Create a subject folder inside `subjects/`, add a `manifest.json`, and place each Markdown module in its own folder under `modules/`. Register the subject in `website/src/library.generated.ts` by running `node website/scripts/sync-notes.mjs` after editing the top-level `subjects` index inside that file's source manifest.
+Create a subject folder inside `subjects/`, add a `manifest.json`, and place each Markdown module in its own folder under `modules/`. Create a matching folder at `legacy/<subject-slug>/` for archived files. Run `node website/scripts/sync-notes.mjs` to refresh the generated website data.
 
 ## Adding a new module
 
@@ -27,7 +28,7 @@ Add the module folder and Markdown file, then add a matching module entry to tha
 
 ## Adding legacy material
 
-Put PDF, PPT, PPTX, DOCX, or other legacy files inside the subject's `legacy/` directory. Add a `legacy` entry to the subject manifest with `title`, `type`, `path`, and optional `description`. The website lists the item and opens the raw GitHub-content route in a new tab. This preserves direct access without attempting to render unsupported formats in the browser.
+Put PDF, PPT, PPTX, DOCX, or other legacy files inside `legacy/<subject-slug>/`. The synchronizer automatically discovers supported files and lists them in the website with a direct raw GitHub-content link. Add an optional `legacy` entry to a subject manifest only when you want to override a file title, type, or description. This preserves direct access without attempting to render unsupported formats in the browser.
 
 ## Important conventions
 
