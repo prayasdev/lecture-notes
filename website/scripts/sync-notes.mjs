@@ -22,7 +22,7 @@ const extensions = {
 };
 
 const rawUrl = (relativePath) =>
-  `https://raw.githubusercontent.com/${owner}/${repository}/${branch}/${relativePath
+  `https://github.com/${owner}/${repository}/raw/refs/heads/${branch}/${relativePath
     .split(path.sep)
     .map(encodeURIComponent)
     .join('/')}`;
